@@ -1,0 +1,345 @@
+.login-container {
+  height: 100vh;
+  background-color: #000000 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 100px !important; */
+}
+.row {
+  width: 40% !important;
+}
+.d-form {
+  max-width: 100% !important;
+  background-color: rgb(27, 27, 27) !important;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: -100px;
+  color: #ffffff;
+  margin-bottom: -60px;
+  height: 600px;
+}
+.google-icon {
+  width: 25px;
+  height: 25px;
+  margin-left: -30px;
+  margin-right: 10px;
+}
+/* Title and Subtitle */
+h2 {
+  color: #ffffff;
+}
+
+.text-muted {
+  color: #bbbbbb;
+}
+
+/* Social buttons */
+.social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-facebook,
+.btn-google {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+}
+
+.btn-google {
+  background-color: #4285f4;
+  height: 44px;
+}
+
+.social-buttons i {
+  margin-right: 8px;
+}
+
+/* Divider */
+.divider {
+  margin: 15px 0;
+  position: relative;
+  color: #bababa;
+  text-align: center;
+  font-weight: 500;
+}
+
+.divider span {
+  background-color: rgb(27, 27, 27) !important;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #333;
+  z-index: 0;
+}
+
+/* Form styling */
+.form-group {
+  position: relative;
+}
+
+.input-shadow {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+.input-shadow::placeholder {
+  color: #888;
+  padding-left: 25px;
+}
+
+.input-shadow:focus {
+  border-color: #555;
+  box-shadow: none;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  margin-right: 50px !important;
+}
+
+.btn-primary {
+  background-color: #cb471f;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.forgot-password {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Remember me checkbox */
+.form-check-input {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background-color: #444;
+  border-color: #555;
+}
+
+.form-check-label {
+  color: #bbb;
+}
+/* Container styling */
+.login-container {
+  height: 100vh;
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-form {
+  max-width: 400px;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Title and Subtitle */
+h2 {
+  color: #ffffff;
+}
+
+.text-muted {
+  color: #a3a3a3 !important;
+}
+
+/* Social buttons */
+.social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-facebook,
+.btn-google {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+}
+
+.btn-google {
+  background-color: #4285f4;
+}
+
+.social-buttons i {
+  margin-right: 8px;
+}
+
+/* Divider */
+.divider {
+  margin: 15px 0;
+  position: relative;
+  color: #aaa;
+  text-align: center;
+}
+
+.divider span {
+  background-color: #2c2c2c;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #333;
+  z-index: 0;
+}
+
+/* Form styling */
+.form-group {
+  position: relative;
+}
+
+.input-shadow {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+.input-shadow::placeholder {
+  color: #888;
+}
+
+.input-shadow:focus {
+  border-color: #555;
+  box-shadow: none;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.btn-primary {
+  background-color: #c0392b;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.forgot-password {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Remember me checkbox */
+.form-check-input {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background-color: #444;
+  border-color: #555;
+}
+
+.form-check-label {
+  color: #bbb;
+}
+@media (max-width: 500px) {
+  .form-contain {
+    /* border: 1px solid rgb(0, 255, 34); */
+    width: 400px !important;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .d-form {
+    /* border: 1px solid rgb(248, 248, 248); */
+    width: 370px !important;
+    margin: 0;
+    padding: 0;
+  }
+  form {
+    /* border: 1px solid rgb(243, 0, 0); */
+    width: 400px !important;
+  }
+  .btn-facebook {
+    width: 50px;
+    height: 50px;
+  }
+  .btn-google {
+    /* width: 300px; */
+    height: 50px;
+  }
+  .google-icon {
+    margin: 0 0 0 0.4px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1290px) {
+  .form-contain {
+    /* border: 1px solid rgb(0, 255, 34); */
+    width: 500px !important;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .d-form {
+    /* border: 1px solid rgb(248, 248, 248); */
+    width: 470px !important;
+    margin: 0;
+    padding: 0;
+  }
+  form {
+    /* border: 1px solid rgb(243, 0, 0); */
+    width: 400px !important;
+  }
+}

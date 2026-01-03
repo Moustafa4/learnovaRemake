@@ -1,0 +1,19 @@
+ .main{
+  display: flex;
+justify-content: center;
+align-items: center;
+background-color: black;
+  color: #ffff;
+  height: 100vh;
+  text-align: center;
+}
+.error-msg{
+text-align: center;
+  font-size: 80px ;
+  font-weight: 700;
+}
+.sm-text{
+  font-size: 30px;
+  color: #d1d1d14a;
+  margin-right: 60px;
+}

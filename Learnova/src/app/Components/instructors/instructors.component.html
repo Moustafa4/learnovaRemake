@@ -1,0 +1,20 @@
+<!-- experts.component.html -->
+
+<div class="container text-center">
+  <h2 class=" mb-6 text-white mb-5 title">Learnova Experts</h2>
+  <ng-content></ng-content>
+
+  <div class="row justify-content-center">
+    <div class="col-md-2 col-sm-4 col-6 mb-4" *ngFor="let expert of experts">
+      <div class="expert-card">
+        <img
+          [src]="expert.image"
+          alt="{{ expert.name }}"
+          class="rounded-circle img-fluid mb-2"
+        />
+        <h5 class="text-white">{{ expert.name }}</h5>
+        <p class="text-muted">{{ expert.role }}</p>
+      </div>
+    </div>
+  </div>
+</div>

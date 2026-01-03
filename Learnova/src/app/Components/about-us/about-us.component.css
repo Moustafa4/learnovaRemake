@@ -1,0 +1,41 @@
+.about-us-container {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding: 50px 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgb(255, 60, 0);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.lead {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: rgb(255, 60, 0);
+  font-weight: bold;
+}
+
+.btn-danger {
+  background-color: rgb(255, 60, 0);
+  border: none;
+  padding: 10px 20px;
+}
+
+.btn-danger:hover {
+  background-color: rgb(255, 60, 0);
+}
+/**red line*/
+.red-line {
+  border: none;
+  height: 2px;
+  background-color: rgb(255, 60, 0);
+}

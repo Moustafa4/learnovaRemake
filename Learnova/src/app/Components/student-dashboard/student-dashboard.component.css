@@ -1,0 +1,155 @@
+.container-fluid,
+.d-flex {
+  background: rgb(27, 27, 27);
+  height: 100vh;
+  padding-bottom: 50px; /* إضافة هامش سفلي */
+}
+.navbar {
+  border-radius: 5px;
+  border: 1px solid rgb(143, 143, 143);
+  background: rgb(65, 65, 65);
+}
+.stuname {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.sidebar {
+  width: 250px;
+  background: rgb(27, 27, 27) !important;
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+}
+a {
+  border: none !important;
+  color: white;
+  background: rgb(29, 29, 29) !important;
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  border: 1px solid white !important;
+  border-radius: 5px;
+  background: rgb(65, 65, 65) !important;
+  font-size: 20px;
+  height: 50px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+}
+ul li {
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sidebar-header   i {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+}
+
+.my-courses {
+  margin: 70px 0px 0px 0px;
+  color: white;
+}
+.course-cards {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-card {
+  text-align: center;
+  background-color: rgb(65, 65, 65);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+  color: white;
+}
+
+.course-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  margin-bottom: 10px;
+}
+
+.course-card img {
+  width: 150px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.img {
+  width: 100px !important;
+}
+
+.course-card button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .course-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .container-fluid,
+  .d-flex {
+    flex-direction: column;
+      padding-bottom: 50px;
+margin-bottom: 50px;
+  }
+
+  .stuname {
+    margin-left: 0;
+  }
+
+  .course-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .my-courses{
+                    height: 50vh !important;
+                    padding-bottom: 50px;
+                    border: 1px solid ;
+                    margin-bottom: 500px;
+  }
+}

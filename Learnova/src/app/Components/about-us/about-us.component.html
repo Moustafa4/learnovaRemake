@@ -1,0 +1,124 @@
+<div class="container-fluid bg-black">
+  <section class="about-us-container">
+    <div class="container pb-5 text-center py-5 mb-5">
+      <h1 class="title mb-4">About Learnova</h1>
+      <p class="lead pb-3">
+        Welcome to <span class="highlight">Learnova</span>, your one-stop
+        destination for comprehensive, interactive, and engaging online learning
+        experiences. Our mission is to provide learners of all ages with
+        high-quality educational content that helps them grow and succeed.
+      </p>
+      <p>
+        we believe in the power of education to transform lives. Whether you're
+        a student, professional, or lifelong learner, we offer courses tailored
+        to your needs. From tech skills to creative arts, our platform brings
+        together top educators to deliver world-class content.
+      </p>
+
+      <button class="btn btn-danger mt-4 btn-lg" [routerLink]="'/courses'">Explore Courses</button>
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="container mb-5">
+      <section class="e-learning-section text-center py-5">
+        <div class="container">
+          <!-- Heading Text -->
+          <h1 class="title mb-4">WHAT WE OFFER?</h1>
+          <p class="section-description mb-5 lead">
+            A cutting-edge online video marketplace for e-learning and
+            professional people development throughout the Middle East and
+            Africa. Offering video courses and motivational/informative talks in
+            Arabic and English. Curating top-rated training programs of
+            expert-created content and guided curriculum with interactive
+            delivery.
+          </p>
+
+          <!-- Icons and Labels -->
+          <div class="row justify-content-center mb-4">
+            <!-- First SVG (Courses) -->
+            <div class="col-md-4">
+              <h5 class="text-white">Courses</h5>
+
+              <svg
+                class="w-[46px] h-[46px] text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 7 2 2 4-4m-5-9v4h4V3h-4Z"
+                />
+              </svg>
+            </div>
+
+            <!-- Second SVG (Talks) -->
+            <div class="col-md-4">
+              <h5 class="text-white">Talks</h5>
+              <svg
+                class="w-[48px] h-[48px] text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <!-- Third SVG (Books) -->
+            <div class="col-md-4">
+              <h5 class="text-light">Books</h5>
+              <svg
+                class="mb-5 w-[48px] h-[48px] text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4"
+                />
+              </svg>
+            </div>
+
+            <!-----------------------experts section----->
+            <div class="container pt-5">
+
+              <app-instructors>
+                <!---contnet-injection-->
+                <p class="lead  pb-4 ">Our Teams of Experts are dedicated professionals with deep industry knowledge,
+                  ready to guide you through every step of your learning journey, ensuring you gain practical skills
+                   and valuable insights</p>
+
+              </app-instructors>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>

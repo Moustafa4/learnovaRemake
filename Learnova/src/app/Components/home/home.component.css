@@ -1,0 +1,260 @@
+.img-container {
+  position: relative;
+}
+.text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  top: 200px;
+  /* border: 1px solid ; */
+  left: 50px;
+  width: 680px;
+  height: 170px;
+  color: rgb(216, 214, 214) !important;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.text h2 {
+  font-weight: bold;
+  /* margin-bottom: 15px; */
+}
+.text a {
+  color: rgb(216, 214, 214);
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.text p {
+  font-size: 16px;
+}
+.popup {
+  font-size: 16px;
+  height: 50px;
+  width: 180px !important;
+  background-color: orangered !important;
+}
+.main-content {
+  background-color: black;
+}
+.slider-topseller {
+  margin-top: 10px;
+  height: 300px;
+}
+.row {
+  margin-bottom: 30px;
+}
+.popular-heading {
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border-bottom: 1px solid orangered;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5),
+    -1px -1px 3px rgba(0, 0, 0, 0.893);
+
+  font-weight: 500;
+}
+.heading {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5),
+    -1px -1px 3px rgba(0, 0, 0, 0.893);
+  font-weight: 500;
+  font-size: 35px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.carousel-control-next {
+  margin-right: -20px;
+  margin-top: 18px;
+  height: 250px;
+  /* border-radius: 15px; */
+  width: 30px;
+  background-color: #00000000;
+}
+
+.carousel-control-prev {
+  background-color: #00000000;
+  margin-left: -20px;
+  margin-top: 13px;
+  height: 270px;
+  /* border-radius: 10px; */
+  width: 30px;
+}
+
+.carousel-item {
+  padding: 15px;
+}
+
+.card {
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+}
+.courses-card-slider {
+  height: 100px;
+}
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000000;
+  border-radius: 50%;
+}
+.btn {
+  background-color: rgb(54, 54, 54);
+  margin-top: -10px;
+  margin-right: 15px;
+  color: #ffffff;
+}
+
+.btn.active {
+  border: 1px solid orangered;
+  background-color: rgb(0, 0, 0);
+
+  /* background-color: rgba(255, 111, 0, 0.042); */
+}
+.btn-all-courses {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  margin-bottom: 80px;
+  margin-top: 20px;
+}
+.btn-all-courses:hover {
+  background-color: orangered;
+  color: white;
+  border: 1px solid rgb(0, 0, 0);
+}
+.routing-container {
+  margin-bottom: -100px;
+}
+.expert-card {
+  background-color: black;
+}
+.expert-card img {
+  height: 210px;
+  width: 100%;
+  padding: 20px;
+}
+.btn-subscribe {
+  border: 1px solid orangered;
+  background-color: rgb(0, 0, 0);
+  margin-bottom: 80px;
+  margin-top: 20px;
+}
+.btn-subscribe:hover {
+  background-color: orangered;
+  color: white;
+}
+.expert-title,
+.course-title {
+  color: orangered;
+}
+
+@media (max-width: 768px) {
+  .col-md-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .img-container {
+    position: relative;
+  }
+  .text {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    width: 400px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    /* border: 1px solid; */
+    height: 170px;
+    color: rgb(216, 214, 214) !important;
+  }
+  .text h2 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .text p {
+    font-size: 9px;
+  }
+  .popup {
+    text-align: center;
+    font-size: 14px;
+    height: 40px;
+    width: 120px !important;
+    background-color: orangered !important;
+  }
+  .text a {
+    color: rgb(216, 214, 214);
+    text-decoration: none;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .col-md-2 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-md-2 {
+    flex: 0 0 19%;
+    max-width: 19%;
+  }
+}
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 calc(100% - 1rem);
+    max-width: calc(100% - 1rem);
+    height: 90px;
+    margin: 20px;
+    margin-bottom: 50px;
+  }
+  .btn-instructors {
+    margin-top: 50px;
+  }
+  .expert-card {
+    background-color: black;
+  }
+  .expert-card img {
+    width: 100%;
+    height: 150px;
+  }
+  .carousel-control-prev-icon {
+    margin-left: 20px;
+    left: 20;
+  }
+  .carousel-control-next-icon {
+    margin-right: 20px;
+    right: 20;
+  }
+  .routing-container {
+    margin-left: 25px;
+  }
+  .cards-container {
+    margin-left: -10px;
+  }
+  .courses-card-slider {
+    height: 130px;
+  }
+  .courses-card {
+    width: 165px;
+  }
+}

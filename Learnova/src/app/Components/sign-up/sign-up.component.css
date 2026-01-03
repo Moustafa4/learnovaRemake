@@ -1,0 +1,365 @@
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.card {
+  box-shadow: 0 4px 8px rgba(79, 79, 79, 0.1);
+  margin-top: -10px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+  text-align: center;
+}
+.card-body {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 2rem;
+
+  border-radius: 10px;
+  width: 800px;
+  background-color: rgb(27, 27, 27) !important;
+  margin-left: -30px !important;
+}
+.card h3 {
+  color: #ffffff;
+  text-align: start;
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+
+/* Button Styling */
+.btn {
+  width: 120px;
+  padding: 5px 0;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+.btnsign-up {
+  border-color: #f7f7f7;
+  color: #ffffff !important;
+}
+
+.btn-primary {
+  background-color: rgb(18, 18, 18);
+  border-color: #ff5900a3;
+  color: #ff5900;
+}
+.teacher-btn {
+  margin-right: 20px !important;
+}
+
+.btn-secondary {
+  background-color: rgb(18, 18, 18);
+  border-color: #ffffff;
+}
+/* Role Button Hover Effect */
+.btn:hover {
+  opacity: 0.8;
+  background-color: #ff5900;
+  color: #ffffff;
+  border-color: #343a40;
+}
+
+/* Form Field Styling */
+.form-label,
+.form-check-label,
+span {
+  font-weight: bold;
+  color: #919191;
+}
+
+.card-form,
+.card-rol {
+  background: #000000;
+  border: 1px solid rgb(0, 0, 0);
+}
+h5 {
+  margin-top: -50px;
+  color: #6e6f70;
+}
+.form-control {
+  border-radius: 8px;
+  border: 0px solid rgba(0, 0, 0, 0.5);
+  background: rgba(65, 65, 65, 0.703);
+  color: #f7f7f7;
+}
+
+.form-control:focus {
+  border: 1px solid #ffffff;
+  outline: none;
+  color: #ffffff;
+  border-color: #555;
+  box-shadow: none;
+}
+
+/* Checkbox Styling */
+.form-check-label a,
+a {
+  text-decoration: underline;
+  color: #ff5900;
+  text-decoration: none;
+}
+.form-check-input {
+  accent-color: #ff6600; /* Change checkbox color */
+}
+.form-check-label a:hover {
+  text-decoration: none;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.mt-3 {
+  margin-top: 1.5rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* singel card */
+.rol-row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 500px;
+  margin-right: 50px;
+  height: 800px;
+  /* border: 1px solid red; */
+}
+.card-rol {
+  width: 450px;
+  /* box-shadow: -19px 20px 20px 2px rgb(255, 111, 0, 47%); */
+}
+.form-row {
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: end;
+  width: 650px;
+  height: auto;
+  margin-right: 90px;
+}
+.card-form {
+  /* border: 1px solid red; */
+  width: auto;
+  /* box-shadow: -19px 20px 20px 1px rgb(255, 111, 0, 47%); */
+}
+.is-invalid {
+  border-color: red;
+}
+.text-danger {
+  color: red;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    flex-direction: column-reverse;
+  }
+  .card-rol,
+  .rol-row {
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .form-row {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+  .card-rol {
+    justify-items: center;
+    width: 450px;
+  }
+  .rol-row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 550px;
+    margin-right: 50px;
+    /* border: 1px solid red; */
+  }
+}
+
+@media (max-width: 600px) {
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+  .card-rol {
+    width: 300px;
+
+    height: auto;
+  }
+  .rol-row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 350px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1025px) {
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+  }
+  .card-rol,
+  .rol-row {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .form-row {
+    /* border: 1px solid; */
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+  .card-rol {
+    justify-items: center;
+    width: 300px;
+  }
+  .rol-row {
+    /* display: flex; */
+    justify-content: start;
+    align-items: center;
+    width: 400px;
+    margin-right: 50px;
+    border: 1px solid rgb(255, 255, 255);
+  }
+  .card-form {
+    /* border: 1px solid red; */
+    width: 500px;
+    margin-left: 100px;
+  }
+}
+@media (min-width: 900px) and (max-width: 605px) {
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    flex-direction: column-reverse;
+  }
+  .card-rol,
+  .rol-row {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1.2rem; /* تقليل حجم النص */
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .form-row {
+    /* border: 1px solid; */
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+  .card-rol {
+    justify-items: center;
+    width: 600px;
+  }
+  .rol-row {
+    margin: 0px 50px 30px 100px;
+
+    /* display: flex; */
+    justify-content: start;
+    align-items: center;
+    width: 650px;
+    border: 1px solid rgb(255, 255, 255);
+  }
+  .card-form {
+    /* border: 1px solid red; */
+    width: 600px;
+    margin-left: 100px;
+  }
+}
+/* ******************************************** */
+@media (max-width: 500px) {
+  .form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .card-form {
+    width: 320px;
+
+    border: 1px solid red;
+    margin: 0;
+
+  } */
+  .card-body {
+    padding: 0px;
+    /* border: 1px solid red; */
+    width: 340px;
+    margin: 0 0 0 40px !important;
+    justify-items: center !important;
+    justify-content: center !important;
+  }
+  .std-btn {
+    width: 90px;
+  }
+  .teacher-btn {
+    width: 90px;
+  }
+  .input {
+    width: 330px;
+  }
+}

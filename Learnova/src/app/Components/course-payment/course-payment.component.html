@@ -1,0 +1,180 @@
+<div class="container-fluid  pb-4 bg-black py-5 d-flex justify-content-center flex-column p-2 d-flex">
+
+  <div class="row  text-light w-50 text-center align-self-center">
+    <h3 class="text-center">Invest in yourself
+    </h3>
+    <!---four p tags -->
+    <div class="container mt-5 text-center">
+      <div class="row ">
+          <!-- First two paragraphs in one row -->
+          <div class="col-md-6">
+              <p> <span class="p-2"> &#10003;</span> Unlimited benefit from all courses on the website and Android app.</p>
+          </div>
+          <div class="col-md-6">
+              <p> <span class="p-2"> &#10003;</span>More than 1,000 illustrated courses in Arabic.</p>
+          </div>
+
+          <!-- Second two paragraphs in another row -->
+          <div class="col-md-6">
+              <p> <span class="p-2"> &#10003;</span>Certificate upon completion of the course.</p>
+          </div>
+          <div class="col-md-6">
+              <p><span class="p-2"> &#10003;</span>Presented by the best experts in the Arab world. </p>
+          </div>
+
+      </div>
+  </div>
+
+
+  </div>
+
+
+    <!------------------------------ Promo Code and Logos --------------------------------------------------->
+
+<div class="container-fluid bg-black justify-content-center d-flex">
+  <div class="row d-flex text-light w-50 clearfix">
+    <p class="float-left" >
+      <a>Apply promo code</a>
+    </p>
+    <b class="h5">We accept
+      <img src="https://app.almentor.net/assets/images/payment-methods/payment-mastercard-dark.svg" alt="Mastercard">
+      <img src="https://app.almentor.net/assets/images/payment-methods/payment-visa.svg" alt="Visa">
+      <img src="https://app.almentor.net/assets/images/payment-methods/payment-meeza.svg" alt="Meeza">
+      <img src="https://app.almentor.net/assets/images/payment-methods/fawry.svg" alt="Fawry">
+      <img src="https://app.almentor.net/assets/images/payment-methods/vodafone-cash.png" alt="Vodafone Cash">
+    </b>
+
+
+  <!-------------------------------------------------------------------------->
+
+  <div id="accordion" data-bs-theme="dark" *ngIf="isProceedVisible" class="mb-5">
+
+
+
+
+    <!-- Collapse [Card] - Credit/Debit Card -->
+    <div class="card  mx-auto" data-bs-theme="dark">
+      <div class="card-header">
+        <a class="btn border-0" data-bs-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <img src="https://app.almentor.net/assets/images/payment-methods/visa-light.svg" alt="Visa Icon">
+          Pay with Credit/Debit Card
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+        <div class="card-body d-grid gap-2 col-12 mx-auto pt-4">
+          <b>Pay with Credit or Debit Card</b>
+          <form #phoneForm1="ngForm" class="text-start">
+            <label for="phone1" class="form-label">Mobile Number</label>
+            <input type="tel" class="form-control" id="phone1" name="phone" placeholder="123-45-678"
+                   [(ngModel)]="inputValue" required ngModel pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+            <div *ngIf="phoneForm1.invalid" class="text-danger">
+              Phone number must match the format 123-45-678.
+            </div>
+            <button type="submit" class="btn proceed w-100 mt-2" data-bs-toggle="modal" data-bs-target="#paymentModal"
+                    [disabled]="phoneForm1.invalid" (click)="pay()">Proceed</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collapse [Card] - Fawry -->
+    <div class="card  mx-auto mt-4" data-bs-theme="dark">
+      <div class="card-header">
+        <a class="collapsed btn border-0" data-bs-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <img src="https://app.almentor.net/assets/images/payment-methods/fawry.svg" alt="Fawry Icon">
+          Pay with Fawry
+        </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body p-2 d-grid gap-2 col-12 mx-auto pt-4">
+          <p>Through Fawry, you can pay through any Fawry outlet with cash. Please pay within the specified time to avoid automatic cancellation.</p>
+          <form #phoneForm2="ngForm" class="text-start">
+            <label for="phone2" class="form-label">Mobile Number</label>
+            <input type="tel" class="form-control" id="phone2" name="phone" placeholder="123-45-678"
+                   required ngModel pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+            <div *ngIf="phoneForm2.invalid" class="text-danger">
+              Phone number must match the format 123-45-678.
+            </div>
+            <button type="submit" class="btn proceed w-100 mt-2" data-bs-toggle="modal" data-bs-target="#paymentModal"
+                    [disabled]="phoneForm2.invalid" (click)="pay()">Proceed</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collapse [Card] - Vodafone Cash -->
+    <div class="card mx-auto mt-4" data-bs-theme="dark">
+      <div class="card-header">
+        <a class="collapsed btn border-0" data-bs-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <img src="https://app.almentor.net/assets/images/payment-methods/vodafone-cash.png" alt="Vodafone Cash Icon" class="cashlogo">
+          Pay with Vodafone Cash
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body d-grid gap-2 col-12 mx-auto pt-4">
+          <form #phoneForm3="ngForm" class="text-start">
+            <label for="phone3" class="form-label">Mobile Number</label>
+            <input type="tel" class="form-control" id="phone3" name="phone" placeholder="123-45-678"
+                   required ngModel pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+            <div *ngIf="phoneForm3.invalid" class="text-danger">
+              Phone number must match the format 123-45-678.
+            </div>
+            <button type="submit" class="btn proceed w-100 mt-2" data-bs-toggle="modal" data-bs-target="#paymentModal"
+                    [disabled]="phoneForm3.invalid" (click)="pay()">Proceed</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- The Modal -->
+<div class="modal" id="paymentModal" data-bs-theme="dark">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header ">
+        <h4 class="modal-title">Payment Confirmation</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" *ngIf="isConfirmed==false ">
+        Are you sure you want to buy this course ?
+        <!-- <p> with a Total cost : {{totalCost}} EGP</p> -->
+      </div>
+      <!--if confirm transections-->
+
+
+      <!-- Modal body -->
+      <div class="modal-body" *ngIf="isConfirmed==true" >
+        <p>  $ Payment was successfully made! Subscribed to this course!
+        </p>
+      </div>
+
+
+      <!-- Modal footer -->
+      <div class="modal-footer text-center">
+        <button type="button" class="btn confirm" (click)="confirmpay()" *ngIf="isConfirmed===false">Yes </button>
+
+        <button type="button" class="btn btn-danger " data-bs-dismiss="modal" >Close</button>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>

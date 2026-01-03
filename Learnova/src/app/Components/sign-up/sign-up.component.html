@@ -1,0 +1,443 @@
+<div class="container-fluid mt-5">
+  <div class="row justify-content-center form-row">
+    <!-- <div class="col-lg-6 col-md-6 col-sm-6 mb-3 w-100"> -->
+    <div class="card card-form">
+      <div class="card-body">
+        <h3 class="card-title text-center">Sign Up</h3>
+        <h5 class="text-center">as</h5>
+
+        <div class="d-flex justify-content-center">
+          <div class="teacher-btn">
+            <button
+              class="btn"
+              [ngClass]="{
+                'btn-primary': selectedRole === 'teacher',
+                'btn-secondary': selectedRole !== 'teacher'
+              }"
+              (click)="selectRole('teacher')"
+            >
+              Teacher
+            </button>
+          </div>
+          <div class="std-btn">
+            <button
+              class="btn"
+              [ngClass]="{
+                'btn-primary': selectedRole === 'student',
+                'btn-secondary': selectedRole !== 'student'
+              }"
+              (click)="selectRole('student')"
+            >
+              Student
+            </button>
+          </div>
+        </div>
+        <form (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm">
+          <div class="row">
+            <!-- First Name -->
+            <div class="col-md-6 mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control input"
+                id="firstName"
+                [(ngModel)]="firstName"
+                name="firstName"
+                required
+                minlength="3"
+                [ngClass]="{
+                  'is-invalid':
+                    signupForm.controls['firstName'] &&
+                    signupForm.controls['firstName'].invalid &&
+                    signupForm.controls['firstName'].touched
+                }"
+              />
+              <div
+                *ngIf="
+                  signupForm.controls['firstName']?.invalid &&
+                  signupForm.controls['firstName']?.touched
+                "
+                class="invalid-feedback"
+              >
+                First Name not matched required .
+              </div>
+            </div>
+
+            <!-- Last Name -->
+            <div class="col-md-6 mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control input"
+                id="lastName"
+                [(ngModel)]="lastName"
+                name="lastName"
+                required
+                minlength="3"
+                [ngClass]="{
+                  'is-invalid':
+                    signupForm.controls['lastName'] &&
+                    signupForm.controls['lastName'].invalid &&
+                    signupForm.controls['lastName'].touched
+                }"
+              />
+              <div
+                *ngIf="
+                  signupForm.controls['lastName']?.invalid &&
+                  signupForm.controls['lastName']?.touched
+                "
+                class="invalid-feedback"
+              >
+                Last Name not matched .
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control input"
+                id="email"
+                [(ngModel)]="email"
+                name="email"
+                required
+                [ngClass]="{
+                  'is-invalid':
+                    signupForm.controls['email'] &&
+                    signupForm.controls['email'].invalid &&
+                    signupForm.controls['email'].touched
+                }"
+              />
+              <div
+                *ngIf="
+                  signupForm.controls['email']?.invalid &&
+                  signupForm.controls['email']?.touched
+                "
+                class="invalid-feedback"
+              >
+                Please enter a valid email address.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="confirmEmail" class="form-label">Confirm Email</label>
+              <input
+                type="email"
+                class="form-control input"
+                id="confirmEmail"
+                [(ngModel)]="confirmEmail"
+                name="confirmEmail"
+                required
+                [pattern]="email"
+                [ngClass]="{
+                  'is-invalid':
+                    signupForm.controls['confirmEmail'] &&
+                    confirmEmail !== email &&
+                    signupForm.controls['confirmEmail'].touched
+                }"
+              />
+              <div
+                *ngIf="
+                  confirmEmail !== email &&
+                  signupForm.controls['confirmEmail']?.touched
+                "
+                class="invalid-feedback"
+              >
+                Email addresses must match.
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Password -->
+            <div class="col-md-6 mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control input"
+                id="password"
+                [(ngModel)]="password"
+                name="password"
+                required
+                minlength="8"
+                [ngClass]="{
+                  'is-invalid':
+                    signupForm.controls['password'] &&
+                    signupForm.controls['password'].invalid &&
+                    signupForm.controls['password'].touched
+                }"
+              />
+              <div
+                *ngIf="
+                  signupForm.controls['password']?.invalid &&
+                  signupForm.controls['password']?.touched
+                "
+                class="invalid-feedback"
+              >
+                Password is required and must be at least 8 characters.
+              </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="col-md-6 mb-3">
+              <label for="confirmPassword" class="form-label"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                class="form-control input"
+                id="confirmPassword"
+                [(ngModel)]="confirmPassword"
+                name="confirmPassword"
+                required
+                [pattern]="password"
+                [ngClass]="{
+                  'is-invalid':
+                    signupForm.controls['confirmPassword'] &&
+                    confirmPassword !== password &&
+                    signupForm.controls['confirmPassword'].touched
+                }"
+              />
+              <div
+                *ngIf="
+                  confirmPassword !== password &&
+                  signupForm.controls['confirmPassword']?.touched
+                "
+                class="invalid-feedback"
+              >
+                Passwords must match.
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Picture -->
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input
+                type="tel"
+                class="form-control input"
+                id="phone"
+                [(ngModel)]="phone"
+                name="phone"
+                required
+                pattern="^\d{11}$"
+                inputmode="numeric"
+                maxlength="11"
+                [ngClass]="{
+                  'is-invalid':
+                    signupForm.controls['phone'] &&
+                    signupForm.controls['phone'].invalid &&
+                    signupForm.controls['phone'].touched
+                }"
+              />
+              <div
+                *ngIf="
+                  signupForm.controls['phone']?.invalid &&
+                  signupForm.controls['phone']?.touched
+                "
+                class="invalid-feedback"
+              >
+                Please enter a valid phone number.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="profilePicture" class="form-label custom-file-upload"
+                >Profile Picture</label
+              >
+              <input
+                type="file"
+                class="form-control input"
+                id="profilePicture"
+                (change)="onFileSelected($event)"
+                accept="image/*"
+                name="profilePicture"
+                required
+                [ngClass]="{
+                  'is-invalid':
+                    signupForm.controls['profilePicture'] &&
+                    !profilePicture &&
+                    signupForm.controls['profilePicture'].touched
+                }"
+              />
+              <div
+                *ngIf="
+                  !profilePicture &&
+                  signupForm.controls['profilePicture']?.touched
+                "
+                class="invalid-feedback"
+              >
+                Profile Picture is required.
+              </div>
+            </div>
+          </div>
+
+          <!-- Teacher-Specific Fields -->
+          <div *ngIf="selectedRole === 'teacher'">
+            <div class="row">
+              <!-- Specialization -->
+              <div class="col-md-6 mb-3">
+                <label for="specialization" class="form-label"
+                  >Specialization</label
+                >
+                <input
+                  type="text"
+                  class="form-control input"
+                  id="specialization"
+                  [(ngModel)]="specialization"
+                  name="specialization"
+                  required
+                  pattern="^[a-zA-Z\s]+$"
+                  [ngClass]="{
+                    'is-invalid':
+                      signupForm.controls['specialization'] &&
+                      signupForm.controls['specialization'].invalid &&
+                      signupForm.controls['specialization'].touched
+                  }"
+                />
+                <div
+                  *ngIf="
+                    signupForm.controls['specialization']?.invalid &&
+                    signupForm.controls['specialization']?.touched
+                  "
+                  class="invalid-feedback"
+                >
+                  Specialization is required and must contain only letters.
+                </div>
+              </div>
+
+              <!-- Experience -->
+              <div class="col-md-6 mb-3">
+                <label for="experience" class="form-label"
+                  >Experience (Years)</label
+                >
+                <input
+                  type="number"
+                  class="form-control input"
+                  id="experience"
+                  [(ngModel)]="experience"
+                  name="experience"
+                  required
+                  min="0"
+                  max="50"
+                  [ngClass]="{
+                    'is-invalid':
+                      signupForm.controls['experience'] &&
+                      signupForm.controls['experience'].invalid &&
+                      signupForm.controls['experience'].touched
+                  }"
+                />
+                <div
+                  *ngIf="
+                    signupForm.controls['experience'] &&
+                    signupForm.controls['experience'].invalid &&
+                    signupForm.controls['experience'].touched
+                  "
+                  class="invalid-feedback"
+                >
+                  Please enter a valid experience.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- National ID -->
+              <div class="col-md-6 mb-3">
+                <label for="nationalId" class="form-label">National ID</label>
+                <input
+                  type="text"
+                  class="form-control input"
+                  id="nationalId"
+                  [(ngModel)]="nationalId"
+                  name="nationalId"
+                  required
+                  pattern="^\d+$"
+                  [ngClass]="{
+                    'is-invalid':
+                      signupForm.controls['nationalId'] &&
+                      signupForm.controls['nationalId'].invalid &&
+                      signupForm.controls['nationalId'].touched
+                  }"
+                />
+                <div
+                  *ngIf="
+                    signupForm.controls['nationalId'] &&
+                    signupForm.controls['nationalId'].invalid &&
+                    signupForm.controls['nationalId'].touched
+                  "
+                  class="invalid-feedback"
+                >
+                  National ID is required and must contain only numbers.
+                </div>
+              </div>
+
+              <!-- Country -->
+              <div class="col-md-6 mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input
+                  type="text"
+                  class="form-control input"
+                  id="country"
+                  [(ngModel)]="country"
+                  name="country"
+                  pattern="^[a-zA-Z\s]+$"
+                  [ngClass]="{
+                    'is-invalid':
+                      signupForm.controls['country'] &&
+                      signupForm.controls['country'].invalid &&
+                      signupForm.controls['country'].touched
+                  }"
+                />
+                <div
+                  *ngIf="
+                    signupForm.controls['country']?.invalid &&
+                    signupForm.controls['country']?.touched
+                  "
+                  class="invalid-feedback"
+                >
+                  country is required and must contain only letters.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agree to Privacy Policy Checkbox -->
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="privacyPolicy"
+              [(ngModel)]="agreeToPolicy"
+              name="privacyPolicy"
+              required
+            />
+            <label class="form-check-label" for="privacyPolicy">
+              I agree to the <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button
+              type="submit"
+              class="btn btn-primary btnsign-up w-25"
+              [disabled]="signupForm.invalid || !agreeToPolicy"
+            >
+              Sign Up
+            </button>
+          </div>
+
+          <div class="mt-3 text-center">
+            <span>Do you have an account ? </span>
+            <a
+              href="/login"
+              style="color: #ff5900 !important; font-weight: 500"
+              class="text-primary"
+              >Log In</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</div>

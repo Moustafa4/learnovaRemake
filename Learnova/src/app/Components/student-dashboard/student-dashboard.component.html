@@ -1,0 +1,77 @@
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <i class="fa fa-code"></i>
+      <h2>DASHBOARD</h2>
+    </div>
+    <ul>
+      <li>
+        <a href="#"><i class="fa fa-home"></i> Home</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-user"></i> Profile</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-wallet"></i> Wallet</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-bar-chart"></i> Analytics</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-tasks"></i> Tasks</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-cog"></i> Settings</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-question-circle"></i> Help</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+
+  <div class="container-fluid mt-4">
+    <nav class="navbar navbar-expand-lg">
+      <div class="ml-auto">
+        <img
+          [src]="studentPicture"
+          alt="Student Avatar"
+          class="rounded-circle"
+          width="50"
+          height="50"
+        />
+        <span class="stuname">{{ studentName }}</span>
+      </div>
+    </nav>
+    <div class="my-courses">
+      <h2>Your Courses</h2>
+
+      <div class="course-cards">
+        <div class="course-card">
+          <img src="Images/html5-logo.png" alt="HTML Logo" />
+
+          <h3>HTML</h3>
+          <p>80% - Progress</p>
+
+          <button>Continue</button>
+        </div>
+        <div class="course-card">
+          <img src="Images/img_css.jpg" class="img" alt="CSS Logo" />
+
+          <h3>CSS</h3>
+          <p>60% - Progress</p>
+          <button>Continue</button>
+        </div>
+        <div class="course-card">
+          <img src="Images/16_JS.png" class="img" alt="JS Logo" />
+
+          <h3>JavaScript</h3>
+          <p>30% - Progress</p>
+          <button>Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
