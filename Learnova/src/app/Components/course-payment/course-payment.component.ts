@@ -8,11 +8,10 @@ import { NgIf } from '@angular/common';
 
 
 @Component({
-  selector: 'app-course-payment',
-  standalone: true,
-  imports: [RouterLink,RouterOutlet,FormsModule,NgClass,NgIf],
-  templateUrl: './course-payment.component.html',
-  styleUrl: './course-payment.component.css'
+    selector: 'app-course-payment',
+    imports: [RouterLink, RouterOutlet, FormsModule, NgClass, NgIf],
+    templateUrl: './course-payment.component.html',
+    styleUrl: './course-payment.component.css'
 })
 export class CoursePaymentComponent {
   // Selected courses by user and total cost (from courses component)

@@ -7,11 +7,10 @@ import * as bootstrap from 'bootstrap';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-main-payment',
-  standalone: true,
-  imports: [NgClass,RouterLink,RouterOutlet,FormsModule,CommonModule],
-  templateUrl: './main-payment.component.html',
-  styleUrl: './main-payment.component.css'
+    selector: 'app-main-payment',
+    imports: [NgClass, RouterLink, RouterOutlet, FormsModule, CommonModule],
+    templateUrl: './main-payment.component.html',
+    styleUrl: './main-payment.component.css'
 })
 export class MainPaymentComponent {
 

@@ -5,11 +5,10 @@ import { FooterComponent } from "../footer/footer.component";
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-about-us',
-  standalone: true,
-  imports: [InstructorsComponent, Header2Component, FooterComponent,RouterLink,RouterOutlet],
-  templateUrl: './about-us.component.html',
-  styleUrl: './about-us.component.css'
+    selector: 'app-about-us',
+    imports: [InstructorsComponent, Header2Component, FooterComponent, RouterLink, RouterOutlet],
+    templateUrl: './about-us.component.html',
+    styleUrl: './about-us.component.css'
 })
 export class AboutUsComponent {
 

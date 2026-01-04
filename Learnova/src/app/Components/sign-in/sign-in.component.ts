@@ -3,11 +3,10 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-sign-in',
-  standalone: true,
-  imports: [RouterModule, FormsModule],
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css'],
+    selector: 'app-sign-in',
+    imports: [RouterModule, FormsModule],
+    templateUrl: './sign-in.component.html',
+    styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
   rememberMe: boolean = false;

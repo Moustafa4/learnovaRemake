@@ -5,11 +5,10 @@ import * as bootstrap from 'bootstrap';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-support',
-  standalone: true,
-  imports: [CommonModule,NgClass,FormsModule],
-  templateUrl: './support.component.html',
-  styleUrl: './support.component.css'
+    selector: 'app-support',
+    imports: [CommonModule, NgClass, FormsModule],
+    templateUrl: './support.component.html',
+    styleUrl: './support.component.css'
 })
 export class SupportComponent {
 

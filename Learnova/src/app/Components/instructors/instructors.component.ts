@@ -5,11 +5,10 @@ import { InstructorsServiceService } from '../Instructors-serv/instructors-servi
 import { OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-instructors',
-  standalone: true,
-  imports: [FormsModule, CommonModule],
-  templateUrl: './instructors.component.html',
-  styleUrl: './instructors.component.css',
+    selector: 'app-instructors',
+    imports: [FormsModule, CommonModule],
+    templateUrl: './instructors.component.html',
+    styleUrl: './instructors.component.css'
 })
 export class InstructorsComponent implements OnInit {
   experts: Expert[] = [];

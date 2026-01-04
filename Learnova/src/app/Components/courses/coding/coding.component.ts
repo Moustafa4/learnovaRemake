@@ -4,11 +4,10 @@ import { RouterLink } from '@angular/router';
 
 
 @Component({
-  selector: 'app-coding',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
-  templateUrl: './coding.component.html',
-  styleUrl: './coding.component.css',
+    selector: 'app-coding',
+    imports: [CommonModule, RouterLink],
+    templateUrl: './coding.component.html',
+    styleUrl: './coding.component.css'
 })
 export class CodingComponent {
 

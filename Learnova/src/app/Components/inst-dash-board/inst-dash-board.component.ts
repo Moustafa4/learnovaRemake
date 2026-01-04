@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-inst-dash-board',
-  standalone: true,
-  imports: [],
-  templateUrl: './inst-dash-board.component.html',
-  styleUrls: ['./inst-dash-board.component.css'],
+    selector: 'app-inst-dash-board',
+    imports: [],
+    templateUrl: './inst-dash-board.component.html',
+    styleUrls: ['./inst-dash-board.component.css']
 })
 export class InstDAshBoardComponent implements OnInit {
   instructorName: string = '';

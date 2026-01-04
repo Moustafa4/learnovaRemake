@@ -5,11 +5,10 @@ import { CartService } from '../../../../services/cartser/cart.service';
 // import { Course } from '../course.model';
 
 @Component({
-  selector: 'app-ux-ui',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './ux-ui.component.html',
-  styleUrl: './ux-ui.component.css',
+    selector: 'app-ux-ui',
+    imports: [CommonModule],
+    templateUrl: './ux-ui.component.html',
+    styleUrl: './ux-ui.component.css'
 })
 export class UxUiComponent {
 

@@ -8,11 +8,10 @@ import { InstructorsServiceService } from '../Instructors-serv/instructors-servi
 import { Course } from '../courses/course.model';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [FormsModule, RouterLink, RouterModule,RouterLinkActive,RouterOutlet,CommonModule, InstructorsComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+    selector: 'app-home',
+    imports: [FormsModule, RouterLink, RouterModule, RouterLinkActive, RouterOutlet, CommonModule, InstructorsComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit  {
   responsiveCardCols: number = 5;

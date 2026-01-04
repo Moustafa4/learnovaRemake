@@ -4,13 +4,10 @@ import { Course } from '../courses/course.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  standalone: true,
-
-  imports: [CommonModule],
-
-  styleUrls: ['./cart.component.css'],
+    selector: 'app-cart',
+    templateUrl: './cart.component.html',
+    imports: [CommonModule],
+    styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
   cartCourses: Course[] = [];

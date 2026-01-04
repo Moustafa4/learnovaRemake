@@ -6,12 +6,11 @@ import { map } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
-  selector: 'app-courses',
-  providers: [CoursesService],
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './courses.component.html',
-  styleUrl: './courses.component.css',
+    selector: 'app-courses',
+    providers: [CoursesService],
+    imports: [CommonModule],
+    templateUrl: './courses.component.html',
+    styleUrl: './courses.component.css'
 })
 export class CoursesComponent {
   private Courses_Service = inject(CoursesService);
