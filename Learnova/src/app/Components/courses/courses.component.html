@@ -4,26 +4,19 @@
       <p>Explore Inspiring Courses Online</p>
     </div>
     <div class="row">
-      @for (course of _courses(); track course) {
-        <div class="col-4">
-          <div class="card" style="width: 18rem">
-            <img
-              src="{{ course.image }}"
-              alt="{{ course.title }}"
-              class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">{{ course.title }}</h5>
-                <p class="card-text">The trainer: {{ course.instructor }}</p>
-                <p>Price: EGP {{ course.price }}</p>
-                <div>
-                  <!-- <a class="btn btn-primary" (click)="addToCart(course)">Add to Cart</a> -->
-                  <a href="/course-payment" class="btn btn-danger">Buy Now</a>
-                </div>
-              </div>
-            </div>
+      @for (course of _courses(); track $index) {
+      <div class="col-4">
+        <div class="card" style="width: 18rem">
+          <img [src]="course.image" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">{{ course.title }}</h5>
+            <p>The trainer: {{ course.instructor }}</p>
+            <p>Price: EGP {{ course.price }}</p>
+            <a class="btn btn-danger">Buy Now</a>
           </div>
-        }
+        </div>
       </div>
+      }
     </div>
   </div>
+</div>

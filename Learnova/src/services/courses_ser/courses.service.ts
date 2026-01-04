@@ -7,7 +7,8 @@ import { map } from 'rxjs';
   providedIn: 'root',
 })
 export class CoursesService {
-  courses_url = 'http://localhost:3000/Courses';
+  courses_url =
+    'https://raw.githubusercontent.com/Moustafa4/learnovaRemake/refs/heads/main/Learnova/public/data/Courses_Data/Courses.json';
   constructor(private _HttpClient: HttpClient) {}
 
   Allcourses() {
@@ -16,10 +17,10 @@ export class CoursesService {
       .pipe(map((res) => res.Courses ?? []));
   }
 
-  CoursesByTitle(title:string) {
+  CoursesByTitle(title: string) {
     return this._HttpClient.get<{ Courses: ICourses[] }>(this.courses_url).pipe(
       map((res) => res.Courses ?? []),
-      map((courses) => courses.find((p) => p.title === title || null))
+      map((Courses) => Courses.find((p) => p.title === title || null))
     );
   }
 }
