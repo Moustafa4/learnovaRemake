@@ -7,6 +7,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 @Component({
   selector: 'app-courses',
   providers: [CoursesService],
+  standalone:true,
   imports: [],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css',
