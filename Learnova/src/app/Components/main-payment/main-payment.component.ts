@@ -8,7 +8,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
     selector: 'app-main-payment',
-    imports: [NgClass, RouterLink, RouterOutlet, FormsModule, CommonModule],
+    imports: [NgClass, FormsModule, CommonModule],
     templateUrl: './main-payment.component.html',
     styleUrl: './main-payment.component.css'
 })

@@ -5,17 +5,16 @@ import { OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import { Expert, InstructorsComponent } from '../instructors/instructors.component';
 import { InstructorsServiceService } from '../Instructors-serv/instructors-service.service';
-import { Course } from '../courses/course.model';
 
 @Component({
     selector: 'app-home',
-    imports: [FormsModule, RouterLink, RouterModule, RouterLinkActive, RouterOutlet, CommonModule, InstructorsComponent],
+    imports: [FormsModule, RouterLink, RouterModule, RouterLinkActive, RouterOutlet, CommonModule],
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit  {
   responsiveCardCols: number = 5;
-  groupedCourses: Course[][] = [];
+  // groupedCourses: Course[][] = [];
   experts: Expert[] = [];
 
   constructor(private instructorsService: InstructorsServiceService) {}
@@ -58,13 +57,13 @@ export class HomeComponent implements OnInit  {
   }
 
   // Group courses based on the responsiveCardCols value
-  getCourseGroups(courses: Course[], groupSize: number = this.responsiveCardCols): Course[][] {
-    const groups: Course[][] = [];
-    for (let i = 0; i < courses.length; i += groupSize) {
-      groups.push(courses.slice(i, i + groupSize));
-    }
-    return groups;
-  }
+  // getCourseGroups(courses: Course[], groupSize: number = this.responsiveCardCols): Course[][] {
+  //   const groups: Course[][] = [];
+  //   for (let i = 0; i < courses.length; i += groupSize) {
+  //     groups.push(courses.slice(i, i + groupSize));
+  //   }
+  //   return groups;
+  // }
   // getExpertGroups(array: Expert[], groupSize: number): Expert[][] {
   //   const groups: Expert[][] = [];
   //   for (let i = 0; i < array.length; i += groupSize) {

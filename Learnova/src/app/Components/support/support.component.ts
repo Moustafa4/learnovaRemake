@@ -6,7 +6,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
     selector: 'app-support',
-    imports: [NgClass, FormsModule],
+    imports: [ FormsModule],
     templateUrl: './support.component.html',
     styleUrl: './support.component.css'
 })

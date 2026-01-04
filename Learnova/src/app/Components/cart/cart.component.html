@@ -10,15 +10,15 @@
     <div class="container cart-container">
       <!-- Empty Cart Message -->
       @if (isCartEmpty) {
-        <div class="empty-cart-message alert alert-info">
-          <i class="fas fa-info-circle"></i> Your cart is currently empty.
-          <br />
-          <small>Start adding courses to invest in your future!</small>
-        </div>
+      <div class="empty-cart-message alert alert-info">
+        <i class="fas fa-info-circle"></i> Your cart is currently empty.
+        <br />
+        <small>Start adding courses to invest in your future!</small>
+      </div>
       }
 
       <!-- List of Cart Items -->
-      @for (item of cartCourses; track item) {
+      <!-- @for (item of cartCourses; track item) {
         <div class="cart-course row">
           <div class="col-md-3">
             <img [src]="item.image" alt="Course Image" class="img-fluid" />
@@ -31,45 +31,45 @@
             <p class="font-weight-bold">${{ item.price }}</p>
             <button class="btn btn-danger" (click)="removeCourse(item.id)">
               <i class="fas fa-trash"></i> Remove
-            </button>
-            <!-- <p>
+            </button> 
+             <p>
             <a href="#" class="remove-course" (click)="removeCourse(item.id)"
               ><i class="fas fa-trash"></i> Remove</a
               >
-            </p> -->
+            </p>
           </div>
         </div>
-      }
+      }  -->
 
       <!-- Cart Total -->
       @if (!isCartEmpty) {
-        <div class="cart-total">
-          <p>Total: ${{ totalPrice }}</p>
-        </div>
+      <div class="cart-total">
+        <p>Total: ${{ totalPrice }}</p>
+      </div>
       }
 
       <!-- Cart Buttons -->
       @if (!isCartEmpty) {
-        <div class="cart-btns">
-          <a href="#" class="btn btn-outline-secondary"
-            ><i class="fas fa-arrow-left"></i> Continue Shopping</a
-            >
-            <a href="/course-payment" class="btn btn-primary"
-              ><i class="fas fa-credit-card"></i> Checkout</a
-              >
-            </div>
-          }
-
-          <!-- Upgrade to Annual Subscription Section -->
-          @if (!isCartEmpty) {
-            <div class="offer-card card mt-4">
-              <h5><i class="fas fa-arrow-up"></i> Upgrade to Annual Subscription</h5>
-              <p>Get access to all courses for a whole year at a discounted price!</p>
-              <a href="/main-payment" class="btn btn-success"
-                ><i class="fas fa-arrow-up"></i> Upgrade Now</a
-                >
-              </div>
-            }
-          </div>
-        </div>
+      <div class="cart-btns">
+        <a href="#" class="btn btn-outline-secondary"
+          ><i class="fas fa-arrow-left"></i> Continue Shopping</a
+        >
+        <a href="/course-payment" class="btn btn-primary"
+          ><i class="fas fa-credit-card"></i> Checkout</a
+        >
       </div>
+      }
+
+      <!-- Upgrade to Annual Subscription Section -->
+      @if (!isCartEmpty) {
+      <div class="offer-card card mt-4">
+        <h5><i class="fas fa-arrow-up"></i> Upgrade to Annual Subscription</h5>
+        <p>Get access to all courses for a whole year at a discounted price!</p>
+        <a href="/main-payment" class="btn btn-success"
+          ><i class="fas fa-arrow-up"></i> Upgrade Now</a
+        >
+      </div>
+      }
+    </div>
+  </div>
+</div>

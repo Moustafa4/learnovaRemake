@@ -9,9 +9,8 @@ import { SupportComponent } from "./Components/support/support.component";
     selector: 'app-root',
     imports: [
         RouterOutlet,
-        RouterLink,
+        
         FooterComponent,
-        HomeComponent,
         RouterModule,
         Header2Component,
         SupportComponent

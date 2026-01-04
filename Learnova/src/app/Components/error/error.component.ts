@@ -3,7 +3,7 @@ import { InstructorsComponent } from '../instructors/instructors.component';
 
 @Component({
     selector: 'app-error',
-    imports: [InstructorsComponent],
+    imports: [],
     templateUrl: './error.component.html',
     styleUrl: './error.component.css'
 })

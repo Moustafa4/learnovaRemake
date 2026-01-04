@@ -9,7 +9,7 @@ import * as bootstrap from 'bootstrap';
 
 @Component({
     selector: 'app-course-payment',
-    imports: [RouterLink, RouterOutlet, FormsModule, NgClass],
+    imports: [ FormsModule],
     templateUrl: './course-payment.component.html',
     styleUrl: './course-payment.component.css'
 })

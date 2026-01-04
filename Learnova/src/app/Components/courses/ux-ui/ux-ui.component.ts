@@ -1,6 +1,5 @@
 
 import { Component, Input } from '@angular/core';
-import { Courses } from '../courses';
 import { CartService } from '../../../../services/cartser/cart.service';
 // import { Course } from '../course.model';
 
