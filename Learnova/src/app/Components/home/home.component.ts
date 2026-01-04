@@ -6,7 +6,6 @@ import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angul
 import { Expert, InstructorsComponent } from '../instructors/instructors.component';
 import { InstructorsServiceService } from '../Instructors-serv/instructors-service.service';
 import { Course } from '../courses/course.model';
-import { Courses } from '../courses/courses';
 
 @Component({
   selector: 'app-home',
@@ -31,14 +30,14 @@ export class HomeComponent implements OnInit  {
     // this.groupedCourses = this.getCourseGroups(Courses, 5);
     this.updateResponsiveCols(window.innerWidth);
     this.experts = this.instructorsService.getExperts();
-    this.groupedCourses = this.getCourseGroups(Courses, this.responsiveCardCols);
+    // this.groupedCourses = this.getCourseGroups(Courses, this.responsiveCardCols);
 
   }
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.updateResponsiveCols(event.target.innerWidth);
     // Update the groupedCourses based on the new responsiveCardCols
-    this.groupedCourses = this.getCourseGroups(Courses, this.responsiveCardCols);
+    // this.groupedCourses = this.getCourseGroups(Courses, this.responsiveCardCols);
   }
   updateResponsiveCols(screenWidth: number): void {
     if (screenWidth < 768) {

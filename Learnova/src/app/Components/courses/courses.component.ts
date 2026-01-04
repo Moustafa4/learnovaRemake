@@ -1,40 +1,31 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
-import { CourseService } from '../course-serv/course.service';
-import { Course } from '../courses/course.model'; // تأكد من المسار الصحيح
+import { Component, inject } from '@angular/core';
+import { CoursesService } from '../../../services/courses_ser/courses.service';
+import { ICourses } from './icourses';
+import { map } from 'rxjs';
+import { toSignal } from '@angular/core/rxjs-interop';
+
 @Component({
   selector: 'app-courses',
+  providers: [CoursesService],
   standalone: true,
   imports: [CommonModule],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css',
 })
 export class CoursesComponent {
-  randomCourses: Course[] = []; // مصفوفة لتخزين الكورسات العشوائية
-  cartService: any;
+  private Courses_Service = inject(CoursesService);
 
-  constructor(private courseService: CourseService) {}
+  private $courses = this.Courses_Service.Allcourses().pipe(
+    map((courses) => courses ?? ([] as ICourses[]))
+  );
 
-  ngOnInit(): void {
-    this.getAllCourses();
+  _courses = toSignal(this.$courses, { initialValue: [] as ICourses[] });
+  constructor() {
+    console.log(this._courses);
   }
 
-  getAllCourses(): void {
-    const allCourses = this.courseService.getCourses(); // تأكد من وجود هذه الدالة في Service
-    this.randomCourses = this.shuffleArray(allCourses); // خلط المصفوفة
-  }
-
-  // دالة لخلط المصفوفة
-  shuffleArray(array: Course[]): Course[] {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
-  @Input() courses: Course[] = [];
-
-  addToCart(Course: Course) {
-    this.cartService.addToCart(Course);
-  }
+  // addToCart(Course: Course) {
+  //   this.cartService.addToCart(Course);
+  // }
 }

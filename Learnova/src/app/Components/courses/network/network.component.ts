@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Courses } from '../courses';
 import { CartService } from '../../../../services/cartser/cart.service';
-import { Course } from '../course.model';
 
 @Component({
   selector: 'app-network',
@@ -16,9 +15,5 @@ export class NetworkComponent {
   constructor(private cartService: CartService) {}
   // cart ser
 
-  @Input() courses: Course[] = [];
 
-  addToCart(Course: Course) {
-    this.cartService.addToCart(Course);
-  }
 }

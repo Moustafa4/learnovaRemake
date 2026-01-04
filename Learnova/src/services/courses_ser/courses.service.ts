@@ -7,12 +7,19 @@ import { map } from 'rxjs';
   providedIn: 'root',
 })
 export class CoursesService {
-  constructor(private _HttpClient: HttpClient) {}
   courses_url = 'http://localhost:3000/Courses';
+  constructor(private _HttpClient: HttpClient) {}
 
   Allcourses() {
     return this._HttpClient
       .get<{ Courses: ICourses[] }>(this.courses_url)
       .pipe(map((res) => res.Courses ?? []));
+  }
+
+  CoursesByTitle(title:string) {
+    return this._HttpClient.get<{ Courses: ICourses[] }>(this.courses_url).pipe(
+      map((res) => res.Courses ?? []),
+      map((courses) => courses.find((p) => p.title === title || null))
+    );
   }
 }

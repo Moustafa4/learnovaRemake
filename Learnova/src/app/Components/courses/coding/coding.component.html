@@ -4,30 +4,7 @@
       <p>Programming Courses</p>
     </div>
     <div class="row">
-      <div
-        *ngFor="let course of codingCourses"
-        class="card"
-        style="width: 18rem"
-        mb-2
-      >
-        <img
-          [src]="course.image"
-          alt="{{ course.title }}"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ course.title }}</h5>
-          <p class="card-text">The trainer: {{ course.instructor }}</p>
-          <p>price: {{ course.price }} EGP</p>
-          <div>
-            <button class="btn" (click)="addToCart(course)">
-              add to cart
-            </button>
-            <a routerLink="/course-payment" class="btn ">buy now</a>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </div>
