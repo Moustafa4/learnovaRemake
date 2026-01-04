@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { CoursesService } from '../../../services/courses_ser/courses.service';
 import { ICourses } from './icourses';
@@ -6,11 +5,11 @@ import { map } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
-    selector: 'app-courses',
-    providers: [CoursesService],
-    imports: [CommonModule],
-    templateUrl: './courses.component.html',
-    styleUrl: './courses.component.css'
+  selector: 'app-courses',
+  providers: [CoursesService],
+  imports: [],
+  templateUrl: './courses.component.html',
+  styleUrl: './courses.component.css',
 })
 export class CoursesComponent {
   private Courses_Service = inject(CoursesService);

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { InstructorsServiceService } from '../Instructors-serv/instructors-service.service';
@@ -6,7 +6,7 @@ import { OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-instructors',
-    imports: [FormsModule, CommonModule],
+    imports: [FormsModule],
     templateUrl: './instructors.component.html',
     styleUrl: './instructors.component.css'
 })

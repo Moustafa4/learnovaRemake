@@ -9,58 +9,67 @@
 
     <div class="container cart-container">
       <!-- Empty Cart Message -->
-      <div *ngIf="isCartEmpty" class="empty-cart-message alert alert-info">
-        <i class="fas fa-info-circle"></i> Your cart is currently empty.
-        <br />
-        <small>Start adding courses to invest in your future!</small>
-      </div>
+      @if (isCartEmpty) {
+        <div class="empty-cart-message alert alert-info">
+          <i class="fas fa-info-circle"></i> Your cart is currently empty.
+          <br />
+          <small>Start adding courses to invest in your future!</small>
+        </div>
+      }
 
       <!-- List of Cart Items -->
-      <div *ngFor="let item of cartCourses" class="cart-course row">
-        <div class="col-md-3">
-          <img [src]="item.image" alt="Course Image" class="img-fluid" />
-        </div>
-        <div class="col-md-9 course-details">
-          <h5>
-            <a href="#" class="course-title">{{ item.title }}</a>
-          </h5>
-          <p>Instructor: {{ item.instructor || "Unknown" }}</p>
-          <p class="font-weight-bold">${{ item.price }}</p>
-          <button class="btn btn-danger" (click)="removeCourse(item.id)">
-            <i class="fas fa-trash"></i> Remove
-          </button>
-
-          <!-- <p>
+      @for (item of cartCourses; track item) {
+        <div class="cart-course row">
+          <div class="col-md-3">
+            <img [src]="item.image" alt="Course Image" class="img-fluid" />
+          </div>
+          <div class="col-md-9 course-details">
+            <h5>
+              <a href="#" class="course-title">{{ item.title }}</a>
+            </h5>
+            <p>Instructor: {{ item.instructor || "Unknown" }}</p>
+            <p class="font-weight-bold">${{ item.price }}</p>
+            <button class="btn btn-danger" (click)="removeCourse(item.id)">
+              <i class="fas fa-trash"></i> Remove
+            </button>
+            <!-- <p>
             <a href="#" class="remove-course" (click)="removeCourse(item.id)"
               ><i class="fas fa-trash"></i> Remove</a
-            >
-          </p> -->
+              >
+            </p> -->
+          </div>
         </div>
-      </div>
+      }
 
       <!-- Cart Total -->
-      <div *ngIf="!isCartEmpty" class="cart-total">
-        <p>Total: ${{ totalPrice }}</p>
-      </div>
+      @if (!isCartEmpty) {
+        <div class="cart-total">
+          <p>Total: ${{ totalPrice }}</p>
+        </div>
+      }
 
       <!-- Cart Buttons -->
-      <div *ngIf="!isCartEmpty" class="cart-btns">
-        <a href="#" class="btn btn-outline-secondary"
-          ><i class="fas fa-arrow-left"></i> Continue Shopping</a
-        >
-        <a href="/course-payment" class="btn btn-primary"
-          ><i class="fas fa-credit-card"></i> Checkout</a
-        >
-      </div>
+      @if (!isCartEmpty) {
+        <div class="cart-btns">
+          <a href="#" class="btn btn-outline-secondary"
+            ><i class="fas fa-arrow-left"></i> Continue Shopping</a
+            >
+            <a href="/course-payment" class="btn btn-primary"
+              ><i class="fas fa-credit-card"></i> Checkout</a
+              >
+            </div>
+          }
 
-      <!-- Upgrade to Annual Subscription Section -->
-      <div *ngIf="!isCartEmpty" class="offer-card card mt-4">
-        <h5><i class="fas fa-arrow-up"></i> Upgrade to Annual Subscription</h5>
-        <p>Get access to all courses for a whole year at a discounted price!</p>
-        <a href="/main-payment" class="btn btn-success"
-          ><i class="fas fa-arrow-up"></i> Upgrade Now</a
-        >
+          <!-- Upgrade to Annual Subscription Section -->
+          @if (!isCartEmpty) {
+            <div class="offer-card card mt-4">
+              <h5><i class="fas fa-arrow-up"></i> Upgrade to Annual Subscription</h5>
+              <p>Get access to all courses for a whole year at a discounted price!</p>
+              <a href="/main-payment" class="btn btn-success"
+                ><i class="fas fa-arrow-up"></i> Upgrade Now</a
+                >
+              </div>
+            }
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>

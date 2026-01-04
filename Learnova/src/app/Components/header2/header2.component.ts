@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-header2',
-    imports: [RouterModule, CommonModule],
+    imports: [RouterModule],
     templateUrl: './header2.component.html',
     styleUrl: './header2.component.css'
 })

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../../services/cartser/cart.service';
 import { Course } from '../courses/course.model';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-cart',
     templateUrl: './cart.component.html',
-    imports: [CommonModule],
+    imports: [],
     styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {

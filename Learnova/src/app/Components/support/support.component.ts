@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { CommonModule } from '@angular/common';
+
 import * as bootstrap from 'bootstrap';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
     selector: 'app-support',
-    imports: [CommonModule, NgClass, FormsModule],
+    imports: [NgClass, FormsModule],
     templateUrl: './support.component.html',
     styleUrl: './support.component.css'
 })

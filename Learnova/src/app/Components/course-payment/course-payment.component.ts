@@ -1,15 +1,15 @@
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { NgClass, CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import * as bootstrap from 'bootstrap';
-import { NgIf } from '@angular/common';
+
 
 
 
 @Component({
     selector: 'app-course-payment',
-    imports: [RouterLink, RouterOutlet, FormsModule, NgClass, NgIf],
+    imports: [RouterLink, RouterOutlet, FormsModule, NgClass],
     templateUrl: './course-payment.component.html',
     styleUrl: './course-payment.component.css'
 })
