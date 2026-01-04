@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Courses } from '../courses';
-import { CartService } from '../../../cartser/cart.service';
+import { CartService } from '../../../../services/cartser/cart.service';
 import { Course } from '../course.model';
 
 @Component({
@@ -9,10 +9,10 @@ import { Course } from '../course.model';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './network.component.html',
-  styleUrl: './network.component.css'
+  styleUrl: './network.component.css',
 })
 export class NetworkComponent {
-  networkCourses = Courses.filter(course => course.typ.startsWith('network'));
+  networkCourses = Courses.filter((course) => course.typ.startsWith('network'));
   constructor(private cartService: CartService) {}
   // cart ser
 

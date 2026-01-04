@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { CartService } from '../../../cartser/cart.service';
+import { CartService } from '../../../../services/cartser/cart.service';
 import { Course } from '../course.model';
 import { Courses } from '../courses';
 

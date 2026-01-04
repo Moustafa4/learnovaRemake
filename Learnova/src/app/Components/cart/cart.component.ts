@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../../cartser/cart.service';
+import { CartService } from '../../../services/cartser/cart.service';
 import { Course } from '../courses/course.model';
 import { CommonModule } from '@angular/common';
 
@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
   cartCourses: Course[] = [];
   isCartEmpty: boolean = true;
   totalPrice: number = 0;
-course: any;
+  course: any;
 
   constructor(private cartService: CartService) {}
 
