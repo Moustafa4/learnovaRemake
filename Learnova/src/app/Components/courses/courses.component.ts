@@ -22,9 +22,7 @@ export class CoursesComponent {
   );
 
   _courses = toSignal(this.$courses, { initialValue: [] as ICourses[] });
-  constructor() {
-    console.log(this._courses());
-  }
+ 
 
   // addToCart(Course: Course) {
   //   this.cartService.addToCart(Course);
