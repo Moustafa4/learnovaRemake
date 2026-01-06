@@ -14,7 +14,7 @@ export class Instructorservisces {
 
   instuctor_data() {
     return this._HttpClient
-      .get<{ instructor: Iinstructor[] }>(this.inst_data)
-      .pipe(map((res) => res.instructor ?? ([] as Iinstructor[])));
+      .get<{ Inst: Iinstructor[] }>(this.inst_data)
+      .pipe(map((res) => res.Inst ?? ([] as Iinstructor[])));
   }
 }

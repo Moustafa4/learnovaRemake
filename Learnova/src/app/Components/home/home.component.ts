@@ -73,7 +73,7 @@ export class HomeComponent {
         this.groupedPopularCourses.push(courses.slice(i, i + this.gropsize));
       }
 
-      for (let i = 0; i <= ins.length; i+=this.gropsize){
+      for (let i = 0; i < ins.length; i+=this.gropsize){
         this.groupedinst.push(ins.slice(i,i+this.gropsize))
       }
     });

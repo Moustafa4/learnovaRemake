@@ -126,34 +126,33 @@
           data-bs-ride="carousel"
         >
           <div class="carousel-inner">
-              @for (
-                group of groupedinst; track
-                group; let i = $index) {
+            <div
+              class="carousel-item"
+              *ngFor="let group of groupedinst; let i = index"
+              [class.active]="i === 0"
+            >
+              <div class="row justify-content-center">
                 <div
-                  [ngClass]="{ 'carousel-item': true, active: i === 0 }"
-                  >
-                  <div class="row justify-content-center">
-                    @for (expert of group; track expert) {
-                      <div
-                        class="col-md-2 col-sm-4 col-6 mb-4"
-                        >
-                        <div class="card expert-card">
-                          <img
-                            [src]="expert.image"
-                            class="card-img-top rounded-circle"
-                            [alt]="expert.name"
-                            />
-                            <div class="card-body">
-                              <h5 class="card-title expert-title">{{ expert.name }}</h5>
-                              <p class="card-text">{{ expert.role }}</p>
-                            </div>
-                          </div>
-                        </div>
-                      }
+                  class="col-md-3 col-sm-12 gx-5"
+                  *ngFor="let ins of group"
+                >
+                  <div class="card courses-card">
+                    <img
+                      [src]="ins.image"
+                      class="card-img-top"
+                      [alt]="ins.name"
+                    />
+                    <div class="card-body courses-card-slider">
+                      <h5 class="card-title course-title">
+                        {{ ins.name }}
+                      </h5>
+                      <p class="card-text">{{ ins.role }}</p>
                     </div>
                   </div>
-                }
+                </div>
               </div>
+            </div>
+          </div>
 
           <!-- Carousel controls -->
           <button
