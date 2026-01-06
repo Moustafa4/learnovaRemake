@@ -34,7 +34,7 @@
             >
               <div class="row justify-content-center">
                 <div
-                  class="col-md-6 col-sm-12 gx-5"
+                  class="col-md-3 col-sm-12 gx-5"
                   *ngFor="let popular of group"
                 >
                   <div class="card courses-card">
@@ -125,9 +125,9 @@
           class="carousel slide"
           data-bs-ride="carousel"
         >
-          <!-- <div class="carousel-inner">
+          <div class="carousel-inner">
               @for (
-                group of getExpertGroups(experts, responsiveCardCols); track
+                group of groupedinst; track
                 group; let i = $index) {
                 <div
                   [ngClass]="{ 'carousel-item': true, active: i === 0 }"
@@ -136,7 +136,6 @@
                     @for (expert of group; track expert) {
                       <div
                         class="col-md-2 col-sm-4 col-6 mb-4"
-                        class="col-md-{{ responsiveCardCols }}"
                         >
                         <div class="card expert-card">
                           <img
@@ -154,7 +153,7 @@
                     </div>
                   </div>
                 }
-              </div> -->
+              </div>
 
           <!-- Carousel controls -->
           <button
