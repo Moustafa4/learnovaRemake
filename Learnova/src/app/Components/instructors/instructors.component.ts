@@ -30,7 +30,7 @@ export class InstructorsComponent {
   //       const userData = JSON.parse(localStorage.getItem(key)!);
   //       // التحقق إذا كان المستخدم هو مدرس
   //       if (userData.role === 'teacher') {
-  //         this.experts.push({
+  //         this..push({
   //           name: `${userData.firstName} ${userData.lastName}`,
   //           role: userData.specialization || 'Teacher', // استخدام التخصص إذا كان متاحًا
   //           image: userData.profilePicture || 'default-image-path.jpg', // إذا لم يتم رفع صورة، استخدم صورة افتراضية
