@@ -5,21 +5,31 @@
 .navbar {
   background-color: rgb(24, 23, 23);
 }
-
+.navbar-nav {
+  margin-top: 6px;
+}
+.navbar li {
+  margin: 5px;
+  transition: border 0.4s ease-in-out;
+}
 .navbar li a {
   color: #ffff;
 }
+.navbar li:hover a {
+  color: #6f1913;
+}
+
 .search-input {
   position: relative;
   background-color: rgb(23, 23, 23);
   height: 15px;
 }
 .dropdown-menu li a {
-  color: rgb(236, 236, 236);
+  color: rgb(236, 236, 236) !important;
 }
 .dropdown-menu li a:hover {
-  background-color: rgb(23, 23, 23);
-  border-bottom: 1px solid rgba(255, 81, 0, 0.978);
+  color: #6f1913 !important;
+  background-color: transparent;
 }
 .input-group-text {
   background-color: none;
@@ -37,8 +47,8 @@ a {
   color: rgb(206, 206, 206);
 }
 .active {
-  border-bottom: 1px solid rgb(255, 111, 0);
-  /* border-radius: 10px; */
+  border: 1px solid #6f0a02;
+  border-radius: 10px;
   /* background-color: rgba(255, 111, 0, 0.042); */
 }
 .login-signup-btn {
@@ -48,7 +58,7 @@ a {
 .seperator {
   margin-left: -10px;
   margin-right: 10px;
-  margin-top: 6px;
+  margin-top: 12px;
   color: rgb(61, 61, 61);
 }
 .dropdown-menu {
@@ -73,20 +83,22 @@ a {
   color: #ffff;
   position: relative;
   border-radius: 5px !important;
-  margin-right: -100px;
-  margin-left: 100px;
+  margin-right: -70px;
+  margin-left: 50px;
+  margin-top: 6px;
 }
 .searchbar:focus {
   outline: none;
-  border: 1px solid rgb(255, 111, 0);
+  border: 1px solid #6f0a02;
   box-shadow: 0px 1px 10px rgba(255, 111, 0, 0.229);
 }
 .search-btn {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  color: rgb(255, 111, 0);
-  right: -100px;
-  top: -1px;
+  color: #6f0a02;
+  right: -70px;
+  top: 5px;
+
   position: absolute;
 }
 .search-btn-sm {
@@ -95,8 +107,9 @@ a {
 .bell-btn-sm {
   display: none;
 }
-.cart-btn {
-  margin-top: -5px;
+.cart-btn a {
+  margin-top: -4px;
+  /* padding-right: NONE !important; */
 }
 .bi-bag {
   margin-right: 20px;
@@ -107,7 +120,7 @@ a {
   top: 3px;
   right: 14px;
   background-color: rgba(27, 27, 27, 0);
-  color: rgb(255, 111, 0);
+  color: #6f0a02;
   border-radius: 50%;
   padding: 2px 6px;
   font-size: 0.75rem; /* Controls counter font size */
@@ -117,6 +130,7 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 @media (max-width: 932px) {
   .navbar-brand {
     margin-top: -18px;
@@ -127,7 +141,7 @@ a {
   }
   .navbar-toggler:focus {
     outline: none;
-    border: 1px solid rgb(255, 111, 0);
+    border: 1px solid #6f0a02;
     box-shadow: none;
   }
   .navbar-collapse {
@@ -149,7 +163,7 @@ a {
     display: flex;
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    color: rgb(255, 111, 0);
+    color: #6f0a02;
     top: 25px;
     right: 90px;
     position: absolute;
@@ -157,6 +171,7 @@ a {
   .nav {
     position: relative;
   }
+
   .search-btn {
     display: none;
   }
@@ -170,7 +185,7 @@ a {
   .bell-btn-sm {
     display: flex;
     color: #ffff;
-    color: rgb(255, 111, 0);
+    color: #6f0a02;
     top: 25px;
     right: 90px;
     position: absolute;
@@ -192,14 +207,14 @@ a {
   }
   .navbar-toggler:focus {
     outline: none;
-    border: 1px solid rgb(255, 111, 0);
+    border: 1px solid #6f0a02;
     box-shadow: none;
   }
   .navbar-collapse {
     margin-top: -10px;
   }
   .active {
-    border-bottom: 1px solid rgb(255, 111, 0);
+    border-bottom: 1px solid #6f0a02;
     border-radius: none;
   }
 
@@ -210,7 +225,7 @@ a {
     display: flex;
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    color: rgb(255, 111, 0);
+    color: #6f0a02;
     top: 25px;
     right: 90px;
     position: absolute;
