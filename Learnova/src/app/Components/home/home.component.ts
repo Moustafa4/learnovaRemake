@@ -1,82 +1,81 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { OnInit } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
-import { Expert, InstructorsComponent } from '../instructors/instructors.component';
-import { InstructorsServiceService } from '../Instructors-serv/instructors-service.service';
+import {
+  RouterLink,
+  RouterLinkActive,
+  RouterModule,
+  RouterOutlet,
+} from '@angular/router';
+import { CoursesService } from '../../../services/courses_ser/courses.service';
+import { map } from 'rxjs';
+import { ICourses } from '../courses/icourses';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { Instructorservisces } from '../../../services/instructor_servisces/instructorservisces';
+import { Iinstructor } from '../instructors/iinstructor';
 
 @Component({
-    selector: 'app-home',
-    imports: [FormsModule, RouterLink, RouterModule, RouterLinkActive, RouterOutlet, CommonModule],
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.css'
+  selector: 'app-home',
+  imports: [
+    FormsModule,
+    RouterLink,
+    RouterModule,
+    RouterLinkActive,
+    RouterOutlet,
+    CommonModule,
+  ],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit  {
-  responsiveCardCols: number = 5;
-  // groupedCourses: Course[][] = [];
-  experts: Expert[] = [];
+export class HomeComponent {
+  // courses
+  private courses_services = inject(CoursesService);
 
-  constructor(private instructorsService: InstructorsServiceService) {}
+  private $popular = this.courses_services.Allcourses().pipe(
+    map((courses) => courses ?? ([] as ICourses[])),
+    map((courses) =>
+      courses.filter((courses) => courses.id === 1 || courses.id === 2)
+    )
+  );
+  _popular = toSignal(this.$popular, { initialValue: [] as ICourses[] });
+  // ins
+  private instructor_services = inject(Instructorservisces);
 
-  ngOnInit(): void {
+  private $ins_data = this.instructor_services
+    .instuctor_data()
+    .pipe(map((instructor) => instructor ?? ([] as Iinstructor[])));
 
-    // if (window.innerWidth < 768) {
-    //   this.responsiveCardCols = 2;
-    // }
-    // this.experts = this.instructorsService.getExperts();
-    // this.groupedCourses = this.getCourseGroups(Courses, 5);
-    this.updateResponsiveCols(window.innerWidth);
-    this.experts = this.instructorsService.getExperts();
-    // this.groupedCourses = this.getCourseGroups(Courses, this.responsiveCardCols);
+  _ins_data = toSignal(this.$ins_data, { initialValue: [] as Iinstructor[] });
 
+  gropsize = 3;
+  groupedPopularCourses: ICourses[][] = [];
+
+  groupedinst:Iinstructor[][]=[];
+  constructor() {
+    effect(() => {
+      console.log(this._ins_data());
+      
+      const courses = this._popular();
+      const ins=this._ins_data()
+      const width = window.innerWidth;
+
+      if (width <= 767) {
+        this.gropsize = 1;
+      } else if (width >= 768 && width <= 991) {
+        this.gropsize = 2;
+      } else {
+        this.gropsize = 3;
+      }
+
+      this.groupedPopularCourses = [];
+
+      for (let i = 0; i < courses.length; i += this.gropsize) {
+        this.groupedPopularCourses.push(courses.slice(i, i + this.gropsize));
+      }
+
+      for (let i = 0; i < ins.length; i+=this.gropsize){
+        this.groupedinst.push(ins.slice(i,i+this.gropsize))
+      }
+    });
   }
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.updateResponsiveCols(event.target.innerWidth);
-    // Update the groupedCourses based on the new responsiveCardCols
-    // this.groupedCourses = this.getCourseGroups(Courses, this.responsiveCardCols);
-  }
-  updateResponsiveCols(screenWidth: number): void {
-    if (screenWidth < 768) {
-      this.responsiveCardCols = 2; // Small screens
-    } else if (screenWidth >= 768 && screenWidth < 992) {
-      this.responsiveCardCols = 3; // Medium screens
-    } else {
-      this.responsiveCardCols = 5; // Large screens
-    }
-  }
-
-  // Group experts based on the responsiveCardCols value
-  getExpertGroups(array: Expert[], groupSize: number = this.responsiveCardCols): Expert[][] {
-    const groups: Expert[][] = [];
-    for (let i = 0; i < array.length; i += groupSize) {
-      groups.push(array.slice(i, i + groupSize));
-    }
-    return groups;
-  }
-
-  // Group courses based on the responsiveCardCols value
-  // getCourseGroups(courses: Course[], groupSize: number = this.responsiveCardCols): Course[][] {
-  //   const groups: Course[][] = [];
-  //   for (let i = 0; i < courses.length; i += groupSize) {
-  //     groups.push(courses.slice(i, i + groupSize));
-  //   }
-  //   return groups;
-  // }
-  // getExpertGroups(array: Expert[], groupSize: number): Expert[][] {
-  //   const groups: Expert[][] = [];
-  //   for (let i = 0; i < array.length; i += groupSize) {
-  //     groups.push(array.slice(i, i + groupSize));
-  //   }
-  //   return groups;
-  // }
-
-  // getCourseGroups(courses: Course[], groupSize: number): Course[][] {
-  //   const groups = [];
-  //   for (let i = 0; i < courses.length; i += groupSize) {
-  //     groups.push(courses.slice(i, i + groupSize));
-  //   }
-  //   return groups;
-  // }
 }

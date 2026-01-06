@@ -4,7 +4,19 @@
       <p>Programming Courses</p>
     </div>
     <div class="row">
-
+      @for (coding of _coding(); track $index) {
+      <div class="col-3">
+        <div class="card" style="width: 18rem">
+          <img src="{{coding.image}}" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">{{ coding.title }}</h5>
+            <p>The trainer: {{ coding.instructor }}</p>
+            <p>Price: EGP {{ coding.price }}</p>
+            <a class="btn btn-danger">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      }
     </div>
   </div>
 </div>

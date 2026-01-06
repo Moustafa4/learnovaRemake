@@ -5,16 +5,16 @@
   <ng-content></ng-content>
 
   <div class="row justify-content-center">
-    @for (expert of experts; track expert) {
+    @for (ins of _instructor(); track ins) {
       <div class="col-md-2 col-sm-4 col-6 mb-4">
         <div class="expert-card">
           <img
-            [src]="expert.image"
-            alt="{{ expert.name }}"
+            [src]="ins.image"
+            alt="{{ ins.name'}}"
             class="rounded-circle img-fluid mb-2"
             />
-            <h5 class="text-white">{{ expert.name }}</h5>
-            <p class="text-muted">{{ expert.role }}</p>
+            <h5 class="text-white">{{ ins.name }}</h5>
+            <p class="text-muted">{{ ins.role }}</p>
           </div>
         </div>
       }

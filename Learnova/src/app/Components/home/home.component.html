@@ -30,29 +30,32 @@
           data-bs-ride="carousel"
         >
           <div class="carousel-inner">
-            <!-- @for (group of ; track group; let i = $index) {
-              <div
-                [ngClass]="{ 'carousel-item': true, active: i === 0 }"
+            <div
+              class="carousel-item"
+              *ngFor="let group of groupedPopularCourses; let i = index"
+              [class.active]="i === 0"
+            >
+              <div class="row justify-content-center">
+                <div
+                  class="col-md-3 col-sm-12 gx-5"
+                  *ngFor="let popular of group"
                 >
-                <div class="row justify-content-center">
-                  @for (course of group; track course) {
-                    <div class="col-md-2 col-sm-6">
-                      <div class="card courses-card">
-                        <img
-                          [src]="course.image"
-                          class="card-img-top"
-                          [alt]="course.title"
-                          />
-                          <div class="card-body courses-card-slider">
-                            <h5 class="card-title course-title">{{ course.title }}</h5>
-                            <p class="card-text">{{ course.instructor }}</p>
-                          </div>
-                        </div>
-                      </div>
-                    }
+                  <div class="card courses-card">
+                    <img
+                      [src]="popular.image"
+                      class="card-img-top"
+                      [alt]="popular.title"
+                    />
+                    <div class="card-body courses-card-slider">
+                      <h5 class="card-title course-title">
+                        {{ popular.title }}
+                      </h5>
+                      <p class="card-text">{{ popular.instructor }}</p>
+                    </div>
                   </div>
                 </div>
-              } -->
+              </div>
+            </div>
           </div>
 
           <button
@@ -126,31 +129,29 @@
           data-bs-ride="carousel"
         >
           <div class="carousel-inner">
-            @for ( group of getExpertGroups(experts, responsiveCardCols); track
-            group; let i = $index) {
-            <div [ngClass]="{ 'carousel-item': true, active: i === 0 }">
+            <div
+              class="carousel-item"
+              *ngFor="let group of groupedinst; let i = index"
+              [class.active]="i === 0"
+            >
               <div class="row justify-content-center">
-                @for (expert of group; track expert) {
-                <div
-                  class="col-md-2 col-sm-4 col-6 mb-4"
-                  class="col-md-{{ responsiveCardCols }}"
-                >
-                  <div class="card expert-card">
+                <div class="col-md-3 col-sm-12 gx-5" *ngFor="let ins of group">
+                  <div class="card courses-card">
                     <img
-                      [src]="expert.image"
-                      class="card-img-top rounded-circle"
-                      [alt]="expert.name"
+                      [src]="ins.image"
+                      class="card-img-top"
+                      [alt]="ins.name"
                     />
-                    <div class="card-body">
-                      <h5 class="card-title expert-title">{{ expert.name }}</h5>
-                      <p class="card-text">{{ expert.role }}</p>
+                    <div class="card-body courses-card-slider">
+                      <h5 class="card-title course-title">
+                        {{ ins.name }}
+                      </h5>
+                      <p class="card-text">{{ ins.role }}</p>
                     </div>
                   </div>
                 </div>
-                }
               </div>
             </div>
-            }
           </div>
 
           <!-- Carousel controls -->
