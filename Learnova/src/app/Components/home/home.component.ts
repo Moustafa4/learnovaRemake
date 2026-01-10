@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, effect, inject, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  effect,
+  HostListener,
+  inject,
+  signal,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
   RouterLink,
@@ -31,13 +38,39 @@ export class HomeComponent {
   // courses
   private courses_services = inject(CoursesService);
 
-  private $popular = this.courses_services.Allcourses().pipe(
-    map((courses) => courses ?? ([] as ICourses[])),
-    map((courses) =>
-      courses.filter((courses) => courses.id === 1 || courses.id === 2)
-    )
-  );
-  _popular = toSignal(this.$popular, { initialValue: [] as ICourses[] });
+  // allcorses
+  private $courses = this.courses_services
+    .Allcourses()
+    .pipe(map((courses) => courses ?? ([] as ICourses[])));
+  _courses = toSignal(this.$courses, { initialValue: [] as ICourses[] });
+
+  _popular = signal<ICourses[]>([]);
+
+  codecorses = computed(() => {
+    const codecorses = this._courses();
+    return Array.isArray(codecorses)
+      ? codecorses
+          .filter((p) => p.typ.toLowerCase() === 'coding')
+          .slice(0, this.itemstoshow())
+      : [];
+  });
+  networkcorses = computed(() => {
+    const networkcorses = this._courses();
+    return Array.isArray(networkcorses)
+      ? networkcorses
+          .filter((p) => p.typ.toLowerCase() === 'network')
+          .slice(0, this.itemstoshow())
+      : [];
+  });
+  designcourses = computed(() => {
+    const designcourses = this._courses();
+    return Array.isArray(designcourses)
+      ? designcourses
+          .filter((p) => p.typ.toLocaleLowerCase() === 'ux_ui')
+          .slice(0, this.itemstoshow())
+      : [];
+  });
+
   // ins
   private instructor_services = inject(Instructorservisces);
 
@@ -47,35 +80,58 @@ export class HomeComponent {
 
   _ins_data = toSignal(this.$ins_data, { initialValue: [] as Iinstructor[] });
 
+  //
+  itemstoshow = signal(5);
+
+  Coding = computed(() => {
+    // const Coding=this.;
+  });
+
+  // عدد الصور في كل سلايدر (كورسات /انسراكتور)
   gropsize = 3;
   groupedPopularCourses: ICourses[][] = [];
 
-  groupedinst:Iinstructor[][]=[];
+  groupedinst: Iinstructor[][] = [];
+  @HostListener('window:resize') onResize() {
+    this.updateGroups();
+  }
+  updateGroups() {
+    const courses = this._popular();
+    const ins = this._ins_data();
+    const width = window.innerWidth;
+
+    if (width <= 767) {
+      this.gropsize = 1;
+    } else if (width > 767 && width <= 991) {
+      this.gropsize = 2;
+    } else {
+      this.gropsize = 3;
+    }
+
+    this.groupedPopularCourses = [];
+    this.groupedinst = [];
+
+    for (let i = 0; i < courses.length; i += this.gropsize) {
+      this.groupedPopularCourses.push(courses.slice(i, i + this.gropsize));
+    }
+
+    for (let i = 0; i < ins.length; i += this.gropsize) {
+      this.groupedinst.push(ins.slice(i, i + this.gropsize));
+    }
+  }
+
   constructor() {
     effect(() => {
+      this._popular.set(
+        this._courses().filter((course) => course.id === 1 || course.id === 2)
+      );
+
       console.log(this._ins_data());
-      
+      console.log(this.codecorses());
       const courses = this._popular();
-      const ins=this._ins_data()
+      const ins = this._ins_data();
       const width = window.innerWidth;
-
-      if (width <= 767) {
-        this.gropsize = 1;
-      } else if (width >= 768 && width <= 991) {
-        this.gropsize = 2;
-      } else {
-        this.gropsize = 3;
-      }
-
-      this.groupedPopularCourses = [];
-
-      for (let i = 0; i < courses.length; i += this.gropsize) {
-        this.groupedPopularCourses.push(courses.slice(i, i + this.gropsize));
-      }
-
-      for (let i = 0; i < ins.length; i+=this.gropsize){
-        this.groupedinst.push(ins.slice(i,i+this.gropsize))
-      }
+      this.updateGroups();
     });
   }
 }
