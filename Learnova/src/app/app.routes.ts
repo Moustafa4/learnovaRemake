@@ -19,19 +19,12 @@ import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { CoursePaymentComponent } from './Components/course-payment/course-payment.component';
 import { PrivacyComponent } from './Components/privacy/privacy.component';
 import { StudentDashboardComponent } from './Components/student-dashboard/student-dashboard.component';
+import { CoursesDetails } from './Components/courses-details/courses-details';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  {
-    path: 'home',
-    component: HomeComponent,
-    children: [
-      { path: '',  component: CodingComponent },
-      { path: 'Coding', component: CodingComponent },
-      { path: 'UxUi', component: UxUiComponent },
-      { path: 'Network', component: NetworkComponent },
-    ],
-  },
+  { path: 'home', component: HomeComponent },
+  {path:'Details/:title',component:CoursesDetails},
   { path: 'about-us', component: AboutUsComponent },
   { path: 'Coding', component: CodingComponent },
   { path: 'courses', component: CoursesComponent },
@@ -48,8 +41,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'main-payment', component: MainPaymentComponent },
   { path: 'InstDAshBoard', component: InstDAshBoardComponent },
-  {path:'StudentDashboard',component:StudentDashboardComponent},
+  { path: 'StudentDashboard', component: StudentDashboardComponent },
   { path: 'Privacy', component: PrivacyComponent },
   { path: '**', component: ErrorComponent },
 ];
-

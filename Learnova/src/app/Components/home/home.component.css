@@ -153,6 +153,20 @@
 .routing-container {
   margin-bottom: -100px;
 }
+.tabs-con .card {
+  height: 379px;
+  text-align: center;
+}
+.tabs-con .card .card-body {
+  justify-content: space-between;
+  display: flex;
+  flex-flow: column;
+}
+#myTabContent .btn {
+  background-color: rgba(0, 0, 0, 0);
+  width: 60%;
+  border: 1px solid white;
+}
 .expert-card {
   background-color: black;
 }
@@ -167,7 +181,8 @@
   margin-bottom: 80px;
   margin-top: 20px;
 }
-.btn-subscribe:hover {
+.btn-subscribe:hover,
+#myTabContent .btn:hover {
   background-color: #6f0a02;
   color: white;
 }
@@ -212,7 +227,7 @@
 }
 /* MOBILE */
 @media (max-width: 767px) {
- #myTab{
+  #myTab {
     width: 90%;
   }
 }
