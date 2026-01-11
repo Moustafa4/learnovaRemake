@@ -26,7 +26,7 @@ export const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'Coding', pathMatch: 'full' }, // Redirect to Coding by default under 'home'
+      { path: '',  component: CodingComponent },
       { path: 'Coding', component: CodingComponent },
       { path: 'UxUi', component: UxUiComponent },
       { path: 'Network', component: NetworkComponent },
