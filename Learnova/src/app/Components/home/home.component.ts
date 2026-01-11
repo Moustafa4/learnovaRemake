@@ -8,12 +8,7 @@ import {
   signal,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {
-  RouterLink,
-  RouterLinkActive,
-  RouterModule,
-  RouterOutlet,
-} from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { CoursesService } from '../../../services/courses_ser/courses.service';
 import { map } from 'rxjs';
 import { ICourses } from '../courses/icourses';
@@ -23,14 +18,7 @@ import { Iinstructor } from '../instructors/iinstructor';
 
 @Component({
   selector: 'app-home',
-  imports: [
-    FormsModule,
-    RouterLink,
-    RouterModule,
-    RouterLinkActive,
-    RouterOutlet,
-    CommonModule,
-  ],
+  imports: [FormsModule, RouterLink, RouterModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -81,7 +69,7 @@ export class HomeComponent {
   _ins_data = toSignal(this.$ins_data, { initialValue: [] as Iinstructor[] });
 
   //
-  itemstoshow = signal(5);
+  itemstoshow = signal(6);
 
   Coding = computed(() => {
     // const Coding=this.;
