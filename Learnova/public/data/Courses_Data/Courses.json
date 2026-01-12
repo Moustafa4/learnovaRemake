@@ -2,8 +2,8 @@
   "Courses": [
     {
       "typ": "coding",
-      "title": "HTML for Beginners",
-      "description": "Master HTML in 30 days: build 5 real-world web page projects from scratch using modern HTML5 standards, semantic tags, forms, media elements, and best practices.",
+      "title": "HTML",
+      "description": "Learn HTML from scratch: build real web pages, understand semantic tags, forms, images, layout techniques and modern HTML5 features.",
       "video": "https://www.youtube.com/watch?v=qz0aGYrrlhU",
       "image": "https://img.youtube.com/vi/qz0aGYrrlhU/maxresdefault.jpg",
       "instructor": "Osama Elzero",
@@ -12,18 +12,18 @@
     },
     {
       "typ": "coding",
-      "title": "CSS Advanced Techniques",
-      "description": "Master CSS in 30 days: create responsive, dynamic layouts and advanced designs using Flexbox, Grid, animations, transitions, and Sass for real-world projects.",
-      "video": "https://www.youtube.com/watch?v=ZA3wQvwDpHlQ",
-      "image": "https://img.youtube.com/vi/ZAwqvwDpHlQ/maxresdefault.jpg",
+      "title": "CSS",
+      "description": "Master CSS: style web pages with Flexbox, Grid, responsive design and animations to make your websites look professional.",
+      "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc",
+      "image": "https://img.youtube.com/vi/1Rs2ND1ryYc/maxresdefault.jpg",
       "instructor": "Mohamed El Desouki",
       "price": 100,
       "id": 2
     },
     {
       "typ": "coding",
-      "title": "JavaScript for Intermediate Developers",
-      "description": "Master JavaScript in 30 days: build 8 real-world interactive web applications using ES6+, DOM manipulation, APIs, and asynchronous programming techniques.",
+      "title": "The Complete JavaScript",
+      "description": "Deep dive into JavaScript: understand variables, functions, DOM, APIs and build interactive website features from scratch.",
       "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
       "image": "https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg",
       "instructor": "Jonas Schmedtmann",
@@ -32,8 +32,8 @@
     },
     {
       "typ": "coding",
-      "title": "Python for Beginners",
-      "description": "Master Python in 30 days: complete 7 hands-on projects including data processing, automation scripts, and simple web apps while learning Python basics and best practices.",
+      "title": "Python for Everybody",
+      "description": "Learn Python basics and advanced concepts: from variables and loops to file handling and simple web apps, ideal for beginners.",
       "video": "https://www.youtube.com/watch?v=rfscVS0vtbw",
       "image": "https://img.youtube.com/vi/rfscVS0vtbw/maxresdefault.jpg",
       "instructor": "Charles Severance",
@@ -42,8 +42,8 @@
     },
     {
       "typ": "coding",
-      "title": "Advanced Web Development",
-      "description": "Master full-stack web development in 30 days: build 8 professional web applications with modern front-end and back-end technologies including React, Node.js, Express, and databases.",
+      "title": "The Complete Web Developer",
+      "description": "Learn full web development: combine HTML, CSS, JavaScript and backend tools to build complete modern websites from start to finish.",
       "video": "https://www.youtube.com/watch?v=Ke90Tje7VS0",
       "image": "https://img.youtube.com/vi/Ke90Tje7VS0/maxresdefault.jpg",
       "instructor": "Andrei Neagoie",
@@ -52,8 +52,8 @@
     },
     {
       "typ": "coding",
-      "title": "Java Programming Advanced",
-      "description": "Master Java in 30 days: build 8 real-world projects covering object-oriented programming, multithreading, data structures, and performance optimization techniques.",
+      "title": "Java Programming",
+      "description": "Understand Java programming: syntax, OOP fundamentals, and how to write real Java applications from basics to advanced topics.",
       "video": "https://www.youtube.com/watch?v=grEKMHGYyns",
       "image": "https://img.youtube.com/vi/grEKMHGYyns/maxresdefault.jpg",
       "instructor": "Tim Buchalka",
@@ -62,8 +62,8 @@
     },
     {
       "typ": "coding",
-      "title": "PHP for Beginners",
-      "description": "Master PHP in 30 days: develop 7 dynamic web projects with database integration, forms, session handling, and real-world server-side applications.",
+      "title": "Learn PHP for Beginners",
+      "description": "Start building dynamic server-side web apps using PHP, working with forms, sessions, databases and real backend logic.",
       "video": "https://www.youtube.com/watch?v=OK_JCtrrv-c",
       "image": "https://img.youtube.com/vi/OK_JCtrrv-c/maxresdefault.jpg",
       "instructor": "Edwin Diaz",
@@ -72,8 +72,8 @@
     },
     {
       "typ": "coding",
-      "title": "Python Developer Advanced",
-      "description": "Master advanced Python in 30 days: complete 8 projects involving backend development, APIs, automation, and modern Python libraries for real-world applications.",
+      "title": "The Complete Python Developer",
+      "description": "Advance your Python skills with real projects, backend development, APIs and more to become a professional Python developer.",
       "video": "https://www.youtube.com/watch?v=HGOBQPFzWKo",
       "image": "https://img.youtube.com/vi/HGOBQPFzWKo/maxresdefault.jpg",
       "instructor": "Andrei Neagoie",
@@ -82,8 +82,8 @@
     },
     {
       "typ": "coding",
-      "title": "Node.js Full-Stack Course",
-      "description": "Master full-stack development with Node.js in 30 days: build 8 scalable, real-world applications using Node.js, Express, MongoDB, and modern JavaScript frameworks.",
+      "title": "Full-stack Web with node.js",
+      "description": "Build scalable full-stack applications using Node.js, Express and JavaScript: from server setup to databases and APIs.",
       "video": "https://www.youtube.com/watch?v=Oe421EPjeBE",
       "image": "https://img.youtube.com/vi/Oe421EPjeBE/maxresdefault.jpg",
       "instructor": "Andrew Mead",
@@ -92,8 +92,8 @@
     },
     {
       "typ": "coding",
-      "title": "CSS & Sass Advanced",
-      "description": "Master advanced CSS and Sass in 30 days: build 7 responsive websites with animations, transitions, themes, and scalable design systems for real projects.",
+      "title": "Advanced CSS and Sass",
+      "description": "Master advanced CSS and Sass: scalable styles, components, responsive themes and modern layouts for production-ready sites.",
       "video": "https://www.youtube.com/watch?v=NuSkS6xX1g8",
       "image": "https://img.youtube.com/vi/NuSkS6xX1g8/maxresdefault.jpg",
       "instructor": "Jonas Schmedtmann",
@@ -102,33 +102,63 @@
     },
     {
       "typ": "network",
-      "title": "CCNA for Beginners",
-      "description": "Master networking in 30 days: complete 7 practical projects and labs covering Cisco CCNA concepts, routing, switching, subnetting, and network troubleshooting.",
+      "title": "Cisco CCNA",
+      "description": "Learn Cisco CCNA networking fundamentals: routing, switching, subnetting, protocols and real networking scenarios.",
       "video": "https://www.youtube.com/watch?v=Wy5vG5E9cUg",
       "image": "https://img.youtube.com/vi/Wy5vG5E9cUg/maxresdefault.jpg",
       "instructor": "Neil Anderson",
       "price": 100,
-      "id": 11
+      "id": 1
     },
     {
-      "typ": "ux_ui",
-      "title": "UI/UX Design for Beginners",
-      "description": "Master UI/UX design in 30 days: complete 8 real-world design projects covering user research, wireframing, prototyping, and creating user-friendly digital experiences.",
-      "video": "https://www.youtube.com/watch?v=V0u4xPBlXrI",
-      "image": "https://img.youtube.com/vi/V0u4xPBlXrI/maxresdefault.jpg",
-      "instructor": "Caler Edwards",
+      "typ": "network",
+      "title": "Networking Fundamentals",
+      "description": "Understand core networking principles: OSI model, TCP/IP, addressing, and hands-on fundamentals for building network knowledge.",
+      "video": "https://www.youtube.com/watch?v=tvL-nH9A4cM",
+      "image": "https://img.youtube.com/vi/tvL-nH9A4cM/maxresdefault.jpg",
+      "instructor": "David Bombal",
       "price": 100,
-      "id": 12
+      "id": 2
     },
     {
-      "typ": "ux_ui",
-      "title": "Advanced Motion Design",
-      "description": "Master motion design in 30 days: create 7 real-world animation projects using professional tools, motion graphics principles, and interactive UI animations for web and apps.",
-      "video": "https://www.youtube.com/watch?v=HU28_50T_1w",
-      "image": "https://img.youtube.com/vi/HU28_50T_1w/maxresdefault.jpg",
-      "instructor": "Jonathan Lam",
+      "typ": "network",
+      "title": "Practical Ethical Hacking",
+      "description": "Learn practical ethical hacking: reconnaissance, vulnerabilities, penetration testing and cybersecurity defense strategies.",
+      "video": "https://www.youtube.com/watch?v=0xh1a3x3SV8",
+      "image": "https://img.youtube.com/vi/0xh1a3x3SV8/maxresdefault.jpg",
+      "instructor": "Heath Adams",
       "price": 100,
-      "id": 13
+      "id": 3
+    },
+    {
+      "typ": "network",
+      "title": "CompTIA Network+",
+      "description": "Prepare for CompTIA Network+ certification with deep understanding of networking concepts and real exam scenarios.",
+      "video": "https://www.youtube.com/watch?v=4H3oFf71Ulg",
+      "image": "https://img.youtube.com/vi/4H3oFf71Ulg/maxresdefault.jpg",
+      "instructor": "Jason Dion",
+      "price": 100,
+      "id": 4
+    },
+    {
+      "typ": "network",
+      "title": "Cisco CCNP Enterprise",
+      "description": "Advance in Cisco networking: enterprise-level routing, switching, automation and high-scale network design.",
+      "video": "https://www.youtube.com/watch?v=2xqHWI6l5sM",
+      "image": "https://img.youtube.com/vi/2xqHWI6l5sM/maxresdefault.jpg",
+      "instructor": "Kevin Wallace",
+      "price": 100,
+      "id": 5
+    },
+    {
+      "typ": "network",
+      "title": "Packet Analysis, Ethical Hacking",
+      "description": "Learn packet analysis and ethical hacking methods to secure networks and understand low-level traffic behavior.",
+      "video": "https://www.youtube.com/watch?v=6x1B6fK-QxQ",
+      "image": "https://img.youtube.com/vi/6x1B6fK-QxQ/maxresdefault.jpg",
+      "instructor": "Zaid Sabih",
+      "price": 100,
+      "id": 6
     }
   ]
 }
