@@ -1,4 +1,41 @@
+.backBanner-container {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.backBanner-image {
+  /* position: absolute;
+  top: 0; */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(50px);
+  transform: scale(1.1);
+}
+
+.backBanner-overlay {
+  /* position: absolute;
+  top: 0; */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #0a8db100 19%,
+    #00536b2b 35%,
+    #003a4a75 48%,
+    #00191fc2,
+    #000e12e8 80%,
+    #000
+  );
+}
+
 /* main part */
-.left-part h1,p{
+.left-part h1,
+p {
   color: rgba(255, 255, 255, 0.904);
 }

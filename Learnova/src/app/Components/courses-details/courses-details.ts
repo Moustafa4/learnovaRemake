@@ -4,13 +4,14 @@ import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ICourses } from '../courses/icourses';
 import { filter, map, switchMap } from 'rxjs';
-import { Title } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-courses-details',
   standalone: true,
 
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './courses-details.html',
   styleUrl: './courses-details.css',
 })
@@ -25,10 +26,12 @@ export class CoursesDetails {
       map((course) => course ?? null)
     )
   );
-  constructor() {
-    effect(() =>{
-    console.log(this.courses());
-    
-    })
+  constructor(private sanitizer: DomSanitizer) {
+    effect(() => {
+      console.log(this.courses());
+    });
+  }
+  safeVideo(video: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(video);
   }
 }

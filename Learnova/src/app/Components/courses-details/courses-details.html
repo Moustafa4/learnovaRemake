@@ -1,11 +1,21 @@
+<div class="backBanner-container">
+  @if(courses()){
+  <div
+    class="backBanner-image"
+    [ngStyle]="{'background-image': 'url(' + courses()!.image+')'}"
+  ></div>
+
+  <div class="backBanner-overlay"></div>
+  }
+</div>
+
 <div class="container">
   <div class="row">
     <!-- left part -->
     <div class="col-8 left-part">
       @if (courses()) {
-      <h1>{{courses()?.title}}</h1>
-      <p>{{courses()?.description}}</p>
-        
+      <iframe [src]="safeVideo(courses()!.video) " frameborder="0"></iframe>
+
       }
     </div>
     <!-- right part -->
