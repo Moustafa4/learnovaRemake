@@ -7,4 +7,7 @@ export interface ICourses {
   price: number;
   description: string;
   video: string;
+  level: string;
+  skills: string[];
+  outcomes: string[];
 }
