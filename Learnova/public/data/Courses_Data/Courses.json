@@ -122,16 +122,17 @@
           "price": 100,
           "id": 10
         },
-        {
-          "typ": "network",
-          "title": "Cisco CCNA",
-          "description": "Learn Cisco CCNA networking fundamentals: routing, switching, subnetting, protocols and real networking scenarios.",
-          "video": "https://www.youtube.com/watch?v=Wy5vG5E9cUg",
-          "image": "https://img.youtube.com/vi/Wy5vG5E9cUg/maxresdefault.jpg",
-          "instructor": "Neil Anderson",
-          "price": 100,
-          "id": 1
-        },
+      {
+        "typ": "network",
+        "title": "Cisco CCNA",
+        "description": "Learn Cisco CCNA networking fundamentals: routing, switching, subnetting, protocols and real networking scenarios.",
+        "video": "https://www.youtube.com/watch?v=pNN3_34TNYw",
+        "image": "https://img.youtube.com/vi/pNN3_34TNYw/maxresdefault.jpg",
+        "instructor": "Neil Anderson",
+        "price": 100,
+        "id": 1
+      }
+,
         {
           "typ": "network",
           "title": "Networking Fundamentals",
