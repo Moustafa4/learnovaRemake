@@ -5,4 +5,5 @@ export interface ICourses {
   image: string;
   instructor: string;
   price: number;
+  description: string;
 }
