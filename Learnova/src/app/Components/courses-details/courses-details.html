@@ -1,24 +1,34 @@
-<div class="backBanner-container">
-  @if(courses()){
-  <div
-    class="backBanner-image"
-    [ngStyle]="{'background-image': 'url(' + courses()!.image+')'}"
-  ></div>
+<div class="container-fluid">
+  <div class="backBanner-container">
+    @if (courses()) {
 
-  <div class="backBanner-overlay"></div>
-  }
-</div>
+    <!-- الخلفية المبلوّرة -->
+    <div
+      class="backBanner-image"
+      [ngStyle]="{
+          'background-image': 'url(' + courses()!.image + ')'
+        }"
+    ></div>
 
-<div class="container">
-  <div class="row">
-    <!-- left part -->
-    <div class="col-8 left-part">
-      @if (courses()) {
-      <iframe [src]="safeVideo(courses()!.video) " frameborder="0"></iframe>
+    <div class="backBanner-overlay"></div>
 
-      }
+    <div class="container backBanner-content">
+      <div class="row">
+        <!-- left part -->
+        <div class="col-8 left-part">
+          <div><img [src]="courses()?.image" [alt]="courses()!.title" /></div>
+          <div class="cat-p">
+            <p>categories: <span>{{courses()?.typ}}</span></p>
+          </div>
+          <div>
+            <h3>By the end of this course, you will be able to</h3>
+          </div>
+        </div>
+        <!-- right part -->
+        <div class="col-4"></div>
+      </div>
     </div>
-    <!-- right part -->
-    <div class="col-4"></div>
+
+    }
   </div>
 </div>

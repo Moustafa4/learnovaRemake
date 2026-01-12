@@ -1,278 +1,627 @@
 {
   "Courses": [
     {
-      
-      
-          "typ": "coding",
-          "title": "Data Science with Python for Intermediate",
-          "description": "This course covers data analysis, visualization, machine learning basics, pandas, NumPy, and real projects using Python. Ideal for future data scientists.",
-          "video": "https://www.youtube.com/watch?v=HrRA67O-QXI",
-          "image": "https://img.youtube.com/vi/ua-CiDNNj30/maxresdefault.jpg",
-          "instructor": "Jose Portilla",
-          "price": 150,
-          "id": 10
-        },
-        {
-          "typ": "coding",
-          "title": "JavaScript Essentials for Beginner",
-          "description": "JavaScript fundamentals including syntax, variables, loops, functions, and DOM manipulation. Perfect for beginners to starter web programming.",
-          "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk",
-          "image": "https://img.youtube.com/vi/W6NZfCO5SIk/maxresdefault.jpg",
-          "instructor": "Mosh Hamedani",
-          "price": 120,
-          "id": 11
-        },
-        {
-          "typ": "coding",
-          "title": "HTML",
-          "description": "Learn HTML from scratch: build real web pages, understand semantic tags, forms, images, layout techniques and modern HTML5 features.",
-          "video": "https://www.youtube.com/watch?v=qz0aGYrrlhU",
-          "image": "https://img.youtube.com/vi/qz0aGYrrlhU/maxresdefault.jpg",
-          "instructor": "Osama Elzero",
-          "price": 100,
-          "id": 1
-        },
-        {
-          "typ": "coding",
-          "title": "CSS",
-          "description": "Master CSS: style web pages with Flexbox, Grid, responsive design and animations to make your websites look professional.",
-          "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc",
-          "image": "https://img.youtube.com/vi/1Rs2ND1ryYc/maxresdefault.jpg",
-          "instructor": "Mohamed El Desouki",
-          "price": 100,
-          "id": 2
-        },
-        {
-          "typ": "coding",
-          "title": "The Complete JavaScript",
-          "description": "Deep dive into JavaScript: understand variables, functions, DOM, APIs and build interactive website features from scratch.",
-          "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
-          "image": "https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg",
-          "instructor": "Jonas Schmedtmann",
-          "price": 100,
-          "id": 3
-        },
-        {
-          "typ": "coding",
-          "title": "Python for Everybody",
-          "description": "Learn Python basics and advanced concepts: from variables and loops to file handling and simple web apps, ideal for beginners.",
-          "video": "https://www.youtube.com/watch?v=rfscVS0vtbw",
-          "image": "https://img.youtube.com/vi/rfscVS0vtbw/maxresdefault.jpg",
-          "instructor": "Charles Severance",
-          "price": 100,
-          "id": 4
-        },
-        {
-          "typ": "coding",
-          "title": "The Complete Web Developer",
-          "description": "Learn full web development: combine HTML, CSS, JavaScript and backend tools to build complete modern websites from start to finish.",
-          "video": "https://www.youtube.com/watch?v=Ke90Tje7VS0",
-          "image": "https://img.youtube.com/vi/Ke90Tje7VS0/maxresdefault.jpg",
-          "instructor": "Andrei Neagoie",
-          "price": 100,
-          "id": 5
-        },
-        {
-          "typ": "coding",
-          "title": "Java Programming",
-          "description": "Understand Java programming: syntax, OOP fundamentals, and how to write real Java applications from basics to advanced topics.",
-          "video": "https://www.youtube.com/watch?v=grEKMHGYyns",
-          "image": "https://img.youtube.com/vi/grEKMHGYyns/maxresdefault.jpg",
-          "instructor": "Tim Buchalka",
-          "price": 100,
-          "id": 6
-        },
-        {
-          "typ": "coding",
-          "title": "Learn PHP for Beginners",
-          "description": "Start building dynamic server-side web apps using PHP, working with forms, sessions, databases and real backend logic.",
-          "video": "https://www.youtube.com/watch?v=OK_JCtrrv-c",
-          "image": "https://img.youtube.com/vi/OK_JCtrrv-c/maxresdefault.jpg",
-          "instructor": "Edwin Diaz",
-          "price": 100,
-          "id": 7
-        },
-        {
-          "typ": "coding",
-          "title": "The Complete Python Developer",
-          "description": "Advance your Python skills with real projects, backend development, APIs and more to become a professional Python developer.",
-          "video": "https://www.youtube.com/watch?v=HGOBQPFzWKo",
-          "image": "https://img.youtube.com/vi/HGOBQPFzWKo/maxresdefault.jpg",
-          "instructor": "Andrei Neagoie",
-          "price": 100,
-          "id": 8
-        },
-        {
-          "typ": "coding",
-          "title": "Full-stack Web with node.js",
-          "description": "Build scalable full-stack applications using Node.js, Express and JavaScript: from server setup to databases and APIs.",
-          "video": "https://www.youtube.com/watch?v=Oe421EPjeBE",
-          "image": "https://img.youtube.com/vi/Oe421EPjeBE/maxresdefault.jpg",
-          "instructor": "Andrew Mead",
-          "price": 100,
-          "id": 9
-        },
-        {
-          "typ": "coding",
-          "title": "Advanced CSS and Sass",
-          "description": "Master advanced CSS and Sass: scalable styles, components, responsive themes and modern layouts for production-ready sites.",
-          "video": "https://www.youtube.com/watch?v=NuSkS6xX1g8",
-          "image": "https://img.youtube.com/vi/NuSkS6xX1g8/maxresdefault.jpg",
-          "instructor": "Jonas Schmedtmann",
-          "price": 100,
-          "id": 10
-        },
-      {
-        "typ": "network",
-        "title": "Cisco CCNA",
-        "description": "Learn Cisco CCNA networking fundamentals: routing, switching, subnetting, protocols and real networking scenarios.",
-        "video": "https://www.youtube.com/watch?v=pNN3_34TNYw",
-        "image": "https://img.youtube.com/vi/pNN3_34TNYw/maxresdefault.jpg",
-        "instructor": "Neil Anderson",
-        "price": 100,
-        "id": 1
-      }
-,
-        {
-          "typ": "network",
-          "title": "Networking Fundamentals",
-          "description": "Understand core networking principles: OSI model, TCP/IP, addressing, and hands-on fundamentals for building network knowledge.",
-          "video": "https://www.youtube.com/watch?v=tvL-nH9A4cM",
-          "image": "https://img.youtube.com/vi/tvL-nH9A4cM/maxresdefault.jpg",
-          "instructor": "David Bombal",
-          "price": 100,
-          "id": 2
-        },
-        {
-          "typ": "network",
-          "title": "Practical Ethical Hacking",
-          "description": "Learn practical ethical hacking: reconnaissance, vulnerabilities, penetration testing and cybersecurity defense strategies.",
-          "video": "https://www.youtube.com/watch?v=0xh1a3x3SV8",
-          "image": "https://img.youtube.com/vi/0xh1a3x3SV8/maxresdefault.jpg",
-          "instructor": "Heath Adams",
-          "price": 100,
-          "id": 3
-        },
-        {
-          "typ": "network",
-          "title": "CompTIA Network+",
-          "description": "Prepare for CompTIA Network+ certification with deep understanding of networking concepts and real exam scenarios.",
-          "video": "https://www.youtube.com/watch?v=4H3oFf71Ulg",
-          "image": "https://img.youtube.com/vi/4H3oFf71Ulg/maxresdefault.jpg",
-          "instructor": "Jason Dion",
-          "price": 100,
-          "id": 4
-        },
-        {
-          "typ": "network",
-          "title": "Cisco CCNP Enterprise",
-          "description": "Advance in Cisco networking: enterprise-level routing, switching, automation and high-scale network design.",
-          "video": "https://www.youtube.com/watch?v=2xqHWI6l5sM",
-          "image": "https://img.youtube.com/vi/2xqHWI6l5sM/maxresdefault.jpg",
-          "instructor": "Kevin Wallace",
-          "price": 100,
-          "id": 5
-        },
-        {
-          "typ": "network",
-          "title": "Packet Analysis, Ethical Hacking",
-          "description": "Learn packet analysis and ethical hacking methods to secure networks and understand low-level traffic behavior.",
-          "video": "https://www.youtube.com/watch?v=6x1B6fK-QxQ",
-          "image": "https://img.youtube.com/vi/6x1B6fK-QxQ/maxresdefault.jpg",
-          "instructor": "Zaid Sabih",
-          "price": 100,
-          "id": 6
-        },
-        {
-          "typ": "ux_ui",
-          "title": "Adobe Photoshop CC for Beginner",
-          "description": "Learn Adobe Photoshop CC: create stunning graphics, retouch images, work with layers and masks, and design professional visuals. Perfect for beginners starting in graphic design.",
-          "video": "https://www.youtube.com/watch?v=OjRqZiAgoHo",
-          "image": "https://img.youtube.com/vi/OjRqZiAgoHo/maxresdefault.jpg",
-          "instructor": "Daniel Walter Scot",
-          "price": 100,
-          "id": 1
-        },
-        {
-          "typ": "ux_ui",
-          "title": "UI/UX Design Bootcamp for Intermediate",
-          "description": "Master UI/UX design: learn user-centered design, wireframing, prototyping, and tools like Figma and Adobe XD. Ideal for aspiring UX designers.",
-          "video": "https://www.youtube.com/watch?v=3qHkEd9kZbI",
-          "image": "https://img.youtube.com/vi/3qHkEd9kZbI/maxresdefault.jpg",
-          "instructor": "Caler Edwards",
-          "price": 100,
-          "id": 2
-        },
-        {
-          "typ": "ux_ui",
-          "title": "Graphic Design Masterclass for Advanced",
-          "description": "A complete graphic design course covering typography, color theory, layouts, and creative workflows. Great for intermediate to advanced learners looking to enhance their design skills.",
-          "video": "https://www.youtube.com/watch?v=AnfezdrB_-s",
-          "image": "https://img.youtube.com/vi/AnfezdrB_-s/maxresdefault.jpg",
-          "instructor": "Lindsay Marsh",
-          "price": 100,
-          "id": 3
-        },
-        {
-          "typ": "ux_ui",
-          "title": "Web Design for Beginners for Beginner",
-          "description": "Learn the basics of web design: HTML structure, CSS styling, responsive layouts, and user-friendly design principles. Perfect for absolute beginners.",
-          "video": "https://www.youtube.com/watch?v=B-ytMSuwbf8",
-          "image": "https://img.youtube.com/vi/B-ytMSuwbf8/maxresdefault.jpg",
-          "instructor": "Brad Schiff",
-          "price": 100,
-          "id": 4
-        },
-        {
-          "typ": "ux_ui",
-          "title": "Adobe Illustrator CC for Intermediate",
-          "description": "This course teaches core Illustrator skills: vector shapes, pen tool, typography, logo design, and scalable graphics. Great for intermediate designers.",
-          "video": "https://www.youtube.com/watch?v=Ib8UBwu3yGA",
-          "image": "https://img.youtube.com/vi/Ib8UBwu3yGA/maxresdefault.jpg",
-          "instructor": "Daniel Walter Scott",
-          "price": 100,
-          "id": 5
-        },
-        {
-          "typ": "ux_ui",
-          "title": "Motion Design & Animation for Advanced",
-          "description": "Learn motion graphics and animation principles using After Effects, keyframing, effects, and project workflows to create professional motion designs.",
-          "video": "https://www.youtube.com/watch?v=0p7EiZkqkUo",
-          "image": "https://img.youtube.com/vi/0p7EiZkqkUo/maxresdefault.jpg",
-          "instructor": "Jonathan Lam",
-          "price": 100,
-          "id": 6
-        },
-        {
-          "typ": "ux_ui",
-          "title": "Design Essentials Adobe XD for Beginner",
-          "description": "Learn Adobe XD to design and prototype interactive user interfaces. Covers design principles, wireframing, and clickable prototypes for apps and websites.",
-          "video": "https://www.youtube.com/watch?v=68w2VwalD5w",
-          "image": "https://img.youtube.com/vi/68w2VwalD5w/maxresdefault.jpg",
-          "instructor": "Daniel Walter Sco",
-          "price": 100,
-          "id": 7
-        },
-        {
-          "typ": "ux_ui",
-          "title": "Canva Master Course for Intermediate",
-          "description": "Master Canva for creating graphics, social media posts, presentations, and marketing materials with simple tools and professional results.",
-          "video": "https://www.youtube.com/watch?v=gjwA1U7Y38Y",
-          "image": "https://img.youtube.com/vi/gjwA1U7Y38Y/maxresdefault.jpg",
-          "instructor": "Daniel Walter Scott",
-          "price": 100,
-          "id": 8
-        },
-        {
-          "typ": "ux_ui",
-          "title": "Mastering Photoshop for Advanced",
-          "description": "Advanced Photoshop techniques including masking, color correction, compositing, and digital art creation. Perfect for designers who want to go beyond basics.",
-          "video": "https://www.youtube.com/watch?v=IyR_uYsRdPs",
-          "image": "https://img.youtube.com/vi/IyR_uYsRdPs/maxresdefault.jpg",
-          "instructor": "Aaron Nace",
-          "price": 90,
-          "id": 9
-        }
-
+      "typ": "coding",
+      "title": "Data Science with Python for Intermediate",
+      "description": "This course covers data analysis, visualization, machine learning basics, pandas, NumPy, and real projects using Python. Ideal for future data scientists.",
+      "video": "https://www.youtube.com/watch?v=HrRA67O-QXI",
+      "image": "https://img.youtube.com/vi/ua-CiDNNj30/maxresdefault.jpg",
+      "instructor": "Jose Portilla",
+      "price": 150,
+      "id": 10,
+      "level": "Intermediate",
+      "outcomes": [
+        "Analyze real datasets using Pandas and NumPy",
+        "Build visualizations to communicate data insights",
+        "Train and evaluate basic machine learning models"
+      ],
+      "skills": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Data Cleaning",
+        "Data Visualization",
+        "Machine Learning Basics"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "JavaScript Essentials for Beginner",
+      "description": "JavaScript fundamentals including syntax, variables, loops, functions, and DOM manipulation. Perfect for beginners to starter web programming.",
+      "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk",
+      "image": "https://img.youtube.com/vi/W6NZfCO5SIk/maxresdefault.jpg",
+      "instructor": "Mosh Hamedani",
+      "price": 120,
+      "id": 11,
+      "level": "Beginner",
+      "outcomes": [
+        "Write basic JavaScript programs using variables, conditions and loops",
+        "Manipulate the DOM to react to user actions",
+        "Organize code using functions and simple modules"
+      ],
+      "skills": [
+        "JavaScript Basics",
+        "ES5 Syntax",
+        "Functions",
+        "Control Flow",
+        "DOM Manipulation",
+        "Debugging"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "HTML",
+      "description": "Learn HTML from scratch: build real web pages, understand semantic tags, forms, images, layout techniques and modern HTML5 features.",
+      "video": "https://www.youtube.com/watch?v=qz0aGYrrlhU",
+      "image": "https://img.youtube.com/vi/qz0aGYrrlhU/maxresdefault.jpg",
+      "instructor": "Osama Elzero",
+      "price": 100,
+      "id": 1,
+      "level": "Beginner",
+      "outcomes": [
+        "Structure web pages with clean semantic HTML",
+        "Create forms, links, images and tables correctly",
+        "Use HTML5 elements for media and layouts"
+      ],
+      "skills": [
+        "HTML5",
+        "Semantic Tags",
+        "Forms",
+        "Links & Images",
+        "Tables",
+        "Basic Accessibility"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "CSS",
+      "description": "Master CSS: style web pages with Flexbox, Grid, responsive design and animations to make your websites look professional.",
+      "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc",
+      "image": "https://img.youtube.com/vi/1Rs2ND1ryYc/maxresdefault.jpg",
+      "instructor": "Mohamed El Desouki",
+      "price": 100,
+      "id": 2,
+      "level": "Beginner",
+      "outcomes": [
+        "Style web pages with colors, typography and spacing",
+        "Build responsive layouts using Flexbox and Grid",
+        "Create basic transitions and hover animations"
+      ],
+      "skills": [
+        "CSS3",
+        "Flexbox",
+        "CSS Grid",
+        "Responsive Design",
+        "Typography",
+        "Animations"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "The Complete JavaScript",
+      "description": "Deep dive into JavaScript: understand variables, functions, DOM, APIs and build interactive website features from scratch.",
+      "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+      "image": "https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg",
+      "instructor": "Jonas Schmedtmann",
+      "price": 100,
+      "id": 3,
+      "level": "Intermediate",
+      "outcomes": [
+        "Use modern JavaScript features to write clean code",
+        "Work with the DOM and browser events confidently",
+        "Consume REST APIs and handle JSON data"
+      ],
+      "skills": [
+        "Modern JavaScript",
+        "ES6+ Syntax",
+        "DOM & Events",
+        "Async JS",
+        "Fetch API",
+        "Modules"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "Python for Everybody",
+      "description": "Learn Python basics and advanced concepts: from variables and loops to file handling and simple web apps, ideal for beginners.",
+      "video": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "image": "https://img.youtube.com/vi/rfscVS0vtbw/maxresdefault.jpg",
+      "instructor": "Charles Severance",
+      "price": 100,
+      "id": 4,
+      "level": "Beginner",
+      "outcomes": [
+        "Write Python scripts that automate simple tasks",
+        "Work with files, strings and collections",
+        "Understand functions and basic error handling"
+      ],
+      "skills": [
+        "Python Basics",
+        "Control Flow",
+        "Functions",
+        "File Handling",
+        "Lists & Dictionaries"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "The Complete Web Developer",
+      "description": "Learn full web development: combine HTML, CSS, JavaScript and backend tools to build complete modern websites from start to finish.",
+      "video": "https://www.youtube.com/watch?v=Ke90Tje7VS0",
+      "image": "https://img.youtube.com/vi/Ke90Tje7VS0/maxresdefault.jpg",
+      "instructor": "Andrei Neagoie",
+      "price": 100,
+      "id": 5,
+      "level": "Intermediate",
+      "outcomes": [
+        "Build full web pages using HTML, CSS and JavaScript",
+        "Connect front‑end interfaces with simple backends",
+        "Deploy a complete web project online"
+      ],
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "REST APIs",
+        "Basic Backend",
+        "Deployment"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "Java Programming",
+      "description": "Understand Java programming: syntax, OOP fundamentals, and how to write real Java applications from basics to advanced topics.",
+      "video": "https://www.youtube.com/watch?v=grEKMHGYyns",
+      "image": "https://img.youtube.com/vi/grEKMHGYyns/maxresdefault.jpg",
+      "instructor": "Tim Buchalka",
+      "price": 100,
+      "id": 6,
+      "level": "Intermediate",
+      "outcomes": [
+        "Write Java programs using classes and objects",
+        "Apply OOP concepts like inheritance and polymorphism",
+        "Work with collections and handle exceptions"
+      ],
+      "skills": [
+        "Java Syntax",
+        "OOP",
+        "Collections",
+        "Exception Handling",
+        "File I/O"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "Learn PHP for Beginners",
+      "description": "Start building dynamic server-side web apps using PHP, working with forms, sessions, databases and real backend logic.",
+      "video": "https://www.youtube.com/watch?v=OK_JCtrrv-c",
+      "image": "https://img.youtube.com/vi/OK_JCtrrv-c/maxresdefault.jpg",
+      "instructor": "Edwin Diaz",
+      "price": 100,
+      "id": 7,
+      "level": "Beginner",
+      "outcomes": [
+        "Process form data and generate dynamic pages with PHP",
+        "Connect PHP applications to a database",
+        "Manage sessions and basic authentication"
+      ],
+      "skills": [
+        "PHP Basics",
+        "Forms",
+        "Sessions",
+        "MySQL Basics",
+        "Server‑Side Rendering"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "The Complete Python Developer",
+      "description": "Advance your Python skills with real projects, backend development, APIs and more to become a professional Python developer.",
+      "video": "https://www.youtube.com/watch?v=HGOBQPFzWKo",
+      "image": "https://img.youtube.com/vi/HGOBQPFzWKo/maxresdefault.jpg",
+      "instructor": "Andrei Neagoie",
+      "price": 100,
+      "id": 8,
+      "level": "Intermediate",
+      "outcomes": [
+        "Build Python applications that interact with external APIs",
+        "Structure larger projects using packages and virtual environments",
+        "Work with databases and simple backends in Python"
+      ],
+      "skills": [
+        "Intermediate Python",
+        "APIs",
+        "Virtual Environments",
+        "Databases",
+        "Backend Basics"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "Full-stack Web with node.js",
+      "description": "Build scalable full-stack applications using Node.js, Express and JavaScript: from server setup to databases and APIs.",
+      "video": "https://www.youtube.com/watch?v=Oe421EPjeBE",
+      "image": "https://img.youtube.com/vi/Oe421EPjeBE/maxresdefault.jpg",
+      "instructor": "Andrew Mead",
+      "price": 100,
+      "id": 9,
+      "level": "Intermediate",
+      "outcomes": [
+        "Create REST APIs with Node.js and Express",
+        "Connect Node servers to databases",
+        "Build and test full‑stack features end‑to‑end"
+      ],
+      "skills": [
+        "Node.js",
+        "Express",
+        "REST APIs",
+        "MongoDB or SQL Basics",
+        "Authentication"
+      ]
+    },
+    {
+      "typ": "coding",
+      "title": "Advanced CSS and Sass",
+      "description": "Master advanced CSS and Sass: scalable styles, components, responsive themes and modern layouts for production-ready sites.",
+      "video": "https://www.youtube.com/watch?v=NuSkS6xX1g8",
+      "image": "https://img.youtube.com/vi/NuSkS6xX1g8/maxresdefault.jpg",
+      "instructor": "Jonas Schmedtmann",
+      "price": 100,
+      "id": 10,
+      "level": "Advanced",
+      "outcomes": [
+        "Architect large CSS codebases using Sass and BEM",
+        "Build complex responsive layouts for real products",
+        "Create advanced animations and visual effects"
+      ],
+      "skills": [
+        "Advanced CSS",
+        "Sass",
+        "BEM",
+        "Design Systems",
+        "Performance‑friendly Animations"
+      ]
+    },
+    {
+      "typ": "network",
+      "title": "Cisco CCNA",
+      "description": "Learn Cisco CCNA networking fundamentals: routing, switching, subnetting, protocols and real networking scenarios.",
+      "video": "https://www.youtube.com/watch?v=pNN3_34TNYw",
+      "image": "https://img.youtube.com/vi/pNN3_34TNYw/maxresdefault.jpg",
+      "instructor": "Neil Anderson",
+      "price": 100,
+      "id": 1,
+      "level": "Intermediate",
+      "outcomes": [
+        "Configure basic Cisco routers and switches",
+        "Design and troubleshoot IPv4 and IPv6 networks",
+        "Be ready for the CCNA 200‑301 exam topics"
+      ],
+      "skills": [
+        "Routing & Switching",
+        "Cisco IOS",
+        "Subnetting",
+        "VLANs",
+        "Spanning Tree",
+        "TCP/IP"
+      ]
+    },
+    {
+      "typ": "network",
+      "title": "Networking Fundamentals",
+      "description": "Understand core networking principles: OSI model, TCP/IP, addressing, and hands-on fundamentals for building network knowledge.",
+      "video": "https://www.youtube.com/watch?v=tvL-nH9A4cM",
+      "image": "https://img.youtube.com/vi/tvL-nH9A4cM/maxresdefault.jpg",
+      "instructor": "David Bombal",
+      "price": 100,
+      "id": 2,
+      "level": "Beginner",
+      "outcomes": [
+        "Explain the OSI and TCP/IP models in simple terms",
+        "Identify key network devices and their roles",
+        "Understand IP addressing and basic subnetting"
+      ],
+      "skills": [
+        "Networking Basics",
+        "OSI Model",
+        "TCP/IP",
+        "IP Addressing",
+        "Switches & Routers"
+      ]
+    },
+    {
+      "typ": "network",
+      "title": "Practical Ethical Hacking",
+      "description": "Learn practical ethical hacking: reconnaissance, vulnerabilities, penetration testing and cybersecurity defense strategies.",
+      "video": "https://www.youtube.com/watch?v=0xh1a3x3SV8",
+      "image": "https://img.youtube.com/vi/0xh1a3x3SV8/maxresdefault.jpg",
+      "instructor": "Heath Adams",
+      "price": 100,
+      "id": 3,
+      "level": "Intermediate",
+      "outcomes": [
+        "Perform basic reconnaissance and vulnerability scanning",
+        "Exploit common weaknesses in lab environments",
+        "Understand how to report findings ethically"
+      ],
+      "skills": [
+        "Ethical Hacking",
+        "Reconnaissance",
+        "Vulnerability Scanning",
+        "Metasploit Basics",
+        "Reporting"
+      ]
+    },
+    {
+      "typ": "network",
+      "title": "CompTIA Network+",
+      "description": "Prepare for CompTIA Network+ certification with deep understanding of networking concepts and real exam scenarios.",
+      "video": "https://www.youtube.com/watch?v=4H3oFf71Ulg",
+      "image": "https://img.youtube.com/vi/4H3oFf71Ulg/maxresdefault.jpg",
+      "instructor": "Jason Dion",
+      "price": 100,
+      "id": 4,
+      "level": "Intermediate",
+      "outcomes": [
+        "Master the main Network+ exam domains",
+        "Troubleshoot common wired and wireless issues",
+        "Select appropriate cables, devices and standards"
+      ],
+      "skills": [
+        "Network+ Topics",
+        "Troubleshooting",
+        "Wireless Networking",
+        "Cabling",
+        "Protocols"
+      ]
+    },
+    {
+      "typ": "network",
+      "title": "Cisco CCNP Enterprise",
+      "description": "Advance in Cisco networking: enterprise-level routing, switching, automation and high-scale network design.",
+      "video": "https://www.youtube.com/watch?v=2xqHWI6l5sM",
+      "image": "https://img.youtube.com/vi/2xqHWI6l5sM/maxresdefault.jpg",
+      "instructor": "Kevin Wallace",
+      "price": 100,
+      "id": 5,
+      "level": "Advanced",
+      "outcomes": [
+        "Design and implement enterprise‑grade Cisco networks",
+        "Work with advanced routing and switching features",
+        "Understand key topics for CCNP Enterprise exams"
+      ],
+      "skills": [
+        "Advanced Routing",
+        "Advanced Switching",
+        "Enterprise Design",
+        "Cisco Automation Basics"
+      ]
+    },
+    {
+      "typ": "network",
+      "title": "Packet Analysis, Ethical Hacking",
+      "description": "Learn packet analysis and ethical hacking methods to secure networks and understand low-level traffic behavior.",
+      "video": "https://www.youtube.com/watch?v=6x1B6fK-QxQ",
+      "image": "https://img.youtube.com/vi/6x1B6fK-QxQ/maxresdefault.jpg",
+      "instructor": "Zaid Sabih",
+      "price": 100,
+      "id": 6,
+      "level": "Intermediate",
+      "outcomes": [
+        "Capture and inspect packets with Wireshark",
+        "Identify suspicious traffic patterns and attacks",
+        "Use packet analysis to support ethical hacking tests"
+      ],
+      "skills": [
+        "Packet Analysis",
+        "Wireshark",
+        "Network Attacks",
+        "Traffic Inspection"
+      ]
+    },
+    {
+      "typ": "ux_ui",
+      "title": "Adobe Photoshop CC for Beginner",
+      "description": "Learn Adobe Photoshop CC: create stunning graphics, retouch images, work with layers and masks, and design professional visuals. Perfect for beginners starting in graphic design.",
+      "video": "https://www.youtube.com/watch?v=OjRqZiAgoHo",
+      "image": "https://img.youtube.com/vi/OjRqZiAgoHo/maxresdefault.jpg",
+      "instructor": "Daniel Walter Scot",
+      "price": 100,
+      "id": 1,
+      "level": "Beginner",
+      "outcomes": [
+        "Navigate the Photoshop interface with confidence",
+        "Retouch and enhance basic photos",
+        "Create simple posters and social media designs"
+      ],
+      "skills": [
+        "Photoshop Basics",
+        "Layers",
+        "Selections",
+        "Photo Retouching",
+        "Text & Shapes"
+      ]
+    },
+    {
+      "typ": "ux_ui",
+      "title": "UI/UX Design Bootcamp for Intermediate",
+      "description": "Master UI/UX design: learn user-centered design, wireframing, prototyping, and tools like Figma and Adobe XD. Ideal for aspiring UX designers.",
+      "video": "https://www.youtube.com/watch?v=3qHkEd9kZbI",
+      "image": "https://img.youtube.com/vi/3qHkEd9kZbI/maxresdefault.jpg",
+      "instructor": "Caler Edwards",
+      "price": 100,
+      "id": 2,
+      "level": "Intermediate",
+      "outcomes": [
+        "Plan user‑centered flows and information architecture",
+        "Create wireframes and interactive prototypes",
+        "Design clean UI screens consistent with a design system"
+      ],
+      "skills": [
+        "UX Fundamentals",
+        "Wireframing",
+        "Prototyping",
+        "UI Design",
+        "Figma / XD"
+      ]
+    },
+    {
+      "typ": "ux_ui",
+      "title": "Graphic Design Masterclass for Advanced",
+      "description": "A complete graphic design course covering typography, color theory, layouts, and creative workflows. Great for intermediate to advanced learners looking to enhance their design skills.",
+      "video": "https://www.youtube.com/watch?v=AnfezdrB_-s",
+      "image": "https://img.youtube.com/vi/AnfezdrB_-s/maxresdefault.jpg",
+      "instructor": "Lindsay Marsh",
+      "price": 100,
+      "id": 3,
+      "level": "Advanced",
+      "outcomes": [
+        "Apply typography and color theory in real projects",
+        "Design complex layouts for print and digital",
+        "Build a consistent visual identity and portfolio pieces"
+      ],
+      "skills": [
+        "Typography",
+        "Color Theory",
+        "Layout Design",
+        "Branding",
+        "Print & Digital Graphics"
+      ]
+    },
+    {
+      "typ": "ux_ui",
+      "title": "Web Design for Beginners for Beginner",
+      "description": "Learn the basics of web design: HTML structure, CSS styling, responsive layouts, and user-friendly design principles. Perfect for absolute beginners.",
+      "video": "https://www.youtube.com/watch?v=B-ytMSuwbf8",
+      "image": "https://img.youtube.com/vi/B-ytMSuwbf8/maxresdefault.jpg",
+      "instructor": "Brad Schiff",
+      "price": 100,
+      "id": 4,
+      "level": "Beginner",
+      "outcomes": [
+        "Design simple, user‑friendly web page layouts",
+        "Understand how HTML and CSS work together visually",
+        "Create responsive pages that look good on mobile"
+      ],
+      "skills": [
+        "Basic Web Design",
+        "Wireframes",
+        "Layout",
+        "Responsive Thinking"
+      ]
+    },
+    {
+      "typ": "ux_ui",
+      "title": "Adobe Illustrator CC for Intermediate",
+      "description": "This course teaches core Illustrator skills: vector shapes, pen tool, typography, logo design, and scalable graphics. Great for intermediate designers.",
+      "video": "https://www.youtube.com/watch?v=Ib8UBwu3yGA",
+      "image": "https://img.youtube.com/vi/Ib8UBwu3yGA/maxresdefault.jpg",
+      "instructor": "Daniel Walter Scott",
+      "price": 100,
+      "id": 5,
+      "level": "Intermediate",
+      "outcomes": [
+        "Create vector illustrations and icons from scratch",
+        "Design logos and simple brand assets",
+        "Prepare artwork for print and web export"
+      ],
+      "skills": [
+        "Illustrator Basics",
+        "Pen Tool",
+        "Vector Illustration",
+        "Logo Design",
+        "Exporting Assets"
+      ]
+    },
+    {
+      "typ": "ux_ui",
+      "title": "Motion Design & Animation for Advanced",
+      "description": "Learn motion graphics and animation principles using After Effects, keyframing, effects, and project workflows to create professional motion designs.",
+      "video": "https://www.youtube.com/watch?v=0p7EiZkqkUo",
+      "image": "https://img.youtube.com/vi/0p7EiZkqkUo/maxresdefault.jpg",
+      "instructor": "Jonathan Lam",
+      "price": 100,
+      "id": 6,
+      "level": "Advanced",
+      "outcomes": [
+        "Animate text and graphic elements smoothly",
+        "Use keyframes, easing and graph editors effectively",
+        "Produce short motion graphics sequences for clients"
+      ],
+      "skills": [
+        "After Effects",
+        "Keyframing",
+        "Motion Principles",
+        "Compositing",
+        "Rendering"
+      ]
+    },
+    {
+      "typ": "ux_ui",
+      "title": "Design Essentials Adobe XD for Beginner",
+      "description": "Learn Adobe XD to design and prototype interactive user interfaces. Covers design principles, wireframing, and clickable prototypes for apps and websites.",
+      "video": "https://www.youtube.com/watch?v=68w2VwalD5w",
+      "image": "https://img.youtube.com/vi/68w2VwalD5w/maxresdefault.jpg",
+      "instructor": "Daniel Walter Sco",
+      "price": 100,
+      "id": 7,
+      "level": "Beginner",
+      "outcomes": [
+        "Design basic app and website screens in XD",
+        "Create interactive prototypes with links and transitions",
+        "Share designs with developers and stakeholders"
+      ],
+      "skills": [
+        "Adobe XD",
+        "UI Layouts",
+        "Interactive Prototypes",
+        "Design Handoffs"
+      ]
+    },
+    {
+      "typ": "ux_ui",
+      "title": "Canva Master Course for Intermediate",
+      "description": "Master Canva for creating graphics, social media posts, presentations, and marketing materials with simple tools and professional results.",
+      "video": "https://www.youtube.com/watch?v=gjwA1U7Y38Y",
+      "image": "https://img.youtube.com/vi/gjwA1U7Y38Y/maxresdefault.jpg",
+      "instructor": "Daniel Walter Scott",
+      "price": 100,
+      "id": 8,
+      "level": "Intermediate",
+      "outcomes": [
+        "Design consistent social media and marketing graphics",
+        "Use Canva templates efficiently and customize them",
+        "Export designs correctly for print and digital"
+      ],
+      "skills": [
+        "Canva",
+        "Social Media Design",
+        "Presentations",
+        "Brand Assets"
+      ]
+    },
+    {
+      "typ": "ux_ui",
+      "title": "Mastering Photoshop for Advanced",
+      "description": "Advanced Photoshop techniques including masking, color correction, compositing, and digital art creation. Perfect for designers who want to go beyond basics.",
+      "video": "https://www.youtube.com/watch?v=IyR_uYsRdPs",
+      "image": "https://img.youtube.com/vi/IyR_uYsRdPs/maxresdefault.jpg",
+      "instructor": "Aaron Nace",
+      "price": 90,
+      "id": 9,
+      "level": "Advanced",
+      "outcomes": [
+        "Create complex composites from multiple images",
+        "Apply advanced masking and color grading techniques",
+        "Build polished artwork suitable for portfolio pieces"
+      ],
+      "skills": [
+        "Advanced Photoshop",
+        "Compositing",
+        "Advanced Masking",
+        "Color Grading",
+        "Digital Art"
+      ]
+    }
   ]
 }
