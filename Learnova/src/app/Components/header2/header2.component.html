@@ -1,5 +1,9 @@
-<div class="header-container sticky-top">
-  <nav class="navbar navbar-expand-lg navbar-dark" style="height: 70px">
+<div class="header-container">
+  <nav
+    class="navbar navbar-expand-lg navbar-dark"
+    style="height: 70px"
+    [class.navbar-scrolled]="isScrolled"
+  >
     <a class="navbar-brand" routerLink="/"
       ><img
         src="/Images/Logo/logo_rm.png"

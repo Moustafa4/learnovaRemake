@@ -56,7 +56,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 10px;
-  border-bottom: 1px solid #6f0a02;
+  border-bottom: 1px solid #92261e;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5),
     -1px -1px 3px rgba(0, 0, 0, 0.893);
@@ -136,7 +136,7 @@
 }
 
 .btn.active {
-  border: 1px solid #6f0a02;
+  border: 1px solid #92261e;
   background-color: rgb(0, 0, 0);
 }
 .btn-all-courses {
@@ -146,7 +146,7 @@
   margin-top: 20px;
 }
 .btn-all-courses:hover {
-  background-color: #6f0a02;
+  background-color: #92261e;
   color: white;
   border: 1px solid rgb(0, 0, 0);
 }
@@ -176,19 +176,19 @@
   padding: 20px;
 }
 .btn-subscribe {
-  border: 1px solid #6f0a02;
+  border: 1px solid #92261e;
   background-color: rgb(0, 0, 0);
   margin-bottom: 80px;
   margin-top: 20px;
 }
 .btn-subscribe:hover,
 #myTabContent .btn:hover {
-  background-color: #6f0a02;
+  background-color: #92261e;
   color: white;
 }
 .expert-title,
 .course-title {
-  color: #6f0a02;
+  color: #92261e;
 }
 
 /* nav&taps */
@@ -205,7 +205,7 @@
 }
 #myTab button.active {
   color: rgba(255, 255, 255, 0.856);
-  background-color: #6f0a02;
+  background-color: #92261e;
 }
 
 .card .img-con {
