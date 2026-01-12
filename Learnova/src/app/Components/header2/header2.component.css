@@ -1,5 +1,5 @@
 .header-container {
-  height: 75px;
+  height: 80px;
 }
 .navbar {
   position: fixed;
@@ -46,7 +46,7 @@
 }
 a {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
 }
 .form-control::placeholder {
   color: rgb(206, 206, 206);
@@ -140,7 +140,7 @@ a {
 }
 
 .navbar.navbar-scrolled {
-  background-color: rgba(29, 29, 29, 0.8);
+  background-color: rgba(61, 61, 61, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);

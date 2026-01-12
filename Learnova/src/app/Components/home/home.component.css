@@ -1,11 +1,12 @@
 .img-container {
   position: relative;
-  height: 610px;
+  height: 600px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.664)),
     url("/Images/Logo/Gemini_Generated_Image_8snj418snj418snj.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 5px;
 }
 .text {
   position: absolute;
@@ -30,7 +31,7 @@
 }
 .text p {
   line-height: 2;
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 20px;
 }
 .text p span,
@@ -38,11 +39,15 @@
   display: block;
 }
 .popup {
-  font-size: 1rem;
+  font-weight: 500;
   margin: 0px !important;
-  width: 180px;
-  padding: 10px 15px;
+
+  width: 200px;
+  padding: 15px;
   background-color: #6f0a02 !important;
+}
+.popup a {
+  font-size: 1.3rem;
 }
 .main-content {
   background-color: black;
@@ -103,25 +108,26 @@
 }
 
 .card {
-  border-radius: 25px;
+  border-radius: 15px;
   overflow: hidden;
   border-radius: 26px;
-  width: 80%;
+  width: 90%;
   margin: 0px auto;
   border: none;
   background-color: #1e1e1e;
   color: white;
+  height: 320px;
 }
 .courses-card-slider {
-  height: 100px;
+  text-align: center;
 }
 .card-img-top {
-  height: 150px;
+  height: 180px;
   object-fit: cover;
 }
 
 .card-title {
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
   font-weight: bold;
 }
 
