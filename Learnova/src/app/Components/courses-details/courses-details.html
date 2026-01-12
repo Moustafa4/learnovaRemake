@@ -1,1 +1,12 @@
-<p>courses-details works!</p>
+<div class="container">
+  <div class="row">
+    <!-- left part -->
+    <div class="col-8">
+      @if (courses()) {
+      <h1>{{courses()?.title}}</h1>
+      }
+    </div>
+    <!-- right part -->
+    <div class="col-4"></div>
+  </div>
+</div>

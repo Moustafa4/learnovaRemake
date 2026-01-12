@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ICourses } from '../../app/Components/courses/icourses';
-import { map } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -17,10 +17,10 @@ export class CoursesService {
       .pipe(map((res) => res.Courses ?? []));
   }
 
-  CoursesByTitle(title: string) {
-    return this._HttpClient.get<{ Courses: ICourses[] }>(this.courses_url).pipe(
-      map((res) => res.Courses ?? []),
-      map((Courses) => Courses.find((p) => p.title === title || null))
-    );
+  CoursesByTitle(title: string): Observable<ICourses | null> {
+  return this._HttpClient.get<{ Courses: ICourses[] }>(this.courses_url).pipe(
+    map(res => res.Courses ?? []),
+    map(courses => courses.find(p => p.title === title) ?? null)
+  );
   }
 }
