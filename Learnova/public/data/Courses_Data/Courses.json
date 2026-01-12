@@ -3,8 +3,9 @@
     {
       "typ": "coding",
       "title": "HTML for Beginners",
-      "description": "Learn the basics of HTML and how to structure web pages from scratch.",
-      "image": "https://c4.wallpaperflare.com/wallpaper/887/817/276/html-5-html-5-logo-wallpaper-thumb.jpg",
+      "description": "Master HTML in 30 days: build 5 real-world web page projects from scratch using modern HTML5 standards, semantic tags, forms, media elements, and best practices.",
+      "video": "https://www.youtube.com/watch?v=G3e-cpL7ofc",
+      "image": "https://img.youtube.com/vi/G3e-cpL7ofc/maxresdefault.jpg",
       "instructor": "Osama Elzero",
       "price": 100,
       "id": 1
@@ -12,8 +13,9 @@
     {
       "typ": "coding",
       "title": "CSS Advanced Techniques",
-      "description": "Master advanced CSS concepts like Flexbox, Grid, animations, and responsive design.",
-      "image": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/07/Black-Blue-background-with-CSS-logos.jpg",
+      "description": "Master CSS in 30 days: create responsive, dynamic layouts and advanced designs using Flexbox, Grid, animations, transitions, and Sass for real-world projects.",
+      "video": "https://www.youtube.com/watch?v=4iwQcvHYfWE",
+      "image": "https://img.youtube.com/vi/4iwQcvHYfWE/maxresdefault.jpg",
       "instructor": "Mohamed El Desouki",
       "price": 100,
       "id": 2
@@ -21,8 +23,9 @@
     {
       "typ": "coding",
       "title": "JavaScript for Intermediate Developers",
-      "description": "Deepen your JavaScript knowledge with real-world examples and modern ES6+ features.",
-      "image": "https://nydabd.com/wp-content/uploads/2018/11/1181834_8257_2.jpg",
+      "description": "Master JavaScript in 30 days: build 8 real-world interactive web applications using ES6+, DOM manipulation, APIs, and asynchronous programming techniques.",
+      "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+      "image": "https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg",
       "instructor": "Jonas Schmedtmann",
       "price": 100,
       "id": 3
@@ -30,8 +33,9 @@
     {
       "typ": "coding",
       "title": "Python for Beginners",
-      "description": "An easy introduction to Python programming focusing on problem solving and logic.",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8h_BUGp_0Yxt_QUeBeMu32g4kvJ6deNMW5g&s",
+      "description": "Master Python in 30 days: complete 7 hands-on projects including data processing, automation scripts, and simple web apps while learning Python basics and best practices.",
+      "video": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "image": "https://img.youtube.com/vi/rfscVS0vtbw/maxresdefault.jpg",
       "instructor": "Charles Severance",
       "price": 100,
       "id": 4
@@ -39,8 +43,9 @@
     {
       "typ": "coding",
       "title": "Advanced Web Development",
-      "description": "Become a professional web developer using modern tools and best practices.",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlkZUYHTE3SBHvF5vHU9l_54lhkqgbJ1qI0Q&s",
+      "description": "Master full-stack web development in 30 days: build 8 professional web applications with modern front-end and back-end technologies including React, Node.js, Express, and databases.",
+      "video": "https://www.youtube.com/watch?v=Ke90Tje7VS0",
+      "image": "https://img.youtube.com/vi/Ke90Tje7VS0/maxresdefault.jpg",
       "instructor": "Andrei Neagoie",
       "price": 100,
       "id": 5
@@ -48,8 +53,9 @@
     {
       "typ": "coding",
       "title": "Java Programming Advanced",
-      "description": "Advanced Java concepts including OOP, multithreading, and performance optimization.",
-      "image": "https://blog.geekster.in/wp-content/uploads/2023/07/jpeg-optimizer_Introduction-to-Java.jpg",
+      "description": "Master Java in 30 days: build 8 real-world projects covering object-oriented programming, multithreading, data structures, and performance optimization techniques.",
+      "video": "https://www.youtube.com/watch?v=grEKMHGYyns",
+      "image": "https://img.youtube.com/vi/grEKMHGYyns/maxresdefault.jpg",
       "instructor": "Tim Buchalka",
       "price": 100,
       "id": 6
@@ -57,8 +63,9 @@
     {
       "typ": "coding",
       "title": "PHP for Beginners",
-      "description": "Learn PHP fundamentals and build dynamic websites step by step.",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-HocsqdMJ5c9k-PKcOmQMBNV2aH24rH9ynw&s",
+      "description": "Master PHP in 30 days: develop 7 dynamic web projects with database integration, forms, session handling, and real-world server-side applications.",
+      "video": "https://www.youtube.com/watch?v=OK_JCtrrv-c",
+      "image": "https://img.youtube.com/vi/OK_JCtrrv-c/maxresdefault.jpg",
       "instructor": "Edwin Diaz",
       "price": 100,
       "id": 7
@@ -66,8 +73,9 @@
     {
       "typ": "coding",
       "title": "Python Developer Advanced",
-      "description": "Advanced Python techniques for backend development and real projects.",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSUGuIAfwIgVjiyCutHaZCj9wGO-KTihuPTg&s",
+      "description": "Master advanced Python in 30 days: complete 8 projects involving backend development, APIs, automation, and modern Python libraries for real-world applications.",
+      "video": "https://www.youtube.com/watch?v=HGOBQPFzWKo",
+      "image": "https://img.youtube.com/vi/HGOBQPFzWKo/maxresdefault.jpg",
       "instructor": "Andrei Neagoie",
       "price": 100,
       "id": 8
@@ -75,8 +83,9 @@
     {
       "typ": "coding",
       "title": "Node.js Full-Stack Course",
-      "description": "Build full-stack applications using Node.js, Express, and databases.",
-      "image": "https://i.ytimg.com/vi/5i8ej1-GpFU/maxresdefault.jpg",
+      "description": "Master full-stack development with Node.js in 30 days: build 8 scalable, real-world applications using Node.js, Express, MongoDB, and modern JavaScript frameworks.",
+      "video": "https://www.youtube.com/watch?v=Oe421EPjeBE",
+      "image": "https://img.youtube.com/vi/Oe421EPjeBE/maxresdefault.jpg",
       "instructor": "Andrew Mead",
       "price": 100,
       "id": 9
@@ -84,8 +93,9 @@
     {
       "typ": "coding",
       "title": "CSS & Sass Advanced",
-      "description": "Advanced styling with CSS and Sass for scalable and maintainable designs.",
-      "image": "https://miro.medium.com/v2/resize:fit:1400/1*P954017TxksjQhrZIZVToQ.jpeg",
+      "description": "Master advanced CSS and Sass in 30 days: build 7 responsive websites with animations, transitions, themes, and scalable design systems for real projects.",
+      "video": "https://www.youtube.com/watch?v=NuSkS6xX1g8",
+      "image": "https://img.youtube.com/vi/NuSkS6xX1g8/maxresdefault.jpg",
       "instructor": "Jonas Schmedtmann",
       "price": 100,
       "id": 10
@@ -93,8 +103,9 @@
     {
       "typ": "network",
       "title": "CCNA for Beginners",
-      "description": "Understand networking fundamentals and prepare for the CCNA certification.",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbJ--uSLQRM9OUqGFFFEyuCW-TbGjnjvPE6A&s",
+      "description": "Master networking in 30 days: complete 7 practical projects and labs covering Cisco CCNA concepts, routing, switching, subnetting, and network troubleshooting.",
+      "video": "https://www.youtube.com/watch?v=Wy5vG5E9cUg",
+      "image": "https://img.youtube.com/vi/Wy5vG5E9cUg/maxresdefault.jpg",
       "instructor": "Neil Anderson",
       "price": 100,
       "id": 11
@@ -102,8 +113,9 @@
     {
       "typ": "ux_ui",
       "title": "UI/UX Design for Beginners",
-      "description": "Learn UI/UX principles and design user-friendly digital experiences.",
-      "image": "https://miro.medium.com/v2/resize:fit:1400/1*G-w3Gpqa2a7F5ygCgF9EpQ.png",
+      "description": "Master UI/UX design in 30 days: complete 8 real-world design projects covering user research, wireframing, prototyping, and creating user-friendly digital experiences.",
+      "video": "https://www.youtube.com/watch?v=V0u4xPBlXrI",
+      "image": "https://img.youtube.com/vi/V0u4xPBlXrI/maxresdefault.jpg",
       "instructor": "Caler Edwards",
       "price": 100,
       "id": 12
@@ -111,8 +123,9 @@
     {
       "typ": "ux_ui",
       "title": "Advanced Motion Design",
-      "description": "Create professional animations and motion graphics for web and apps.",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0WNidF3Y8oCW-2mtp6KdjECyetsHADrsHHw&s",
+      "description": "Master motion design in 30 days: create 7 real-world animation projects using professional tools, motion graphics principles, and interactive UI animations for web and apps.",
+      "video": "https://www.youtube.com/watch?v=HU28_50T_1w",
+      "image": "https://img.youtube.com/vi/HU28_50T_1w/maxresdefault.jpg",
       "instructor": "Jonathan Lam",
       "price": 100,
       "id": 13

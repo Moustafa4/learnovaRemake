@@ -6,4 +6,5 @@ export interface ICourses {
   instructor: string;
   price: number;
   description: string;
+  video: string;
 }
