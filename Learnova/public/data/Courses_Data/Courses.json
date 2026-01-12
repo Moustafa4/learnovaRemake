@@ -1,8 +1,8 @@
 {
   "Courses": [
     {
-      "Courses": [
-        {
+      
+      
           "typ": "coding",
           "title": "Data Science with Python for Intermediate",
           "description": "This course covers data analysis, visualization, machine learning basics, pandas, NumPy, and real projects using Python. Ideal for future data scientists.",
@@ -272,7 +272,6 @@
           "price": 90,
           "id": 9
         }
-      ]
-    }
+
   ]
 }
