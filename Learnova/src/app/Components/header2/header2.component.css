@@ -47,9 +47,8 @@ a {
   color: rgb(206, 206, 206);
 }
 .active {
-  border: 1px solid #6f0a02;
-  border-radius: 10px;
-  /* background-color: rgba(255, 111, 0, 0.042); */
+  border-bottom: 1px solid #6f0a02;
+  border-radius: none;
 }
 .login-signup-btn {
   margin-right: 50px;
@@ -90,7 +89,8 @@ a {
 .searchbar:focus {
   outline: none;
   border: 1px solid #6f0a02;
-  box-shadow: 0px 1px 10px rgba(255, 111, 0, 0.229);
+  box-shadow: none;
+  /* box-shadow: 0px 1px 10px rgba(255, 111, 0, 0.229); */
 }
 .search-btn {
   background-color: rgba(0, 0, 0, 0);
@@ -223,10 +223,10 @@ a {
   /* .navbar-collapse {
     margin-top: -10px;
   } */
-  .active {
+  /* .active {
     border-bottom: 1px solid #6f0a02;
     border-radius: none;
-  }
+  } */
 
   .searchbar {
     display: none;
