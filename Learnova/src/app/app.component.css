@@ -2,3 +2,6 @@
   background-color: black;
   height: 100vh;
 }
+body {
+  font-family: "Helvetica Neue", Arial, system-ui, -apple-system, sans-serif;
+}
