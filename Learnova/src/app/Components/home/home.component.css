@@ -13,8 +13,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  top: 15%;
-  left: 5%;
+  top: 22%;
+  left: 8%;
   width: 680px;
   height: 170px;
   color: rgb(216, 214, 214) !important;
@@ -106,7 +106,10 @@
 .carousel-item {
   padding: 15px;
 }
-
+.card-text {
+  font-size: 20px;
+  margin-top: 12px;
+}
 .card {
   border-radius: 15px;
   overflow: hidden;
@@ -114,9 +117,10 @@
   width: 90%;
   margin: 0px auto;
   border: none;
-  background-color: #1e1e1e;
+  background-color: #0e0c0c;
   color: white;
   height: 320px;
+  box-shadow: 0px 0px 7px 1px rgb(60 60 60 / 50%);
 }
 .courses-card-slider {
   text-align: center;
@@ -133,8 +137,9 @@
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #000000;
+  background-color: transparent;
   border-radius: 50%;
+  margin-top: 97px;
 }
 .btn {
   background-color: rgb(54, 54, 54);
