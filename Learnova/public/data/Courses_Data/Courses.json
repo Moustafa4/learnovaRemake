@@ -3,7 +3,7 @@
     {
       "typ": "coding",
       "title": "Data Science with Python for Intermediate",
-      "description": "This course covers data analysis, visualization, machine learning basics, pandas, NumPy, and real projects using Python. Ideal for future data scientists.",
+      "description": "This course takes you beyond basic Python and into real-world data analysis. You start by reviewing essential Python features that matter most for data work. Then you learn how to load, clean and transform messy datasets using Pandas and NumPy. Step by step, you practice building visualizations that highlight trends, patterns and anomalies. You also get an introduction to core machine learning ideas and simple models you can train yourself. By the end, you will feel confident exploring new datasets and presenting data-driven insights to others.",
       "video": "https://www.youtube.com/watch?v=HrRA67O-QXI",
       "image": "https://img.youtube.com/vi/ua-CiDNNj30/maxresdefault.jpg",
       "instructor": "Jose Portilla",
@@ -27,7 +27,7 @@
     {
       "typ": "coding",
       "title": "JavaScript Essentials for Beginner",
-      "description": "JavaScript fundamentals including syntax, variables, loops, functions, and DOM manipulation. Perfect for beginners to starter web programming.",
+      "description": "This course gives you a friendly introduction to JavaScript from the very beginning. You will learn what variables, data types and operators are, and how to use them safely. Next, you practice writing conditions, loops and functions to make your code reusable and easier to understand. You will then move into the browser and see how JavaScript can change HTML and CSS in response to user actions. Along the way, you will debug common errors and understand how the browser executes your scripts. By the end, you will be ready to build small interactive components and move on to more advanced JavaScript topics.",
       "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk",
       "image": "https://img.youtube.com/vi/W6NZfCO5SIk/maxresdefault.jpg",
       "instructor": "Mosh Hamedani",
@@ -51,7 +51,7 @@
     {
       "typ": "coding",
       "title": "HTML",
-      "description": "Learn HTML from scratch: build real web pages, understand semantic tags, forms, images, layout techniques and modern HTML5 features.",
+      "description": "This course teaches you how to build solid web pages using modern HTML from the ground up. You begin by understanding the structure of a web document and the role of the browser. Then you learn the most important tags for headings, paragraphs, images and links. After that, you will work with forms, tables and semantic elements that make your pages accessible and easy to maintain. Real examples show you how to organize content for blogs, landing pages and simple web apps. By the end, you will be able to turn a design or idea into clean, semantic HTML ready for styling and interactivity.",
       "video": "https://www.youtube.com/watch?v=qz0aGYrrlhU",
       "image": "https://img.youtube.com/vi/qz0aGYrrlhU/maxresdefault.jpg",
       "instructor": "Osama Elzero",
@@ -75,7 +75,7 @@
     {
       "typ": "coding",
       "title": "CSS",
-      "description": "Master CSS: style web pages with Flexbox, Grid, responsive design and animations to make your websites look professional.",
+      "description": "This course helps you turn plain HTML into attractive, professional-looking web pages using CSS. You start by learning how selectors, properties and the box model work together. Then you practice styling text, colors, spacing and backgrounds to create a consistent visual identity. The course guides you through building responsive layouts using Flexbox and CSS Grid. You also explore simple transitions and hover effects that make interfaces feel more polished. Throughout the lessons, you work on real sections like hero banners, cards and navigation bars. By the end, you will be able to style complete pages that look great on both desktop and mobile.",
       "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc",
       "image": "https://img.youtube.com/vi/1Rs2ND1ryYc/maxresdefault.jpg",
       "instructor": "Mohamed El Desouki",
@@ -99,7 +99,7 @@
     {
       "typ": "coding",
       "title": "The Complete JavaScript",
-      "description": "Deep dive into JavaScript: understand variables, functions, DOM, APIs and build interactive website features from scratch.",
+      "description": "This course is designed to take you from basic JavaScript knowledge to a strong, modern understanding of the language. You will revisit the fundamentals and quickly move into ES6+ features like arrow functions, classes and modules. With plenty of practice, you learn how to interact with the DOM, handle events and build dynamic UI behavior. The course also covers asynchronous programming, promises and working with remote APIs. You will build small projects that combine multiple concepts into real features. By the end, you will write cleaner, more structured JavaScript suitable for frameworks and larger applications.",
       "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
       "image": "https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg",
       "instructor": "Jonas Schmedtmann",
@@ -123,7 +123,7 @@
     {
       "typ": "coding",
       "title": "Python for Everybody",
-      "description": "Learn Python basics and advanced concepts: from variables and loops to file handling and simple web apps, ideal for beginners.",
+      "description": "This course introduces Python to complete beginners with a clear, step‑by‑step approach. You start with installing Python and writing your first simple programs. Then you learn about variables, conditions, loops and functions to structure your code. You will work with strings, lists and dictionaries to process different types of data. Later, you explore file handling and small real‑world tasks that can be automated with scripts. Each section reinforces the concepts with practical exercises. By the end, you will be comfortable writing basic Python programs and ready to move into more specialized areas.",
       "video": "https://www.youtube.com/watch?v=rfscVS0vtbw",
       "image": "https://img.youtube.com/vi/rfscVS0vtbw/maxresdefault.jpg",
       "instructor": "Charles Severance",
@@ -146,7 +146,7 @@
     {
       "typ": "coding",
       "title": "The Complete Web Developer",
-      "description": "Learn full web development: combine HTML, CSS, JavaScript and backend tools to build complete modern websites from start to finish.",
+      "description": "This course walks you through the full web development stack using modern tools. You begin by mastering the fundamentals of HTML, CSS and JavaScript together. Then you see how these pieces connect to simple backends and APIs. Through guided projects, you build pages, forms and interactive components that mirror real websites. You also learn how to organize your files, manage assets and think about deployment. The focus is on building complete, functioning sites rather than isolated snippets. By the end, you will have a clear picture of how a full web project is structured from start to finish.",
       "video": "https://www.youtube.com/watch?v=Ke90Tje7VS0",
       "image": "https://img.youtube.com/vi/Ke90Tje7VS0/maxresdefault.jpg",
       "instructor": "Andrei Neagoie",
@@ -170,7 +170,7 @@
     {
       "typ": "coding",
       "title": "Java Programming",
-      "description": "Understand Java programming: syntax, OOP fundamentals, and how to write real Java applications from basics to advanced topics.",
+      "description": "This course teaches you how to think and build software in Java, one of the most widely used languages in the world. You start by learning the syntax, variables and basic control structures. Then you move into object‑oriented programming with classes, objects and methods. You will explore inheritance, polymorphism and interfaces to design flexible systems. The lessons also cover collections, error handling and working with files. Throughout the course, you build small programs that reflect real use cases. By the end, you will have the foundation needed for desktop apps, Android, or backend development in Java.",
       "video": "https://www.youtube.com/watch?v=grEKMHGYyns",
       "image": "https://img.youtube.com/vi/grEKMHGYyns/maxresdefault.jpg",
       "instructor": "Tim Buchalka",
@@ -193,7 +193,7 @@
     {
       "typ": "coding",
       "title": "Learn PHP for Beginners",
-      "description": "Start building dynamic server-side web apps using PHP, working with forms, sessions, databases and real backend logic.",
+      "description": "This course shows you how to create dynamic websites and simple backends using PHP. You begin by learning the basics of the language and how it integrates with HTML. Then you handle forms, user input and server‑side validation. You will connect your PHP scripts to a database so you can store and retrieve information. The course also introduces sessions and simple authentication concepts. Through small projects, you see how separate pages work together to form a real application. By the end, you will be able to build basic PHP sites that respond to user actions and data.",
       "video": "https://www.youtube.com/watch?v=OK_JCtrrv-c",
       "image": "https://img.youtube.com/vi/OK_JCtrrv-c/maxresdefault.jpg",
       "instructor": "Edwin Diaz",
@@ -216,7 +216,7 @@
     {
       "typ": "coding",
       "title": "The Complete Python Developer",
-      "description": "Advance your Python skills with real projects, backend development, APIs and more to become a professional Python developer.",
+      "description": "This course is aimed at learners who already know Python basics and want to become productive developers. You start by revisiting core language features and improving code style. Then you build projects that interact with APIs, files and databases. The instructor guides you through organizing larger applications with packages and virtual environments. You will also touch on backend concepts and simple web services written in Python. Real examples help you understand how Python is used in professional environments. By the end, you will be able to structure and ship more serious Python applications.",
       "video": "https://www.youtube.com/watch?v=HGOBQPFzWKo",
       "image": "https://img.youtube.com/vi/HGOBQPFzWKo/maxresdefault.jpg",
       "instructor": "Andrei Neagoie",
@@ -239,7 +239,7 @@
     {
       "typ": "coding",
       "title": "Full-stack Web with node.js",
-      "description": "Build scalable full-stack applications using Node.js, Express and JavaScript: from server setup to databases and APIs.",
+      "description": "This course focuses on building full‑stack JavaScript applications powered by Node.js. You begin by setting up a Node and Express server and understanding how HTTP requests work. Then you design REST APIs that send and receive JSON data. On the data side, you connect to databases and learn how to model and validate information. You will also see how front‑end clients talk to your backend and how to secure common routes. Throughout the course, you build and test features that feel like those in real products. By the end, you will be ready to create and maintain Node‑based web services.",
       "video": "https://www.youtube.com/watch?v=Oe421EPjeBE",
       "image": "https://img.youtube.com/vi/Oe421EPjeBE/maxresdefault.jpg",
       "instructor": "Andrew Mead",
@@ -262,7 +262,7 @@
     {
       "typ": "coding",
       "title": "Advanced CSS and Sass",
-      "description": "Master advanced CSS and Sass: scalable styles, components, responsive themes and modern layouts for production-ready sites.",
+      "description": "This course is for developers who already know basic CSS and want to build scalable, modern user interfaces. You learn how to architect large stylesheets using Sass, variables and partials. The instructor shows you how to apply BEM and design‑system thinking to keep components consistent. You will build complex responsive layouts tailored for real products and dashboards. Advanced animations and transitions are used to bring interactions to life without hurting performance. By the end, you will be able to design and maintain professional‑grade CSS codebases for production websites.",
       "video": "https://www.youtube.com/watch?v=NuSkS6xX1g8",
       "image": "https://img.youtube.com/vi/NuSkS6xX1g8/maxresdefault.jpg",
       "instructor": "Jonas Schmedtmann",
@@ -285,7 +285,7 @@
     {
       "typ": "network",
       "title": "Cisco CCNA",
-      "description": "Learn Cisco CCNA networking fundamentals: routing, switching, subnetting, protocols and real networking scenarios.",
+      "description": "This course prepares you for the Cisco CCNA exam while building strong hands‑on networking skills. You begin with IP addressing, subnetting and the core protocols behind modern networks. Then you configure routers and switches in realistic lab scenarios. You will work with VLANs, routing protocols and basic security concepts. Each module connects theory directly to command‑line practice on Cisco devices. The content is aligned with the official CCNA exam objectives. By the end, you will understand how small and medium networks are designed, deployed and troubleshot.",
       "video": "https://www.youtube.com/watch?v=pNN3_34TNYw",
       "image": "https://img.youtube.com/vi/pNN3_34TNYw/maxresdefault.jpg",
       "instructor": "Neil Anderson",
@@ -309,7 +309,7 @@
     {
       "typ": "network",
       "title": "Networking Fundamentals",
-      "description": "Understand core networking principles: OSI model, TCP/IP, addressing, and hands-on fundamentals for building network knowledge.",
+      "description": "This course gives you a clear foundation in computer networking concepts. You start by understanding why networks exist and how devices communicate. The OSI and TCP/IP models are explained in plain language with real examples. You then learn about switches, routers and common network topologies. Basic IP addressing and subnetting help you see how traffic is directed. Hands‑on demos show what happens to packets as they move across a network. By the end, you will feel comfortable with the core ideas needed for further networking or certification study.",
       "video": "https://www.youtube.com/watch?v=tvL-nH9A4cM",
       "image": "https://img.youtube.com/vi/tvL-nH9A4cM/maxresdefault.jpg",
       "instructor": "David Bombal",
@@ -332,7 +332,7 @@
     {
       "typ": "network",
       "title": "Practical Ethical Hacking",
-      "description": "Learn practical ethical hacking: reconnaissance, vulnerabilities, penetration testing and cybersecurity defense strategies.",
+      "description": "This course focuses on real‑world ethical hacking skills in a structured way. You begin with reconnaissance and information gathering on target systems. Then you perform vulnerability scanning and understand how weaknesses are discovered. The instructor demonstrates common exploit techniques in safe lab environments. You also learn how to escalate privileges and maintain controlled access. Defensive strategies and reporting best practices are discussed so you know how professionals work. By the end, you will have a practical view of the offensive side of cybersecurity and how to use it ethically.",
       "video": "https://www.youtube.com/watch?v=0xh1a3x3SV8",
       "image": "https://img.youtube.com/vi/0xh1a3x3SV8/maxresdefault.jpg",
       "instructor": "Heath Adams",
@@ -355,7 +355,7 @@
     {
       "typ": "network",
       "title": "CompTIA Network+",
-      "description": "Prepare for CompTIA Network+ certification with deep understanding of networking concepts and real exam scenarios.",
+      "description": "This course helps you pass the CompTIA Network+ exam while building strong conceptual knowledge. You cover each exam domain, from networking basics to security and troubleshooting. Realistic diagrams and examples show how networks are planned and documented. You learn how to choose cables, devices and standards for different environments. Detailed troubleshooting sections walk you through diagnosing common wired and wireless issues. The training is structured so you can revisit topics easily while preparing. By the end, you will be well‑positioned to sit for the Network+ certification with confidence.",
       "video": "https://www.youtube.com/watch?v=4H3oFf71Ulg",
       "image": "https://img.youtube.com/vi/4H3oFf71Ulg/maxresdefault.jpg",
       "instructor": "Jason Dion",
@@ -378,7 +378,7 @@
     {
       "typ": "network",
       "title": "Cisco CCNP Enterprise",
-      "description": "Advance in Cisco networking: enterprise-level routing, switching, automation and high-scale network design.",
+      "description": "This advanced course targets network engineers preparing for Cisco CCNP Enterprise. You revisit routing and switching at a deeper, enterprise‑scale level. The instructor explains how to design resilient topologies using modern Cisco technologies. You work through advanced configurations for routing, switching and policy control. Automation and programmability topics show where networks are heading next. Design scenarios and labs train you to think like an enterprise architect. By the end, you will understand how large networks are built, optimized and prepared for CCNP exams.",
       "video": "https://www.youtube.com/watch?v=2xqHWI6l5sM",
       "image": "https://img.youtube.com/vi/2xqHWI6l5sM/maxresdefault.jpg",
       "instructor": "Kevin Wallace",
@@ -400,7 +400,7 @@
     {
       "typ": "network",
       "title": "Packet Analysis, Ethical Hacking",
-      "description": "Learn packet analysis and ethical hacking methods to secure networks and understand low-level traffic behavior.",
+      "description": "This course teaches you how to read and interpret network traffic at the packet level. You start with capturing packets using tools like Wireshark. Then you learn how to filter, search and decode different protocols. The instructor shows how normal traffic looks so that anomalies become easier to spot. You connect this knowledge to ethical hacking scenarios and attack detection. Case studies help you see how packet analysis supports investigations and penetration tests. By the end, you will be more comfortable understanding what is really happening on the wire.",
       "video": "https://www.youtube.com/watch?v=6x1B6fK-QxQ",
       "image": "https://img.youtube.com/vi/6x1B6fK-QxQ/maxresdefault.jpg",
       "instructor": "Zaid Sabih",
@@ -422,7 +422,7 @@
     {
       "typ": "ux_ui",
       "title": "Adobe Photoshop CC for Beginner",
-      "description": "Learn Adobe Photoshop CC: create stunning graphics, retouch images, work with layers and masks, and design professional visuals. Perfect for beginners starting in graphic design.",
+      "description": "This course introduces Photoshop in a practical, project‑based way for new designers. You begin by exploring the interface, tools and essential panels. Then you learn how to work with layers, masks and selections to control edits precisely. Common photo‑retouching tasks are demonstrated step by step. You also design simple posters and social media graphics using text, shapes and images. Best practices for exporting files for web and print are covered. By the end, you will feel comfortable opening, editing and designing real visuals in Photoshop.",
       "video": "https://www.youtube.com/watch?v=OjRqZiAgoHo",
       "image": "https://img.youtube.com/vi/OjRqZiAgoHo/maxresdefault.jpg",
       "instructor": "Daniel Walter Scot",
@@ -445,7 +445,7 @@
     {
       "typ": "ux_ui",
       "title": "UI/UX Design Bootcamp for Intermediate",
-      "description": "Master UI/UX design: learn user-centered design, wireframing, prototyping, and tools like Figma and Adobe XD. Ideal for aspiring UX designers.",
+      "description": "This course is a compact bootcamp for designers who want to deepen their UI/UX skills. You start with user‑centered design principles and how to understand user needs. Wireframing sessions help you translate ideas into clear layouts. Then you move into high‑fidelity UI design using tools like Figma or Adobe XD. You will create interactive prototypes to communicate flows and micro‑interactions. Feedback loops and usability thinking are built into the process. By the end, you will be able to plan, design and present interfaces like a professional UX designer.",
       "video": "https://www.youtube.com/watch?v=3qHkEd9kZbI",
       "image": "https://img.youtube.com/vi/3qHkEd9kZbI/maxresdefault.jpg",
       "instructor": "Caler Edwards",
@@ -468,7 +468,7 @@
     {
       "typ": "ux_ui",
       "title": "Graphic Design Masterclass for Advanced",
-      "description": "A complete graphic design course covering typography, color theory, layouts, and creative workflows. Great for intermediate to advanced learners looking to enhance their design skills.",
+      "description": "This course is a comprehensive journey through modern graphic design practice. You revisit the core principles of typography, color and composition with fresh, practical examples. Real projects demonstrate how to create strong layouts for both print and digital platforms. The instructor shows you how to build visual hierarchy and tell stories with design. You will also explore branding, logo creation and the process behind consistent identities. Portfolio‑ready assignments help you build real pieces as you learn. By the end, you will have the confidence to tackle complex design briefs with a professional mindset.",
       "video": "https://www.youtube.com/watch?v=AnfezdrB_-s",
       "image": "https://img.youtube.com/vi/AnfezdrB_-s/maxresdefault.jpg",
       "instructor": "Lindsay Marsh",
@@ -491,7 +491,7 @@
     {
       "typ": "ux_ui",
       "title": "Web Design for Beginners for Beginner",
-      "description": "Learn the basics of web design: HTML structure, CSS styling, responsive layouts, and user-friendly design principles. Perfect for absolute beginners.",
+      "description": "This course introduces web design from a visual and structural perspective. You learn how HTML and CSS work together to create layouts users can navigate easily. Simple wireframing exercises help you plan sections before writing any code. You then style those layouts to match modern design trends and responsive behavior. The course emphasizes clarity, readability and user‑friendly decisions. Small projects guide you through building landing pages and basic sites. By the end, you will understand how to approach web design even if you are new to both design and development.",
       "video": "https://www.youtube.com/watch?v=B-ytMSuwbf8",
       "image": "https://img.youtube.com/vi/B-ytMSuwbf8/maxresdefault.jpg",
       "instructor": "Brad Schiff",
@@ -513,7 +513,7 @@
     {
       "typ": "ux_ui",
       "title": "Adobe Illustrator CC for Intermediate",
-      "description": "This course teaches core Illustrator skills: vector shapes, pen tool, typography, logo design, and scalable graphics. Great for intermediate designers.",
+      "description": "This course helps you use Adobe Illustrator confidently for vector‑based design work. You start with shapes, paths and the Pen Tool to draw clean graphics. Then you learn to work with typography, icons and simple illustrations. Logo design exercises show how to combine concepts, grids and color. You also prepare artwork for export to print and digital formats. Attention is given to organizing layers and using reusable components. By the end, you will be able to create scalable illustrations and brand assets that look sharp everywhere.",
       "video": "https://www.youtube.com/watch?v=Ib8UBwu3yGA",
       "image": "https://img.youtube.com/vi/Ib8UBwu3yGA/maxresdefault.jpg",
       "instructor": "Daniel Walter Scott",
@@ -536,7 +536,7 @@
     {
       "typ": "ux_ui",
       "title": "Motion Design & Animation for Advanced",
-      "description": "Learn motion graphics and animation principles using After Effects, keyframing, effects, and project workflows to create professional motion designs.",
+      "description": "This course dives into motion design for those who already know the basics of design or video. You learn the core principles of animation such as timing, easing and anticipation. Using After Effects, you will animate text, shapes and UI elements step by step. The instructor demonstrates how to use keyframes, graphs and effects for polished results. You also explore how to structure motion projects for clients and export them in the right formats. Case studies show how motion supports branding and storytelling. By the end, you will be able to build short, professional motion graphics sequences.",
       "video": "https://www.youtube.com/watch?v=0p7EiZkqkUo",
       "image": "https://img.youtube.com/vi/0p7EiZkqkUo/maxresdefault.jpg",
       "instructor": "Jonathan Lam",
@@ -559,7 +559,7 @@
     {
       "typ": "ux_ui",
       "title": "Design Essentials Adobe XD for Beginner",
-      "description": "Learn Adobe XD to design and prototype interactive user interfaces. Covers design principles, wireframing, and clickable prototypes for apps and websites.",
+      "description": "This course introduces Adobe XD as a fast and intuitive tool for UI design. You begin by setting up artboards and using basic shapes, text and components. Then you design simple app and website screens that follow common patterns. Interactive prototyping features show you how to link screens and add transitions. You also learn how to share designs with clients and developers for feedback and handoff. Best practices for organizing files and styles are covered throughout. By the end, you will be able to design and present clickable prototypes for your own ideas.",
       "video": "https://www.youtube.com/watch?v=68w2VwalD5w",
       "image": "https://img.youtube.com/vi/68w2VwalD5w/maxresdefault.jpg",
       "instructor": "Daniel Walter Sco",
@@ -581,7 +581,7 @@
     {
       "typ": "ux_ui",
       "title": "Canva Master Course for Intermediate",
-      "description": "Master Canva for creating graphics, social media posts, presentations, and marketing materials with simple tools and professional results.",
+      "description": "This course shows you how to go beyond templates and really master Canva. You start by understanding brand kits, layouts and how to keep designs consistent. Then you create social media posts, presentations and marketing materials step by step. The instructor shares tips for working quickly while still producing polished results. You explore how to collaborate with others and manage design assets in the cloud. Export settings for print and digital are explained clearly. By the end, you will be able to produce on‑brand graphics for different platforms using only Canva.",
       "video": "https://www.youtube.com/watch?v=gjwA1U7Y38Y",
       "image": "https://img.youtube.com/vi/gjwA1U7Y38Y/maxresdefault.jpg",
       "instructor": "Daniel Walter Scott",
@@ -603,7 +603,7 @@
     {
       "typ": "ux_ui",
       "title": "Mastering Photoshop for Advanced",
-      "description": "Advanced Photoshop techniques including masking, color correction, compositing, and digital art creation. Perfect for designers who want to go beyond basics.",
+      "description": "This course is aimed at designers who want to push Photoshop to a professional level. You work on complex composites built from multiple images and advanced masking. Color correction and grading techniques are demonstrated in real projects. You also explore creative effects, lighting and digital painting workflows. The instructor shares tips for organizing large files and working efficiently with layers. Portfolio‑style assignments help you practice the full process from raw images to final artwork. By the end, you will be able to create polished visuals suitable for campaigns, portfolios and client work.",
       "video": "https://www.youtube.com/watch?v=IyR_uYsRdPs",
       "image": "https://img.youtube.com/vi/IyR_uYsRdPs/maxresdefault.jpg",
       "instructor": "Aaron Nace",

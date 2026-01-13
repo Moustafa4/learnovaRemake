@@ -1,30 +1,30 @@
 /* Main container */
 .container-fluid {
-  position: relative;
-  height: 650px;
+  margin-bottom: 25px;
 }
 
 .backBanner-container {
-  position: relative;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 650px;
 }
 
 .backBanner-image {
-  position: absolute;
-  inset: 0;
   background-size: cover;
   background-position: center;
-  filter: blur(50px);
-  transform: scale(1.1);
-  z-index: 1;
+  width: 100%;
+  height: 500px;
 }
 
 /* img  overlay*/
 .backBanner-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  height: 650px;
+  width: 100%;
+  backdrop-filter: blur(30px);
+  transform: scale(1.1);
   background-image: linear-gradient(
     to bottom,
     #0a8db100 19%,
@@ -40,7 +40,7 @@
 /*start courses details*/
 .backBanner-content {
   position: relative;
-  z-index: 3; /* فوق الخلفية والـoverlay */
+  z-index: 5; /* فوق الخلفية والـoverlay */
   padding-top: 40px;
 }
 
@@ -61,4 +61,49 @@
 .left-part .cat-p span {
   font-weight: bold;
   text-decoration: underline;
+}
+.left-part .skills {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.left-part .skills p  {
+  color: white;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 50px;
+  text-align: center;
+}
+.outcomes h3,
+.Coursedetails h3,.Aboutcourse h3 {
+  color: white;
+  font-weight: 600;
+}
+.outcomes ul,
+.Coursedetails ul {
+  padding: 0;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.822);
+  line-height: 50px;
+  font-size: 18px;
+}
+.outcomes ul li::before {
+  content: "✓";
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.Coursedetails ul li i {
+  margin-right: 10px;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ffffff9e;
+  opacity: 1;
+}
+.Aboutcourse p{
+  color: white;
+  border: 1px solid red;
 }

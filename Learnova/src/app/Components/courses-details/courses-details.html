@@ -11,25 +11,46 @@
     ></div>
 
     <div class="backBanner-overlay"></div>
-
-    <div class="container backBanner-content">
-      <div class="row">
-        <!-- left part -->
-        <div class="col-8 left-part">
-          <div><img [src]="courses()?.image" [alt]="courses()!.title" /></div>
-          <div class="cat-p">
-            <p>categories: <span>{{courses()?.typ}}</span></p>
-          </div>
-          
-          <div>
-            <h3>By the end of this course, you will be able to</h3>
-          </div>
-        </div>
-        <!-- right part -->
-        <div class="col-4"></div>
-      </div>
-    </div>
-
     }
+  </div>
+  <div class="container backBanner-content">
+    <div class="row">
+      <!-- left part -->
+      <div class="col-8 left-part">
+        <div><img [src]="courses()?.image" [alt]="courses()!.title" /></div>
+        <div class="cat-p">
+          <p>categories: <span>{{courses()?.typ}}</span></p>
+        </div>
+        <div class="skills">
+          @for (s of courses()?.skills; track s) {
+          <p>{{s}}</p>
+          }
+        </div>
+        <div class="outcomes">
+          <h3>By the end of this course, you will be able to</h3>
+          <ul>
+            @for (o of courses()?.outcomes; track o) {
+            <li>{{o}}</li>
+            }
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="Coursedetails">
+        <h3>Course details</h3>
+        <ul>
+          <li><i class="bi bi-alarm"></i>1 h 4 m/13 lessons</li>
+          <li><i class="bi bi-calendar"></i> Last updated: 20/9/2026</li>
+          <li><i class="bi bi-card-text"></i>Course completion certificate</li>
+        </ul>
+      </div>
+      <hr />
+      <div class="Aboutcourse">
+        <h3>About this course</h3>
+        <p>{{courses()?.description}}</p>
+      </div>
+      <!-- right part -->
+      <div class="col-4"></div>
+    </div>
   </div>
 </div>
