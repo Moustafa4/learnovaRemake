@@ -1,4 +1,11 @@
-import { Component, effect, inject } from '@angular/core';
+import {
+  Component,
+  effect,
+  ElementRef,
+  HostListener,
+  inject,
+  ViewChild,
+} from '@angular/core';
 import { CoursesService } from '../../../services/courses_ser/courses.service';
 import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -26,12 +33,20 @@ export class CoursesDetails {
       map((course) => course ?? null)
     )
   );
-  constructor(private sanitizer: DomSanitizer) {
-    effect(() => {
-      console.log(this.courses());
-    });
-  }
-  safeVideo(video: string): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(video);
+  @ViewChild('Textcon') Textcon!: ElementRef<HTMLDivElement>;
+
+  isExpanded = false;
+  toggleRead(event: Event) {
+    event.preventDefault();
+
+    this.isExpanded = !this.isExpanded;
+
+    if (this.isExpanded) {
+      this.Textcon.nativeElement.style.overflow = 'visible';
+      this.Textcon.nativeElement.style.height = 'fit-content';
+    } else {
+      this.Textcon.nativeElement.style.overflow = 'hidden';
+      this.Textcon.nativeElement.style.height = '60px';
+    }
   }
 }

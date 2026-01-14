@@ -50,7 +50,7 @@
     },
     {
       "typ": "coding",
-      "title": "HTML",
+      "title": "HTML For Beginner",
       "description": "This course teaches you how to build solid web pages using modern HTML from the ground up. You begin by understanding the structure of a web document and the role of the browser. Then you learn the most important tags for headings, paragraphs, images and links. After that, you will work with forms, tables and semantic elements that make your pages accessible and easy to maintain. Real examples show you how to organize content for blogs, landing pages and simple web apps. By the end, you will be able to turn a design or idea into clean, semantic HTML ready for styling and interactivity.",
       "video": "https://www.youtube.com/watch?v=qz0aGYrrlhU",
       "image": "https://img.youtube.com/vi/qz0aGYrrlhU/maxresdefault.jpg",
@@ -74,7 +74,7 @@
     },
     {
       "typ": "coding",
-      "title": "CSS",
+      "title": "CSS For Beginner",
       "description": "This course helps you turn plain HTML into attractive, professional-looking web pages using CSS. You start by learning how selectors, properties and the box model work together. Then you practice styling text, colors, spacing and backgrounds to create a consistent visual identity. The course guides you through building responsive layouts using Flexbox and CSS Grid. You also explore simple transitions and hover effects that make interfaces feel more polished. Throughout the lessons, you work on real sections like hero banners, cards and navigation bars. By the end, you will be able to style complete pages that look great on both desktop and mobile.",
       "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc",
       "image": "https://img.youtube.com/vi/1Rs2ND1ryYc/maxresdefault.jpg",
@@ -169,7 +169,7 @@
     },
     {
       "typ": "coding",
-      "title": "Java Programming",
+      "title": "Java Programming Intermediate Level",
       "description": "This course teaches you how to think and build software in Java, one of the most widely used languages in the world. You start by learning the syntax, variables and basic control structures. Then you move into object‑oriented programming with classes, objects and methods. You will explore inheritance, polymorphism and interfaces to design flexible systems. The lessons also cover collections, error handling and working with files. Throughout the course, you build small programs that reflect real use cases. By the end, you will have the foundation needed for desktop apps, Android, or backend development in Java.",
       "video": "https://www.youtube.com/watch?v=grEKMHGYyns",
       "image": "https://img.youtube.com/vi/grEKMHGYyns/maxresdefault.jpg",
@@ -261,7 +261,7 @@
     },
     {
       "typ": "coding",
-      "title": "Advanced CSS and Sass",
+      "title": "Advanced CSS and Sass Advanced Level",
       "description": "This course is for developers who already know basic CSS and want to build scalable, modern user interfaces. You learn how to architect large stylesheets using Sass, variables and partials. The instructor shows you how to apply BEM and design‑system thinking to keep components consistent. You will build complex responsive layouts tailored for real products and dashboards. Advanced animations and transitions are used to bring interactions to life without hurting performance. By the end, you will be able to design and maintain professional‑grade CSS codebases for production websites.",
       "video": "https://www.youtube.com/watch?v=NuSkS6xX1g8",
       "image": "https://img.youtube.com/vi/NuSkS6xX1g8/maxresdefault.jpg",
@@ -284,7 +284,7 @@
     },
     {
       "typ": "network",
-      "title": "Cisco CCNA",
+      "title": "Cisco CCNA Intermediate",
       "description": "This course prepares you for the Cisco CCNA exam while building strong hands‑on networking skills. You begin with IP addressing, subnetting and the core protocols behind modern networks. Then you configure routers and switches in realistic lab scenarios. You will work with VLANs, routing protocols and basic security concepts. Each module connects theory directly to command‑line practice on Cisco devices. The content is aligned with the official CCNA exam objectives. By the end, you will understand how small and medium networks are designed, deployed and troubleshot.",
       "video": "https://www.youtube.com/watch?v=pNN3_34TNYw",
       "image": "https://img.youtube.com/vi/pNN3_34TNYw/maxresdefault.jpg",

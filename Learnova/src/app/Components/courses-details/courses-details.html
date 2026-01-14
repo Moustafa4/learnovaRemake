@@ -16,8 +16,24 @@
   <div class="container backBanner-content">
     <div class="row">
       <!-- left part -->
-      <div class="col-8 left-part">
-        <div><img [src]="courses()?.image" [alt]="courses()!.title" /></div>
+      <div class="col-sm-12 col-md-9 col-lg-9 p-0 left-part">
+        <div><img [src]="courses()?.image" [alt]="courses()?.title" /></div>
+
+        <div class="card" style="width: 100%">
+          <div class="card-body">
+            <h5 class="card-title">{{courses()?.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+              By: {{courses()?.instructor}}
+            </h6>
+            <ul class="card-text">
+              <li><i class="bi bi-alarm"></i>1 h 4 m/13 lessons</li>
+              <li><i class="bi bi-reception-4"></i> {{courses()?.level}}</li>
+              <li><i class="bi bi-globe"></i> Course Language: Ar / En</li>
+            </ul>
+            <a href="#" class="card-link">Buy Now</a>
+          </div>
+        </div>
+
         <div class="cat-p">
           <p>categories: <span>{{courses()?.typ}}</span></p>
         </div>
@@ -34,23 +50,57 @@
             }
           </ul>
         </div>
+        <hr />
+        <div class="Coursedetails">
+          <h3>Course details</h3>
+          <ul>
+            <li><i class="bi bi-alarm"></i>1 h 4 m/13 lessons</li>
+            <li><i class="bi bi-calendar"></i> Last updated: 20/9/2026</li>
+            <li>
+              <i class="bi bi-card-text"></i>Course completion certificate
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="Aboutcourse">
+          <h3>About this course</h3>
+          <p #Textcon>{{courses()?.description}}</p>
+          <a href="#" (click)="toggleRead($event)">
+            {{ isExpanded ? 'Read less' : 'Read more' }}
+          </a>
+        </div>
+        <hr />
+        <div class="requirements">
+          <h3>Course requirements and prerequisites</h3>
+          <ul>
+            <li>
+              There are no requirements for this course. Your interest in the
+              topic and your commitment to learning are all you need to achieve
+              the utmost benefit from this course.
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <!-- End col-8 -->
       </div>
-      <hr />
-      <div class="Coursedetails">
-        <h3>Course details</h3>
-        <ul>
-          <li><i class="bi bi-alarm"></i>1 h 4 m/13 lessons</li>
-          <li><i class="bi bi-calendar"></i> Last updated: 20/9/2026</li>
-          <li><i class="bi bi-card-text"></i>Course completion certificate</li>
-        </ul>
-      </div>
-      <hr />
-      <div class="Aboutcourse">
-        <h3>About this course</h3>
-        <p>{{courses()?.description}}</p>
-      </div>
+
       <!-- right part -->
-      <div class="col-4"></div>
+      <div class="col-3 right">
+        <div class="card" style="width: 100%">
+          <div class="card-body">
+            <h5 class="card-title">{{courses()?.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+              By: {{courses()?.instructor}}
+            </h6>
+            <ul class="card-text">
+              <li><i class="bi bi-alarm"></i>1 h 4 m/13 lessons</li>
+              <li><i class="bi bi-reception-4"></i> {{courses()?.level}}</li>
+              <li><i class="bi bi-globe"></i> Course Language: Ar / En</li>
+            </ul>
+            <a href="#" class="card-link">Buy Now</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -2,14 +2,12 @@
 .container-fluid {
   margin-bottom: 25px;
 }
-
 .backBanner-container {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 650px;
 }
-
 .backBanner-image {
   background-size: cover;
   background-position: center;
@@ -24,7 +22,6 @@
   height: 650px;
   width: 100%;
   backdrop-filter: blur(30px);
-  transform: scale(1.1);
   background-image: linear-gradient(
     to bottom,
     #0a8db100 19%,
@@ -40,13 +37,12 @@
 /*start courses details*/
 .backBanner-content {
   position: relative;
-  z-index: 5; /* فوق الخلفية والـoverlay */
+  z-index: 5;
   padding-top: 40px;
 }
-
 .left-part img {
   width: 100%;
-  max-width: 740px;
+  height: 500px;
   border-radius: 12px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
@@ -68,20 +64,24 @@
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.left-part .skills p  {
+.left-part .skills p {
   color: white;
-  padding: 5px;
-  border: 1px solid white;
+  padding: 3px 10px 2px 10px;
+  border: 2px solid #ffffffad;
   border-radius: 50px;
   text-align: center;
+  font-weight: bold;
 }
 .outcomes h3,
-.Coursedetails h3,.Aboutcourse h3 {
+.Coursedetails h3,
+.Aboutcourse h3,
+.requirements h3 {
   color: white;
   font-weight: 600;
 }
 .outcomes ul,
-.Coursedetails ul {
+.Coursedetails ul,
+.right ul {
   padding: 0;
   list-style: none;
   color: rgba(255, 255, 255, 0.822);
@@ -94,7 +94,8 @@
   margin-right: 10px;
 }
 
-.Coursedetails ul li i {
+.Coursedetails ul li i,
+.right ul li i {
   margin-right: 10px;
 }
 hr {
@@ -103,7 +104,90 @@ hr {
   background-color: #ffffff9e;
   opacity: 1;
 }
-.Aboutcourse p{
+.Aboutcourse p {
   color: white;
-  border: 1px solid red;
+  line-height: 30px;
+  width: 753px;
+}
+.requirements ul {
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* right part */
+
+.right .card {
+  background: #000000b3;
+  color: white;
+  position: sticky;
+  top: 90px;
+  box-shadow: 0px 0px 4px 0px white;
+}
+.right .card .card-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  padding: 5px;
+  color: white;
+  background: rgba(255, 255, 255, 0.185);
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+.right .card .card-link:hover {
+  background: #750a02;
+  border: none;
+}
+/* MOBILE */
+@media (max-width: 767px) {
+  .right,
+  .left-part .skills,
+  .left-part .cat-p,
+  .backBanner-container {
+    display: none;
+  }
+  .backBanner-content {
+    position: relative;
+    z-index: unset;
+    padding: 20px;
+  }
+
+  .left-part img {
+    width: 100%;
+    height: 224px;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+  }
+  .backBanner-overlay {
+    display: none;
+  }
+
+  .Aboutcourse p {
+    color: white;
+    line-height: 30px;
+    height: 60px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .outcomes ul,
+  .Coursedetails ul,
+  .right ul,.requirements ul {
+    padding: 0;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.822);
+    line-height: 24px;
+    font-size: 12px;
+  }
+}
+/* Small Screens */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+/* midume */
+@media (min-width: 992px) {
+}
+/* D Large Screens */
+@media (min-width: 1200px) {
 }
