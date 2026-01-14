@@ -1,77 +1,4 @@
-/* Main container */
-.container-fluid {
-  margin-bottom: 25px;
-}
-.backBanner-container {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 650px;
-}
-.backBanner-image {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 500px;
-}
-
-/* img  overlay*/
-.backBanner-overlay {
-  position: absolute;
-  top: 0;
-  height: 650px;
-  width: 100%;
-  backdrop-filter: blur(30px);
-  background-image: linear-gradient(
-    to bottom,
-    #0a8db100 19%,
-    #00536b2b 35%,
-    #003a4a75 48%,
-    #00191fc2,
-    #000e12e8 80%,
-    #000
-  );
-  z-index: 2;
-}
-
-/*start courses details*/
-.backBanner-content {
-  position: relative;
-  z-index: 5;
-  padding-top: 40px;
-}
-.left-part img {
-  width: 100%;
-  height: 500px;
-  border-radius: 12px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
-}
-.left-part .cat-p {
-  margin-top: 20px;
-  color: #fdfcff;
-  font-size: 16px;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-}
-
-.left-part .cat-p span {
-  font-weight: bold;
-  text-decoration: underline;
-}
-.left-part .skills {
-  display: flex;
-  width: 90%;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-.left-part .skills p {
-  color: white;
-  padding: 3px 10px 2px 10px;
-  border: 2px solid #ffffffad;
-  border-radius: 50px;
-  text-align: center;
-  font-weight: bold;
-}
+/* Global */
 .outcomes h3,
 .Coursedetails h3,
 .Aboutcourse h3,
@@ -79,66 +6,10 @@
   color: white;
   font-weight: 600;
 }
-.outcomes ul,
-.Coursedetails ul,
-.right ul {
-  padding: 0;
-  list-style: none;
-  color: rgba(255, 255, 255, 0.822);
-  line-height: 50px;
-  font-size: 18px;
-}
 .outcomes ul li::before {
   content: "✓";
   font-size: 20px;
   margin-right: 10px;
-}
-
-.Coursedetails ul li i,
-.right ul li i {
-  margin-right: 10px;
-}
-hr {
-  border: none;
-  height: 1px;
-  background-color: #ffffff9e;
-  opacity: 1;
-}
-.Aboutcourse p {
-  color: white;
-  line-height: 30px;
-  width: 753px;
-}
-.requirements ul {
-  color: white;
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-/* right part */
-
-.right .card {
-  background: #000000b3;
-  color: white;
-  position: sticky;
-  top: 90px;
-  box-shadow: 0px 0px 4px 0px white;
-}
-.right .card .card-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 26px;
-  padding: 5px;
-  color: white;
-  background: rgba(255, 255, 255, 0.185);
-  text-decoration: none;
-  text-align: center;
-  width: 100%;
-}
-.right .card .card-link:hover {
-  background: #750a02;
-  border: none;
 }
 /* MOBILE */
 @media (max-width: 767px) {
@@ -174,20 +45,390 @@ hr {
   }
   .outcomes ul,
   .Coursedetails ul,
-  .right ul,.requirements ul {
+  .left-part ul,
+  .requirements ul {
     padding: 0;
     list-style: none;
     color: rgba(255, 255, 255, 0.822);
     line-height: 24px;
     font-size: 12px;
   }
+  .left-part .card {
+    background: #000000b3;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 4px 0px white;
+  }
+  .left-part .card-subtitle {
+    color: white;
+  }
+  .left-part .card .card-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 5px;
+    color: white;
+    background: #750a02;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+  }
+  .left-part .card .card-link:hover {
+    color: red;
+    background: white;
+    border: 1px solid #750a02;
+  }
 }
 /* Small Screens */
 @media (min-width: 768px) and (max-width: 991px) {
+  .right,
+  .left-part .skills,
+  .left-part .cat-p,
+  .backBanner-container,
+  .backBanner-overlay {
+    display: none;
+  }
+  .backBanner-content {
+    position: relative;
+    z-index: unset;
+    padding: 20px;
+  }
+
+  .left-part img {
+    width: 100%;
+    height: 377px;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+  }
+
+  .Aboutcourse p {
+    color: white;
+    line-height: 30px;
+    height: 60px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .left-part ul {
+    padding: 0;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.822);
+    line-height: 42px;
+    font-size: 18px;
+  }
+  .left-part .card {
+    margin: 0px auto;
+    /* width: 60% !important; */
+    background: #000000b3;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 4px 0px white;
+  }
+  .left-part .card-subtitle {
+    color: white;
+  }
+  .left-part .card .card-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 5px;
+    color: white;
+    background: #750a02;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+  }
+  .left-part .card .card-link:hover {
+    color: red;
+    background: white;
+    border: 2px solid #750a02;
+  }
 }
 /* midume */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+  .right,
+  .left-part .skills,
+  .left-part .cat-p,
+  .backBanner-container,
+  .backBanner-overlay {
+    display: none;
+  }
+  .backBanner-content {
+    position: relative;
+    z-index: unset;
+    padding: 20px;
+  }
+  /* Main container */
+  .container-fluid {
+    margin-bottom: 25px;
+  }
+
+  .backBanner-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+  }
+
+
+
+  /*start courses details*/
+  .backBanner-content {
+    position: relative;
+    z-index: unset;
+    padding-top: 40px;
+  }
+  .left-part img {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  }
+  .left-part .cat-p {
+    margin-top: 20px;
+    color: #fdfcff;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+
+  .left-part .cat-p span {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .left-part .skills {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .left-part .skills p {
+    color: white;
+    padding: 3px 10px 2px 10px;
+    border: 2px solid #ffffffad;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .outcomes ul,
+  .Coursedetails ul,
+  .right ul {
+    padding: 0;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.822);
+    line-height: 39px;
+    font-size: 17px;
+  }
+
+  .Coursedetails ul li i,
+  .right ul li i {
+    margin-right: 10px;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ffffff9e;
+    opacity: 1;
+  }
+  .Aboutcourse p {
+    color: white;
+    line-height: 30px;
+    width: 753px;
+  }
+  .requirements ul {
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  /* right part */
+
+  .left-part .card {
+    margin-top: 20px;
+    background: #000000b3;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 4px 0px white;
+  }
+  .left-part .card-subtitle {
+    color: white;
+  }
+  .left-part .card .card-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 5px;
+    color: white;
+    background: #750a02;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+  }
+  .left-part .card .card-link:hover {
+    color: red;
+    background: white;
+    border: 2px solid #750a02;
+  }
+  .left-part ul {
+    padding: 0;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.822);
+    line-height: 42px;
+    font-size: 18px;
+  }
 }
 /* D Large Screens */
 @media (min-width: 1200px) {
+  .right,
+  .left-part .skills,
+  .left-part .cat-p,
+  .backBanner-container {
+    display: block;
+  }
+  .left-part .card {
+    display: none;
+  }
+  /* Main container */
+  .container-fluid {
+    margin-bottom: 25px;
+  }
+  .backBanner-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 650px;
+  }
+  .backBanner-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+  }
+
+  /* img  overlay*/
+  .backBanner-overlay {
+    position: absolute;
+    top: 0;
+    height: 650px;
+    width: 100%;
+    backdrop-filter: blur(30px);
+    background-image: linear-gradient(
+      to bottom,
+      #0a8db100 19%,
+      #00536b2b 35%,
+      #003a4a75 48%,
+      #00191fc2,
+      #000e12e8 80%,
+      #000
+    );
+    z-index: 2;
+  }
+
+  /*start courses details*/
+  .backBanner-content {
+    position: relative;
+    z-index: 5;
+    padding-top: 40px;
+  }
+  .left-part img {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  }
+  .left-part .cat-p {
+    margin-top: 20px;
+    color: #fdfcff;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+
+  .left-part .cat-p span {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .left-part .skills {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .left-part .skills p {
+    color: white;
+    padding: 3px 10px 2px 10px;
+    border: 2px solid #ffffffad;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .outcomes h3,
+  .Coursedetails h3,
+  .Aboutcourse h3,
+  .requirements h3 {
+    color: white;
+    font-weight: 600;
+  }
+  .outcomes ul,
+  .Coursedetails ul,
+  .right ul {
+    padding: 0;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.822);
+    line-height: 39px;
+    font-size: 17px;
+  }
+
+  .Coursedetails ul li i,
+  .right ul li i {
+    margin-right: 10px;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ffffff9e;
+    opacity: 1;
+  }
+  .Aboutcourse p {
+    color: white;
+    line-height: 30px;
+    width: 753px;
+  }
+  .requirements ul {
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  /* right part */
+
+  .right .card {
+    background: #000000b3;
+    color: white;
+    position: sticky;
+    top: 90px;
+    box-shadow: 0px 0px 4px 0px white;
+  }
+  .right .card .card-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 5px;
+    color: white;
+    background: rgba(255, 255, 255, 0.185);
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+  }
+  .right .card .card-link:hover {
+    color: red;
+    background: white;
+    border: 1px solid #750a02;
+  }
 }

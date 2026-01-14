@@ -12,7 +12,6 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ICourses } from '../courses/icourses';
 import { filter, map, switchMap } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-courses-details',
@@ -34,19 +33,44 @@ export class CoursesDetails {
     )
   );
   @ViewChild('Textcon') Textcon!: ElementRef<HTMLDivElement>;
+  @ViewChild('atext') atext!: ElementRef<HTMLAnchorElement>;
 
   isExpanded = false;
+
+  ngAfterViewInit() {
+    this.applyResponsiveStyles(); // يتنفذ أول ما العناصر تبقى جاهزة في الـ DOM [web:22]
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.applyResponsiveStyles(); // كل ما العرض يتغير
+  }
+
   toggleRead(event: Event) {
     event.preventDefault();
-
     this.isExpanded = !this.isExpanded;
+    this.applyResponsiveStyles();
+  }
 
-    if (this.isExpanded) {
+  private applyResponsiveStyles() {
+    const width = window.innerWidth;
+
+    if (!this.Textcon?.nativeElement || !this.atext?.nativeElement) return;
+
+    if (width <= 991) {
+      this.atext.nativeElement.style.display = 'inline-block'; 
+      if (this.isExpanded) {
+        this.Textcon.nativeElement.style.overflow = 'visible';
+        this.Textcon.nativeElement.style.height = 'fit-content';
+      } else {
+        this.Textcon.nativeElement.style.overflow = 'hidden';
+        this.Textcon.nativeElement.style.height = '60px';
+      }
+    } else {
+     
+      this.atext.nativeElement.style.display = 'none';
       this.Textcon.nativeElement.style.overflow = 'visible';
       this.Textcon.nativeElement.style.height = 'fit-content';
-    } else {
-      this.Textcon.nativeElement.style.overflow = 'hidden';
-      this.Textcon.nativeElement.style.height = '60px';
     }
   }
 }
