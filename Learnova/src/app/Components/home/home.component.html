@@ -17,9 +17,9 @@
     </div>
 
     <!-- First part the slider of popular courses -->
-    <div class="container">
-      <div class="text-center popular-heading">
-        <p>Popular Courses</p>
+    <div class="pop-container">
+      <div class="text-left popular-heading">
+        <p>Top Courses of the week</p>
       </div>
 
       <div class="row slider-topseller">
@@ -36,7 +36,7 @@
             >
               <div class="row justify-content-evenly">
                 <div
-                  class="col-sm-12 col-md-4 col-lg-3 gx-2"
+                  class="col-sm-12 col-md-4 col-lg-4 gx-2"
                   *ngFor="let popular of group"
                 >
                   <div class="card courses-card">
@@ -49,6 +49,16 @@
                         />
                       </div>
                       <div class="card-body courses-card-slider">
+                        <div class="d-flex justify-content-between">
+                          <p class="course-type">
+                            {{ popular.typ }}
+                          </p>
+                          <span class="courses_rate mt-1"
+                            ><i class="fa fa-star"> </i> 4.5 ( 400+ Enrollements
+                            )
+                          </span>
+                        </div>
+
                         <h5 class="card-title course-title">
                           {{ popular.title }}
                         </h5>
@@ -84,146 +94,149 @@
     </div>
 
     <!-- courses -->
-    <div class="text-center heading">
-      <p>Explore Inspiring Courses Online</p>
-    </div>
-    <!-- ******************************************* -->
-    <div class="container tabs-con">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link active"
-            id="Coding"
-            data-bs-toggle="tab"
-            data-bs-target="#home-tab-pane"
-            type="button"
-            role="tab"
-            aria-controls="home-tab-pane"
-            aria-selected="true"
-          >
-            Coding
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="profile-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#profile-tab-pane"
-            type="button"
-            role="tab"
-            aria-controls="profile-tab-pane"
-            aria-selected="false"
-          >
-            Network
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="contact-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#contact-tab-pane"
-            type="button"
-            role="tab"
-            aria-controls="contact-tab-pane"
-            aria-selected="false"
-          >
-            Design
-          </button>
-        </li>
-      </ul>
+    <section class="courses-section">
+      <div class="text-center heading">
+        <p>Explore Inspiring Courses Online</p>
+      </div>
+      <!-- ******************************************* -->
+      <div class="tabs-con">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="Coding"
+              data-bs-toggle="tab"
+              data-bs-target="#home-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="home-tab-pane"
+              aria-selected="true"
+            >
+              Coding
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="profile-tab-pane"
+              aria-selected="false"
+            >
+              Network
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#contact-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="contact-tab-pane"
+              aria-selected="false"
+            >
+              Design
+            </button>
+          </li>
+        </ul>
 
-      <div class="tab-content" id="myTabContent">
-        <div
-          class="tab-pane fade show active"
-          id="home-tab-pane"
-          role="tabpanel"
-          aria-labelledby="Coding"
-          tabindex="0"
-        >
-          <div class="row gy-5">
-            @for (p of codecorses(); track p.id) {
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <div class="img-con">
-                  <img src="{{ p.image }}" class="card-img-top" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title">{{ p.title }}</h3>
-                  <a routerLink="/Details/{{ p.title }}" class="btn btn-primary"
-                    >Show Details</a
-                  >
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home-tab-pane"
+            role="tabpanel"
+            aria-labelledby="Coding"
+            tabindex="0"
+          >
+            <div class="row gy-5">
+              @for (p of codecorses(); track p.id) {
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="img-con">
+                    <img src="{{ p.image }}" class="card-img-top" alt="..." />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">{{ p.title }}</h3>
+                    <a
+                      routerLink="/Details/{{ p.title }}"
+                      class="btn btn-primary"
+                      >Show Details</a
+                    >
+                  </div>
                 </div>
               </div>
+              }
             </div>
-            }
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="profile-tab-pane"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+            tabindex="0"
+          >
+            <div class="row">
+              @for (p of networkcorses(); track p.id) {
+              <div class="col-12 col-md-6 col-lg-4 gy-5">
+                <div class="card">
+                  <div class="img-con">
+                    <img src="{{ p.image }}" class="card-img-top" alt="..." />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{ p.title }}</h5>
+                    <a
+                      routerLink="/ProjectDetails/{{ p.title }}"
+                      class="btn btn-primary"
+                      >Show Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+              }
+            </div>
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="contact-tab-pane"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+            tabindex="0"
+          >
+            <div class="row">
+              @for (p of designcourses(); track p.id) {
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                  <div class="img-con">
+                    <img src="{{ p.image }}" class="card-img-top" alt="..." />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{ p.title }}</h5>
+                    <a
+                      routerLink="/ProjectDetails/{{ p.title }}"
+                      class="btn btn-primary"
+                      >Show Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+              }
+            </div>
           </div>
         </div>
-
-        <div
-          class="tab-pane fade"
-          id="profile-tab-pane"
-          role="tabpanel"
-          aria-labelledby="profile-tab"
-          tabindex="0"
-        >
-          <div class="row">
-            @for (p of networkcorses(); track p.id) {
-            <div class="col-12 col-md-6 col-lg-4 gy-5">
-              <div class="card">
-                <div class="img-con">
-                  <img src="{{ p.image }}" class="card-img-top" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">{{ p.title }}</h5>
-                  <a
-                    routerLink="/ProjectDetails/{{ p.title }}"
-                    class="btn btn-primary"
-                    >Show Details</a
-                  >
-                </div>
-              </div>
-            </div>
-            }
-          </div>
-        </div>
-
-        <div
-          class="tab-pane fade"
-          id="contact-tab-pane"
-          role="tabpanel"
-          aria-labelledby="contact-tab"
-          tabindex="0"
-        >
-          <div class="row">
-            @for (p of designcourses(); track p.id) {
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card">
-                <div class="img-con">
-                  <img src="{{ p.image }}" class="card-img-top" alt="..." />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">{{ p.title }}</h5>
-                  <a
-                    routerLink="/ProjectDetails/{{ p.title }}"
-                    class="btn btn-primary"
-                    >Show Details</a
-                  >
-                </div>
-              </div>
-            </div>
-            }
-          </div>
+        <div class="btn-courses d-flex justify-content-center">
+          <button class="btn btn-all-courses mt-4 btn-lg" routerLink="/courses">
+            See All Courses
+          </button>
         </div>
       </div>
-      <div class="btn-courses d-flex justify-content-center">
-        <button class="btn btn-all-courses mt-4 btn-lg" routerLink="/courses">
-          See All Courses
-        </button>
-      </div>
-    </div>
-
+    </section>
     <!-- instructors slider -->
     <div class="container text-center">
       <h2 class="mb-6 text-white mb-5 title">Learnova Experts</h2>

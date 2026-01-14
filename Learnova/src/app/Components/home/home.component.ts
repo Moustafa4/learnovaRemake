@@ -76,7 +76,7 @@ export class HomeComponent {
   });
 
   // عدد الصور في كل سلايدر (كورسات /انسراكتور)
-  gropsize = 4;
+  gropsize = 3;
   groupedPopularCourses: ICourses[][] = [];
 
   groupedinst: Iinstructor[][] = [];
@@ -93,7 +93,7 @@ export class HomeComponent {
     } else if (width > 767 && width <= 991) {
       this.gropsize = 2;
     } else {
-      this.gropsize = 4;
+      this.gropsize = 3;
     }
 
     this.groupedPopularCourses = [];
