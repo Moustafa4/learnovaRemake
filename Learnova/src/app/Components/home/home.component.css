@@ -61,8 +61,8 @@
 }
 .popular-heading {
   font-size: 35px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   margin-left: 10px;
   border-bottom: 1px solid #92261e;
   color: rgb(255, 255, 255);
@@ -113,7 +113,7 @@
 .card {
   border-radius: 15px;
   overflow: hidden;
-  border-radius: 26px;
+  border-radius: 10px;
   width: 90%;
   margin: 0px auto;
   border: none;
@@ -122,12 +122,52 @@
   height: 320px;
   box-shadow: 0px 0px 7px 1px rgb(60 60 60 / 50%);
 }
+.courses-card a {
+  text-decoration: none;
+  color: #fff;
+}
 .courses-card-slider {
   text-align: center;
 }
+.card-img-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 10px;
+}
+.card-img-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 10%; /* شريط رفيع */
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.145) 45%,
+    rgba(255, 255, 255, 0.222) 50%,
+    rgba(255, 255, 255, 0.177) 60%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+  transition: left 1.5s ease, opacity 0.2s;
+}
+
+.courses-card:hover .card-img-container::after {
+  left: 130%;
+  opacity: 1;
+}
 .card-img-top {
-  height: 180px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
   object-fit: cover;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card-title {

@@ -1,10 +1,6 @@
 <div class="main-content">
   <div>
-    <div class="row img-container">
-      <!-- <img
-        src=""
-        alt=""
-      /> -->
+    <div class="img-container">
       <div class="text">
         <h1>
           Start Your Online
@@ -44,17 +40,21 @@
                   *ngFor="let popular of group"
                 >
                   <div class="card courses-card">
-                    <img
-                      [src]="popular.image"
-                      class="card-img-top"
-                      [alt]="popular.title"
-                    />
-                    <div class="card-body courses-card-slider">
-                      <h5 class="card-title course-title">
-                        {{ popular.title }}
-                      </h5>
-                      <p class="card-text">{{ popular.instructor }}</p>
-                    </div>
+                    <a routerLink="/Details/{{ popular.title }}">
+                      <div class="card-img-container">
+                        <img
+                          [src]="popular.image"
+                          class="card-img-top"
+                          [alt]="popular.title"
+                        />
+                      </div>
+                      <div class="card-body courses-card-slider">
+                        <h5 class="card-title course-title">
+                          {{ popular.title }}
+                        </h5>
+                        <p class="card-text">{{ popular.instructor }}</p>
+                      </div></a
+                    >
                   </div>
                 </div>
               </div>
