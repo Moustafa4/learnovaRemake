@@ -93,31 +93,65 @@
   padding-right: 0%;
 }
 .carousel-control-next {
-  margin-right: -20px;
-  margin-top: 18px;
-  height: 250px;
-  /* border-radius: 15px; */
+  margin-right: -30px;
+  margin-top: -10px;
+  height: 100%;
   width: 30px;
   background-color: #00000000;
 }
 .fa-star {
   color: #f4c150;
 }
+.carousel button {
+  background-color: black;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.carousel button:hover,
+.carousel-control-prev :hover,
+.carousel-control-next:hover {
+  box-shadow: -10px 3px 14px 6px rgb(0 0 0 / 92%);
+}
 .carousel-control-prev {
   background-color: #00000000;
-  margin-left: -20px;
-  margin-top: 13px;
-  height: 270px;
-  /* border-radius: 10px; */
+  margin-left: -30px;
+  margin-top: -10px;
+  height: 100%;
   width: 30px;
+  box-shadow: 20px 2px 20px 7px rgb(0 0 0 / 92%);
 }
-
+.carousel-control-prev:hover,
+.carousel-control-prev-icon:hover {
+  box-shadow: -10px 3px 14px 6px rgb(0 0 0 / 92%);
+}
 .carousel-item {
   padding: 15px;
 }
 .card-text {
-  font-size: 20px;
-  margin-top: 12px;
+  font-size: 16px;
+
+  color: #bfbaba;
+  padding: 5px;
+}
+.card-top-part {
+  height: 160px;
+}
+
+.ins-name_wishlist p {
+  font-size: 18px;
+}
+.ins-name_wishlist :nth-child(2) {
+  background-color: #303030;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.fa-bookmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
 }
 .card {
   border-radius: 15px;
@@ -134,7 +168,11 @@
   text-decoration: none;
   color: #fff;
 }
-
+.Crs-Duration {
+  margin-top: 10px;
+  color: #bfbaba;
+  font-size: 12px;
+}
 .card-img-container {
   position: relative;
   width: 100%;
@@ -194,7 +232,7 @@
 .carousel-control-next-icon {
   background-color: transparent;
   border-radius: 50%;
-  margin-top: 97px;
+  /* margin-top: 97px; */
 }
 .btn {
   background-color: rgb(54, 54, 54);
@@ -259,7 +297,7 @@
 .course-title {
   color: #fff;
   font-weight: 500;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 /* nav&taps */
