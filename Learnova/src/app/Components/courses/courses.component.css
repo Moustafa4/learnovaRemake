@@ -12,7 +12,7 @@ body {
 .container {
   background-color: #000000;
 }
-.card-title{
+.card-title {
   color: orangered;
 }
 .card {
@@ -89,25 +89,32 @@ body {
 .btn:hover {
   background-color: rgb(235, 65, 8);
 }
-/* إعداد الشبكة */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* الأعمدة تتكيف مع حجم الشاشة */
-  gap: 20px; /* مسافة بين البطاقات */
-  padding: 20px; /* مسافة داخلية حول الشبكة */
-  background-color: #000000;
 
-}
-@media (max-width: 600px) {
+/* MOBILE */
+@media (max-width: 767px) {
   .card {
-    margin-left: 50px;
+    margin: 0 auto;
+    width: 245px;
+    height: fit-content;
 
-    font-size: 14px; /* تصغير حجم النص على الشاشات الصغيرة */
+    font-size: 14px;
+  }
+  .card img{
+    height: 149px;
+  }
+  .btn{
+    padding: 2px 2px 2px 2px;
   }
   .heading {
-  margin-right: 40px;
+    margin-right: 40px;
   }
+}
+/* Small Screens  */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+/* midume  */
+@media (min-width: 992px) {
+}
+/* D Large Screens  */
+@media (min-width: 12øøpx) {
 }

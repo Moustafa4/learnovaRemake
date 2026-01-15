@@ -5,12 +5,13 @@ import { map } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-courses',
   providers: [CoursesService],
   standalone:true,
-  imports: [CommonModule,HttpClientModule],
+  imports: [CommonModule, HttpClientModule, RouterLink],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css',
 })
