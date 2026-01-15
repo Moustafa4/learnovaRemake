@@ -60,8 +60,9 @@
   margin-bottom: 30px;
 }
 .pop-container,
-.courses-section {
-  width: 75%;
+.courses-section,
+.ins-container {
+  width: 75% !important;
   margin: 0px auto;
 }
 .course-type {
@@ -118,8 +119,7 @@
   height: 100%;
   width: 30px;
 }
-.carousel-control-prev:hover,
-.carousel-control-prev-icon:hover {
+.carousel-control-prev:hover {
   box-shadow: 20px 2px 20px 7px rgb(0 0 0 / 92%);
 }
 .carousel-item {
@@ -151,6 +151,14 @@
   left: 50%;
   color: white;
   transform: translate(-50%, -50%);
+}
+.ins-card {
+  width: 326px !important;
+}
+.ins-card .card-body {
+  background-color: #000000 !important;
+  text-align: left;
+  padding-left: 0px !important;
 }
 .card {
   border-radius: 15px;
