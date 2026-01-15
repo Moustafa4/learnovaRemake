@@ -10,4 +10,6 @@ export interface ICourses {
   level: string;
   skills: string[];
   outcomes: string[];
+  duration: string;
+  rate:number;
 }
