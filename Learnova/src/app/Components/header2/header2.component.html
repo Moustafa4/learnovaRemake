@@ -119,20 +119,38 @@
         style="width: 35%"
       >
         <div
-          class="input-group d-flex justify-content-center"
+          class="input-group search-con d-flex justify-content-center"
           style="width: 60%"
         >
           <input
+            [(ngModel)]="sear_word"
+            (ngModelChange)="onsearch($event)"
             type="text"
             placeholder="search ..."
             aria-label="Search"
             class="form-control searchbar"
             style="height: 33px"
+            name="search"
           />
 
           <button type="submit" class="btn search-btn">
             <i class="fas fa-search"></i>
           </button>
+          <div class="search-overlay" *ngIf="showOverlay">
+            <div
+              class="search-item"
+              *ngFor="let course of searchfilter"
+              (click)="goToCourse(course.title)"
+            >
+              <div class="info">
+                <img src="{{ course.image }}" alt="" /> {{ course.title }}
+              </div>
+            </div>
+
+            <div *ngIf="searchfilter.length === 0" class="empty">
+              No courses found
+            </div>
+          </div>
         </div>
       </form>
 

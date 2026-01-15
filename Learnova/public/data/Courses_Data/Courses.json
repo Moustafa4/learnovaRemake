@@ -10,6 +10,8 @@
       "price": 150,
       "id": 10,
       "level": "Intermediate",
+      "duration": "5h30m",
+      "rate": 4.7,
       "outcomes": [
         "Analyze real datasets using Pandas and NumPy",
         "Build visualizations to communicate data insights",
@@ -34,6 +36,8 @@
       "price": 120,
       "id": 11,
       "level": "Beginner",
+      "duration": "3h20m",
+      "rate": 4.6,
       "outcomes": [
         "Write basic JavaScript programs using variables, conditions and loops",
         "Manipulate the DOM to react to user actions",
@@ -58,6 +62,8 @@
       "price": 100,
       "id": 1,
       "level": "Beginner",
+      "duration": "2h10m",
+      "rate": 4.5,
       "outcomes": [
         "Structure web pages with clean semantic HTML",
         "Create forms, links, images and tables correctly",
@@ -82,6 +88,8 @@
       "price": 100,
       "id": 2,
       "level": "Beginner",
+      "duration": "3h45m",
+      "rate": 4.6,
       "outcomes": [
         "Style web pages with colors, typography and spacing",
         "Build responsive layouts using Flexbox and Grid",
@@ -106,6 +114,8 @@
       "price": 100,
       "id": 3,
       "level": "Intermediate",
+      "duration": "6h10m",
+      "rate": 4.8,
       "outcomes": [
         "Use modern JavaScript features to write clean code",
         "Work with the DOM and browser events confidently",
@@ -130,6 +140,8 @@
       "price": 100,
       "id": 4,
       "level": "Beginner",
+      "duration": "4h00m",
+      "rate": 4.7,
       "outcomes": [
         "Write Python scripts that automate simple tasks",
         "Work with files, strings and collections",
@@ -153,6 +165,8 @@
       "price": 100,
       "id": 5,
       "level": "Intermediate",
+      "duration": "7h30m",
+      "rate": 4.8,
       "outcomes": [
         "Build full web pages using HTML, CSS and JavaScript",
         "Connect front‑end interfaces with simple backends",
@@ -177,6 +191,8 @@
       "price": 100,
       "id": 6,
       "level": "Intermediate",
+      "duration": "5h40m",
+      "rate": 4.6,
       "outcomes": [
         "Write Java programs using classes and objects",
         "Apply OOP concepts like inheritance and polymorphism",
@@ -200,6 +216,8 @@
       "price": 100,
       "id": 7,
       "level": "Beginner",
+      "duration": "2h15m",
+      "rate": 4.4,
       "outcomes": [
         "Process form data and generate dynamic pages with PHP",
         "Connect PHP applications to a database",
@@ -223,6 +241,8 @@
       "price": 100,
       "id": 8,
       "level": "Intermediate",
+      "duration": "6h50m",
+      "rate": 4.7,
       "outcomes": [
         "Build Python applications that interact with external APIs",
         "Structure larger projects using packages and virtual environments",
@@ -246,6 +266,8 @@
       "price": 100,
       "id": 9,
       "level": "Intermediate",
+      "duration": "7h10m",
+      "rate": 4.6,
       "outcomes": [
         "Create REST APIs with Node.js and Express",
         "Connect Node servers to databases",
@@ -269,6 +291,8 @@
       "price": 100,
       "id": 10,
       "level": "Advanced",
+      "duration": "5h55m",
+      "rate": 4.8,
       "outcomes": [
         "Architect large CSS codebases using Sass and BEM",
         "Build complex responsive layouts for real products",
@@ -292,6 +316,8 @@
       "price": 100,
       "id": 1,
       "level": "Intermediate",
+      "duration": "4h20m",
+      "rate": 4.6,
       "outcomes": [
         "Configure basic Cisco routers and switches",
         "Design and troubleshoot IPv4 and IPv6 networks",
@@ -316,6 +342,8 @@
       "price": 100,
       "id": 2,
       "level": "Beginner",
+      "duration": "2h05m",
+      "rate": 4.5,
       "outcomes": [
         "Explain the OSI and TCP/IP models in simple terms",
         "Identify key network devices and their roles",
@@ -339,6 +367,8 @@
       "price": 100,
       "id": 3,
       "level": "Intermediate",
+      "duration": "4h50m",
+      "rate": 4.7,
       "outcomes": [
         "Perform basic reconnaissance and vulnerability scanning",
         "Exploit common weaknesses in lab environments",
@@ -362,6 +392,8 @@
       "price": 100,
       "id": 4,
       "level": "Intermediate",
+      "duration": "3h35m",
+      "rate": 4.6,
       "outcomes": [
         "Master the main Network+ exam domains",
         "Troubleshoot common wired and wireless issues",
@@ -385,6 +417,8 @@
       "price": 100,
       "id": 5,
       "level": "Advanced",
+      "duration": "5h25m",
+      "rate": 4.8,
       "outcomes": [
         "Design and implement enterprise‑grade Cisco networks",
         "Work with advanced routing and switching features",
@@ -407,6 +441,8 @@
       "price": 100,
       "id": 6,
       "level": "Intermediate",
+      "duration": "3h55m",
+      "rate": 4.5,
       "outcomes": [
         "Capture and inspect packets with Wireshark",
         "Identify suspicious traffic patterns and attacks",
@@ -429,6 +465,8 @@
       "price": 100,
       "id": 1,
       "level": "Beginner",
+      "duration": "1h30m",
+      "rate": 4.4,
       "outcomes": [
         "Navigate the Photoshop interface with confidence",
         "Retouch and enhance basic photos",
@@ -452,6 +490,8 @@
       "price": 100,
       "id": 2,
       "level": "Intermediate",
+      "duration": "3h40m",
+      "rate": 4.6,
       "outcomes": [
         "Plan user‑centered flows and information architecture",
         "Create wireframes and interactive prototypes",
@@ -475,6 +515,8 @@
       "price": 100,
       "id": 3,
       "level": "Advanced",
+      "duration": "4h25m",
+      "rate": 4.7,
       "outcomes": [
         "Apply typography and color theory in real projects",
         "Design complex layouts for print and digital",
@@ -498,6 +540,8 @@
       "price": 100,
       "id": 4,
       "level": "Beginner",
+      "duration": "2h00m",
+      "rate": 4.5,
       "outcomes": [
         "Design simple, user‑friendly web page layouts",
         "Understand how HTML and CSS work together visually",
@@ -520,6 +564,8 @@
       "price": 100,
       "id": 5,
       "level": "Intermediate",
+      "duration": "3h10m",
+      "rate": 4.6,
       "outcomes": [
         "Create vector illustrations and icons from scratch",
         "Design logos and simple brand assets",
@@ -543,6 +589,8 @@
       "price": 100,
       "id": 6,
       "level": "Advanced",
+      "duration": "4h45m",
+      "rate": 4.7,
       "outcomes": [
         "Animate text and graphic elements smoothly",
         "Use keyframes, easing and graph editors effectively",
@@ -566,6 +614,8 @@
       "price": 100,
       "id": 7,
       "level": "Beginner",
+      "duration": "2h25m",
+      "rate": 4.4,
       "outcomes": [
         "Design basic app and website screens in XD",
         "Create interactive prototypes with links and transitions",
@@ -588,6 +638,8 @@
       "price": 100,
       "id": 8,
       "level": "Intermediate",
+      "duration": "3h35m",
+      "rate": 4.5,
       "outcomes": [
         "Design consistent social media and marketing graphics",
         "Use Canva templates efficiently and customize them",
@@ -610,6 +662,8 @@
       "price": 90,
       "id": 9,
       "level": "Advanced",
+      "duration": "4h55m",
+      "rate": 4.8,
       "outcomes": [
         "Create complex composites from multiple images",
         "Apply advanced masking and color grading techniques",
