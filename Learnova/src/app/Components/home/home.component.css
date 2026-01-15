@@ -120,7 +120,7 @@
 }
 .carousel-control-prev:hover,
 .carousel-control-prev-icon:hover {
-  box-shadow: -10px 3px 14px 6px rgb(0 0 0 / 92%);
+  box-shadow: 20px 2px 20px 7px rgb(0 0 0 / 92%);
 }
 .carousel-item {
   padding: 15px;
