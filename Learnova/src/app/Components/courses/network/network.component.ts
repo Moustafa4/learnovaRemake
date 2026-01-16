@@ -6,10 +6,11 @@ import { map } from 'rxjs';
 import { ICourses } from '../icourses';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-network',
-  imports: [CommonModule],
+  imports: [RouterModule],
   templateUrl: './network.component.html',
   styleUrl: './network.component.css',
 })

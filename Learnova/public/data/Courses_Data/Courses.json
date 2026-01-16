@@ -456,7 +456,7 @@
       ]
     },
     {
-      "typ": "ux_ui",
+      "typ": "design",
       "title": "Adobe Photoshop CC for Beginner",
       "description": "This course introduces Photoshop in a practical, project‑based way for new designers. You begin by exploring the interface, tools and essential panels. Then you learn how to work with layers, masks and selections to control edits precisely. Common photo‑retouching tasks are demonstrated step by step. You also design simple posters and social media graphics using text, shapes and images. Best practices for exporting files for web and print are covered. By the end, you will feel comfortable opening, editing and designing real visuals in Photoshop.",
       "video": "https://www.youtube.com/watch?v=OjRqZiAgoHo",
@@ -481,7 +481,7 @@
       ]
     },
     {
-      "typ": "ux_ui",
+      "typ": "design",
       "title": "UI/UX Design Bootcamp for Intermediate",
       "description": "This course is a compact bootcamp for designers who want to deepen their UI/UX skills. You start with user‑centered design principles and how to understand user needs. Wireframing sessions help you translate ideas into clear layouts. Then you move into high‑fidelity UI design using tools like Figma or Adobe XD. You will create interactive prototypes to communicate flows and micro‑interactions. Feedback loops and usability thinking are built into the process. By the end, you will be able to plan, design and present interfaces like a professional UX designer.",
       "video": "https://www.youtube.com/watch?v=3qHkEd9kZbI",
@@ -506,7 +506,7 @@
       ]
     },
     {
-      "typ": "ux_ui",
+      "typ": "design",
       "title": "Graphic Design Masterclass for Advanced",
       "description": "This course is a comprehensive journey through modern graphic design practice. You revisit the core principles of typography, color and composition with fresh, practical examples. Real projects demonstrate how to create strong layouts for both print and digital platforms. The instructor shows you how to build visual hierarchy and tell stories with design. You will also explore branding, logo creation and the process behind consistent identities. Portfolio‑ready assignments help you build real pieces as you learn. By the end, you will have the confidence to tackle complex design briefs with a professional mindset.",
       "video": "https://www.youtube.com/watch?v=AnfezdrB_-s",
@@ -531,7 +531,7 @@
       ]
     },
     {
-      "typ": "ux_ui",
+      "typ": "design",
       "title": "Web Design for Beginners for Beginner",
       "description": "This course introduces web design from a visual and structural perspective. You learn how HTML and CSS work together to create layouts users can navigate easily. Simple wireframing exercises help you plan sections before writing any code. You then style those layouts to match modern design trends and responsive behavior. The course emphasizes clarity, readability and user‑friendly decisions. Small projects guide you through building landing pages and basic sites. By the end, you will understand how to approach web design even if you are new to both design and development.",
       "video": "https://www.youtube.com/watch?v=B-ytMSuwbf8",
@@ -555,7 +555,7 @@
       ]
     },
     {
-      "typ": "ux_ui",
+      "typ": "design",
       "title": "Adobe Illustrator CC for Intermediate",
       "description": "This course helps you use Adobe Illustrator confidently for vector‑based design work. You start with shapes, paths and the Pen Tool to draw clean graphics. Then you learn to work with typography, icons and simple illustrations. Logo design exercises show how to combine concepts, grids and color. You also prepare artwork for export to print and digital formats. Attention is given to organizing layers and using reusable components. By the end, you will be able to create scalable illustrations and brand assets that look sharp everywhere.",
       "video": "https://www.youtube.com/watch?v=Ib8UBwu3yGA",
@@ -580,7 +580,7 @@
       ]
     },
     {
-      "typ": "ux_ui",
+      "typ": "design",
       "title": "Motion Design & Animation for Advanced",
       "description": "This course dives into motion design for those who already know the basics of design or video. You learn the core principles of animation such as timing, easing and anticipation. Using After Effects, you will animate text, shapes and UI elements step by step. The instructor demonstrates how to use keyframes, graphs and effects for polished results. You also explore how to structure motion projects for clients and export them in the right formats. Case studies show how motion supports branding and storytelling. By the end, you will be able to build short, professional motion graphics sequences.",
       "video": "https://www.youtube.com/watch?v=0p7EiZkqkUo",
@@ -605,7 +605,7 @@
       ]
     },
     {
-      "typ": "ux_ui",
+      "typ": "design",
       "title": "Design Essentials Adobe XD for Beginner",
       "description": "This course introduces Adobe XD as a fast and intuitive tool for UI design. You begin by setting up artboards and using basic shapes, text and components. Then you design simple app and website screens that follow common patterns. Interactive prototyping features show you how to link screens and add transitions. You also learn how to share designs with clients and developers for feedback and handoff. Best practices for organizing files and styles are covered throughout. By the end, you will be able to design and present clickable prototypes for your own ideas.",
       "video": "https://www.youtube.com/watch?v=68w2VwalD5w",
@@ -629,7 +629,7 @@
       ]
     },
     {
-      "typ": "ux_ui",
+      "typ": "design",
       "title": "Canva Master Course for Intermediate",
       "description": "This course shows you how to go beyond templates and really master Canva. You start by understanding brand kits, layouts and how to keep designs consistent. Then you create social media posts, presentations and marketing materials step by step. The instructor shares tips for working quickly while still producing polished results. You explore how to collaborate with others and manage design assets in the cloud. Export settings for print and digital are explained clearly. By the end, you will be able to produce on‑brand graphics for different platforms using only Canva.",
       "video": "https://www.youtube.com/watch?v=gjwA1U7Y38Y",
@@ -653,7 +653,7 @@
       ]
     },
     {
-      "typ": "ux_ui",
+      "typ": "design",
       "title": "Mastering Photoshop for Advanced",
       "description": "This course is aimed at designers who want to push Photoshop to a professional level. You work on complex composites built from multiple images and advanced masking. Color correction and grading techniques are demonstrated in real projects. You also explore creative effects, lighting and digital painting workflows. The instructor shares tips for organizing large files and working efficiently with layers. Portfolio‑style assignments help you practice the full process from raw images to final artwork. By the end, you will be able to create polished visuals suitable for campaigns, portfolios and client work.",
       "video": "https://www.youtube.com/watch?v=IyR_uYsRdPs",

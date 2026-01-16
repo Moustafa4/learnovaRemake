@@ -1,6 +1,6 @@
 import { Component, computed, inject, Input } from '@angular/core';
 
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { CoursesService } from '../../../../services/courses_ser/courses.service';
 import { filter, map } from 'rxjs';
 import { ICourses } from '../icourses';
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-coding',
-  imports: [CommonModule],
+  imports: [RouterModule],
   templateUrl: './coding.component.html',
   styleUrl: './coding.component.css',
 })
