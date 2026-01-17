@@ -2,16 +2,16 @@
   <div class="text-center heading">
     <p>Explore Inspiring Courses Online</p>
   </div>
-  <select class="form-select" aria-label="Default select example">
-    <option selected>Open this select menu</option>
-    <option value="1">Programming</option>
-    <option value="2">design</option>
-    <option value="3">Network</option>
+  <select [(ngModel)]="selectedCat" (change)="onchanged()" class="form-select">
+    <option selected>All Courses</option>
+    <option value="Programming">Programming</option>
+    <option value="design">Design</option>
+    <option value="network">Network</option>
   </select>
 
   <div class="row">
-    @for (course of filterproduct(); track $index) {
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-0 g-5">
+    @for (course of filterproduct; track $index) {
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3  p-0 g-5">
       <div class="card w-xs-25">
         <img [src]="course.image" class="card-img-top" />
         <div class="card-body">

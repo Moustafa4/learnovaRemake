@@ -25,20 +25,24 @@ export class CoursesComponent {
 
   _courses = toSignal(this.$courses, { initialValue: [] as ICourses[] });
 
-  filterproduct = signal<ICourses[]>([]);
-  slectedCat: string = '';
+  filterproduct: ICourses[] = this._courses();
+  selectedCat: string = 'All Courses';
   constructor() {
     effect(() => {
-      this.filterproduct.set(this._courses()); 
+      this.filterproduct = this._courses();
     });
   }
 
   onchanged() {
-      this.filterproduct.set(
-        this._courses().filter((m) => m.typ === this.slectedCat)
+    if (this.selectedCat == 'All Courses') {
+      this.filterproduct = this._courses();
+    } else {
+      this.filterproduct = this._courses().filter(
+        (m) => m.typ === this.selectedCat
       );
-
+    }
   }
+
   // addToCart(Course: Course) {
   //   this.cartService.addToCart(Course);
   // }

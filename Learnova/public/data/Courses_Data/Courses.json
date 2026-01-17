@@ -1,7 +1,7 @@
 {
   "Courses": [
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "Data Science with Python for Intermediate",
       "description": "This course takes you beyond basic Python and into real-world data analysis. You start by reviewing essential Python features that matter most for data work. Then you learn how to load, clean and transform messy datasets using Pandas and NumPy. Step by step, you practice building visualizations that highlight trends, patterns and anomalies. You also get an introduction to core machine learning ideas and simple models you can train yourself. By the end, you will feel confident exploring new datasets and presenting data-driven insights to others.",
       "video": "https://www.youtube.com/watch?v=HrRA67O-QXI",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "JavaScript Essentials for Beginner",
       "description": "This course gives you a friendly introduction to JavaScript from the very beginning. You will learn what variables, data types and operators are, and how to use them safely. Next, you practice writing conditions, loops and functions to make your code reusable and easier to understand. You will then move into the browser and see how JavaScript can change HTML and CSS in response to user actions. Along the way, you will debug common errors and understand how the browser executes your scripts. By the end, you will be ready to build small interactive components and move on to more advanced JavaScript topics.",
       "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "HTML For Beginner",
       "description": "This course teaches you how to build solid web pages using modern HTML from the ground up. You begin by understanding the structure of a web document and the role of the browser. Then you learn the most important tags for headings, paragraphs, images and links. After that, you will work with forms, tables and semantic elements that make your pages accessible and easy to maintain. Real examples show you how to organize content for blogs, landing pages and simple web apps. By the end, you will be able to turn a design or idea into clean, semantic HTML ready for styling and interactivity.",
       "video": "https://www.youtube.com/watch?v=qz0aGYrrlhU",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "CSS For Beginner",
       "description": "This course helps you turn plain HTML into attractive, professional-looking web pages using CSS. You start by learning how selectors, properties and the box model work together. Then you practice styling text, colors, spacing and backgrounds to create a consistent visual identity. The course guides you through building responsive layouts using Flexbox and CSS Grid. You also explore simple transitions and hover effects that make interfaces feel more polished. Throughout the lessons, you work on real sections like hero banners, cards and navigation bars. By the end, you will be able to style complete pages that look great on both desktop and mobile.",
       "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc",
@@ -105,7 +105,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "The Complete JavaScript",
       "description": "This course is designed to take you from basic JavaScript knowledge to a strong, modern understanding of the language. You will revisit the fundamentals and quickly move into ES6+ features like arrow functions, classes and modules. With plenty of practice, you learn how to interact with the DOM, handle events and build dynamic UI behavior. The course also covers asynchronous programming, promises and working with remote APIs. You will build small projects that combine multiple concepts into real features. By the end, you will write cleaner, more structured JavaScript suitable for frameworks and larger applications.",
       "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "Python for Everybody",
       "description": "This course introduces Python to complete beginners with a clear, step‑by‑step approach. You start with installing Python and writing your first simple programs. Then you learn about variables, conditions, loops and functions to structure your code. You will work with strings, lists and dictionaries to process different types of data. Later, you explore file handling and small real‑world tasks that can be automated with scripts. Each section reinforces the concepts with practical exercises. By the end, you will be comfortable writing basic Python programs and ready to move into more specialized areas.",
       "video": "https://www.youtube.com/watch?v=rfscVS0vtbw",
@@ -156,7 +156,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "The Complete Web Developer",
       "description": "This course walks you through the full web development stack using modern tools. You begin by mastering the fundamentals of HTML, CSS and JavaScript together. Then you see how these pieces connect to simple backends and APIs. Through guided projects, you build pages, forms and interactive components that mirror real websites. You also learn how to organize your files, manage assets and think about deployment. The focus is on building complete, functioning sites rather than isolated snippets. By the end, you will have a clear picture of how a full web project is structured from start to finish.",
       "video": "https://www.youtube.com/watch?v=Ke90Tje7VS0",
@@ -182,7 +182,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "Java Programming Intermediate Level",
       "description": "This course teaches you how to think and build software in Java, one of the most widely used languages in the world. You start by learning the syntax, variables and basic control structures. Then you move into object‑oriented programming with classes, objects and methods. You will explore inheritance, polymorphism and interfaces to design flexible systems. The lessons also cover collections, error handling and working with files. Throughout the course, you build small programs that reflect real use cases. By the end, you will have the foundation needed for desktop apps, Android, or backend development in Java.",
       "video": "https://www.youtube.com/watch?v=grEKMHGYyns",
@@ -207,7 +207,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "Learn PHP for Beginners",
       "description": "This course shows you how to create dynamic websites and simple backends using PHP. You begin by learning the basics of the language and how it integrates with HTML. Then you handle forms, user input and server‑side validation. You will connect your PHP scripts to a database so you can store and retrieve information. The course also introduces sessions and simple authentication concepts. Through small projects, you see how separate pages work together to form a real application. By the end, you will be able to build basic PHP sites that respond to user actions and data.",
       "video": "https://www.youtube.com/watch?v=OK_JCtrrv-c",
@@ -232,7 +232,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "The Complete Python Developer",
       "description": "This course is aimed at learners who already know Python basics and want to become productive developers. You start by revisiting core language features and improving code style. Then you build projects that interact with APIs, files and databases. The instructor guides you through organizing larger applications with packages and virtual environments. You will also touch on backend concepts and simple web services written in Python. Real examples help you understand how Python is used in professional environments. By the end, you will be able to structure and ship more serious Python applications.",
       "video": "https://www.youtube.com/watch?v=HGOBQPFzWKo",
@@ -257,7 +257,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "Full-stack Web with node.js",
       "description": "This course focuses on building full‑stack JavaScript applications powered by Node.js. You begin by setting up a Node and Express server and understanding how HTTP requests work. Then you design REST APIs that send and receive JSON data. On the data side, you connect to databases and learn how to model and validate information. You will also see how front‑end clients talk to your backend and how to secure common routes. Throughout the course, you build and test features that feel like those in real products. By the end, you will be ready to create and maintain Node‑based web services.",
       "video": "https://www.youtube.com/watch?v=Oe421EPjeBE",
@@ -282,7 +282,7 @@
       ]
     },
     {
-      "typ": "coding",
+      "typ": "Programming",
       "title": "Advanced CSS and Sass Advanced Level",
       "description": "This course is for developers who already know basic CSS and want to build scalable, modern user interfaces. You learn how to architect large stylesheets using Sass, variables and partials. The instructor shows you how to apply BEM and design‑system thinking to keep components consistent. You will build complex responsive layouts tailored for real products and dashboards. Advanced animations and transitions are used to bring interactions to life without hurting performance. By the end, you will be able to design and maintain professional‑grade CSS codebases for production websites.",
       "video": "https://www.youtube.com/watch?v=NuSkS6xX1g8",
