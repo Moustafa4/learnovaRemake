@@ -377,7 +377,11 @@
     width: 100%;
   }
   .courses-card {
-    width: 50%;
+    width: 100%;
+  }
+.courses-card-nav{
+  width: 100%;
+
   }
   .inst-card {
     width: 80% !important;
