@@ -1,7 +1,14 @@
 .main {
   background-color: black;
   height: 100vh;
+  border: 1px solid yellow;
 }
 body {
-  font-family: "Helvetica Neue", Arial, system-ui, -apple-system, sans-serif;
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  border: 1px solid yellow;
 }
