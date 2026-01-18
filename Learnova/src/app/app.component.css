@@ -1,7 +1,6 @@
 .main {
   background-color: black;
   height: 100vh;
-  border: 1px solid yellow;
 }
 body {
   font-family:
@@ -10,5 +9,4 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
-  border: 1px solid yellow;
 }
