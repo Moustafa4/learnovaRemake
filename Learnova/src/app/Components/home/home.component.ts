@@ -38,7 +38,9 @@ export class HomeComponent {
     const codecorses = this._courses();
     return Array.isArray(codecorses)
       ? codecorses
-          .filter((p) => p.typ.toLowerCase() === 'coding')
+          .filter(
+            (p) => p.typ.toLowerCase() === 'Programming'.toLocaleLowerCase(),
+          )
           .slice(0, this.itemstoshow())
       : [];
   });
@@ -54,7 +56,9 @@ export class HomeComponent {
     const designcourses = this._courses();
     return Array.isArray(designcourses)
       ? designcourses
-          .filter((p) => p.typ.toLocaleLowerCase() === 'ux_ui')
+          .filter(
+            (p) => p.typ.toLocaleLowerCase() === 'Design'.toLocaleLowerCase(),
+          )
           .slice(0, this.itemstoshow())
       : [];
   });
@@ -116,11 +120,9 @@ export class HomeComponent {
   constructor() {
     effect(() => {
       this._popular.set(
-        this._courses().filter((course) => course.id === 1 || course.id === 2)
+        this._courses().filter((course) => course.id === 1 || course.id === 2),
       );
 
-      console.log(this._ins_data());
-      console.log(this.codecorses());
       const courses = this._popular();
       const ins = this._ins_data();
       const width = window.innerWidth;

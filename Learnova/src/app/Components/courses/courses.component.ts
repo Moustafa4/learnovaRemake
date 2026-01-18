@@ -38,7 +38,8 @@ export class CoursesComponent {
       this.filterproduct = this._courses();
     } else {
       this.filterproduct = this._courses().filter(
-        (m) => m.typ === this.selectedCat
+        (m) =>
+          m.typ.toLocaleLowerCase() === this.selectedCat.toLocaleLowerCase()
       );
     }
   }

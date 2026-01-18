@@ -324,6 +324,9 @@
   color: rgba(255, 255, 255, 0.856);
   border: 1.5px solid #92261e;
 }
+.inst-card .card{
+  width: 260px;
+}
 /*
 .card .img-con {
   width: 97%;
