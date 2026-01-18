@@ -83,7 +83,11 @@ select {
   .card img {
     height: 149px;
   }
+<<<<<<< HEAD
+  .btn{
+=======
   .btn {
+>>>>>>> 6dc2b498706e3eeddff094e73286cfef736d741b
     padding: 8px;
   }
   .heading {
