@@ -36,7 +36,7 @@ export class Header2Component {
     }
 
     this.searchfilter = this._courses().filter((c) =>
-      c.title.toLowerCase().includes (value)
+      c.description.toLowerCase().includes (value)
     );
 
     this.showOverlay = true;

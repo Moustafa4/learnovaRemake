@@ -4,11 +4,13 @@ import { CoursesService } from '../../../../services/courses_ser/courses.service
 import { map } from 'rxjs';
 import { ICourses } from '../icourses';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 // import { Course } from '../course.model';
 
 @Component({
   selector: 'app-ux-ui',
-  imports: [],
+  imports: [CommonModule,RouterLink],
   templateUrl: './ux-ui.component.html',
   styleUrl: './ux-ui.component.css',
 })
@@ -21,7 +23,7 @@ export class UxUiComponent {
       courses.filter((courses) => courses.typ?.toLocaleLowerCase() === 'ux_ui')
     )
   );
- _uiux= toSignal(this.$Uiux,{initialValue:[]as ICourses[]})
+  _uiux = toSignal(this.$Uiux, { initialValue: [] as ICourses[] });
   // addToCart(Course: Course) {
   //   this.cartService.addToCart(Course);
   // }
