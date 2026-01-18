@@ -52,13 +52,13 @@
         <div class="Coursedetails">
           <h3>Course details</h3>
           <ul>
-            @if(courses()){ @for (c of courses()?.duration; track $index) {
-            <li><i class="bi bi-alarm"></i>{{c}}/13 lessons</li>
+            @if(courses()){ 
+            <li><i class="bi bi-alarm"></i>{{courses()?.duration}}/13 lessons</li>
             <li><i class="bi bi-calendar"></i> Last updated: 20/9/2026</li>
             <li>
               <i class="bi bi-card-text"></i>Course completion certificate
             </li>
-            }}
+            }
           </ul>
         </div>
         <hr />

@@ -284,7 +284,6 @@
 }
 /* D Large Screens */
 @media (min-width: 1200px) {
-  .right,
   .left-part .skills,
   .left-part .cat-p,
   .backBanner-container {
