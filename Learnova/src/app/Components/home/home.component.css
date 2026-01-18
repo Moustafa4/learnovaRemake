@@ -9,18 +9,7 @@
   background-repeat: no-repeat;
   margin-top: 5px;
 }
-.text {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  top: 22%;
-  left: 10.5%;
-  width: 680px;
-  height: 170px;
-  color: rgb(216, 214, 214) !important;
-  margin: 5px 20px;
-}
+
 .text h1 {
   font-weight: bold;
   margin-bottom: 20px;
@@ -96,13 +85,7 @@
   padding-left: 0%;
   padding-right: 0%;
 }
-.carousel-control-next {
-  margin-right: -30px;
-  margin-top: -10px;
-  height: 100%;
-  width: 30px;
-  background-color: #00000000;
-}
+
 .fa-star {
   color: #f4c150;
 }
@@ -114,13 +97,6 @@
 .carousel-control-prev :hover,
 .carousel-control-next:hover {
   box-shadow: -10px 3px 14px 6px rgb(0 0 0 / 92%);
-}
-.carousel-control-prev {
-  background-color: #00000000;
-  margin-left: -30px;
-  margin-top: -10px;
-  height: 100%;
-  width: 30px;
 }
 .carousel-control-prev:hover {
   box-shadow: 20px 2px 20px 7px rgb(0 0 0 / 92%);
@@ -189,8 +165,6 @@
   width: 100%;
   height: 249px;
   overflow: hidden;
-  /* padding: 5px; */
-  /* border-radius: 10px; */
 }
 .card-img-container::after {
   content: "";
@@ -245,7 +219,6 @@
 .carousel-control-next-icon {
   background-color: transparent;
   border-radius: 50%;
-  /* margin-top: 97px; */
 }
 .btn {
   background-color: rgb(54, 54, 54);
@@ -273,10 +246,6 @@
 .routing-container {
   margin-bottom: -100px;
 }
-/* .tabs-con .card {
-  height: 379px;
-  text-align: center;
-} */
 .tabs-con .card .card-body {
   justify-content: space-between;
   display: flex;
@@ -389,8 +358,60 @@
   .courses-card-nav {
     width: 100%;
   }
+  .carousel-control-next,
+  .carousel-control-prev {
+    margin-right: -22px;
+    margin-top: -10px;
+    height: 50%;
+    width: 30px;
+    background-color: #00000000;
+  }
   .inst-card {
-    width: 80% !important;
+    width: 100% !important;
+  }
+  .inst-card .card {
+    width: 70% !important;
+  }
+  #learnovaExpertsCarousel .carousel-control-next,
+  #learnovaExpertsCarousel .carousel-control-prev {
+    margin-right: 0px;
+    margin-top: 0px;
+    height: 75%;
+    width: 30px;
+    background-color: #000000;
+  }
+}
+/* Small Screens  */
+@media (min-width: 768px) and (max-width: 991px) {
+  #myTab {
+    width: 90%;
+  }
+  .text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 22%;
+    left: 3%;
+    width: 90%;
+    height: 170px;
+    color: rgb(216, 214, 214) !important;
+    margin: 5px 0px 5px 20px;
+    border: 1px solid red;
+  }
+  .text p {
+    font-size: 20px;
+  }
+  span,
+  p {
+    display: inline-block;
+    width: 100%;
+  }
+  .courses-card {
+    width: 90%;
+  }
+  .courses-card-nav {
+    width: 95%;
   }
   .carousel-control-next,
   .carousel-control-prev {
@@ -400,30 +421,109 @@
     width: 30px;
     background-color: #00000000;
   }
-  .inst-caru .carousel-control-next,
-  .inst-caru .carousel-control-prev {
-    margin-right: -1px;
+
+  .inst-card .card {
+    width: 95% !important;
+  }
+  #learnovaExpertsCarousel .carousel-control-next,
+  #learnovaExpertsCarousel .carousel-control-prev {
+    margin-right: -2px;
     margin-top: 0px;
     height: 75%;
     width: 30px;
-    background-color: #00000000;
-  }
-}
-/* Small Screens  */
-@media (min-width: 768px) and (max-width: 991px) {
-  .inst-card .card {
-    width: 260px;
+    background-color: #000000;
   }
 }
 /* midume */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+  #myTab {
+    width: 90%;
+  }
+  .text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 22%;
+    left: 3%;
+    width: 90%;
+    height: 170px;
+    color: rgb(216, 214, 214) !important;
+    margin: 5px 0px 5px 20px;
+    border: 1px solid red;
+  }
+  .text p {
+    font-size: 20px;
+  }
+  span,
+  p {
+    display: inline-block;
+    width: 100%;
+  }
+  .courses-card {
+    width: 90%;
+  }
+  .courses-card-nav {
+    width: 95%;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    margin-right: -22px;
+    margin-top: -10px;
+    height: 50%;
+    width: 30px;
+    background-color: #00000000;
+  }
+
   .inst-card .card {
-    width: 260px;
+    width: 95% !important;
+  }
+  #learnovaExpertsCarousel .carousel-control-next,
+  #learnovaExpertsCarousel .carousel-control-prev {
+    margin-right: -2px;
+    margin-top: 0px;
+    height: 75%;
+    width: 30px;
+    background-color: #000000;
   }
 }
 /* Large Screens  */
 @media (min-width: 1200px) {
+  .text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 22%;
+    left: 10.5%;
+    width: 680px;
+    height: 170px;
+    color: rgb(216, 214, 214) !important;
+    margin: 5px 20px;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    margin-right: -22px;
+    margin-top: -10px;
+    height: 50%;
+    width: 30px;
+    background-color: #00000000;
+  }
+  #learnovaExpertsCarousel .carousel-control-next,
+  #learnovaExpertsCarousel .carousel-control-prev {
+    margin-right: -2px;
+    margin-top: 0px;
+    height: 75%;
+    width: 30px;
+    background-color: #000000;
+  }
+  .courses-card {
+    width: 90%;
+  }
+  .courses-card-nav {
+    width: 95%;
+  }
   .inst-card .card {
-    width: 260px;
+    width: 95%;
   }
 }

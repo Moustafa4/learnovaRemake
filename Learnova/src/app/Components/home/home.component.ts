@@ -99,7 +99,7 @@ export class HomeComponent {
       this.grop_ins_size = 1;
     } else if (width > 767 && width <= 991) {
       this.gropsize = 2;
-      this.grop_ins_size = 3;
+      this.grop_ins_size = 2;
     } else {
       this.gropsize = 3;
       this.grop_ins_size = 4;
