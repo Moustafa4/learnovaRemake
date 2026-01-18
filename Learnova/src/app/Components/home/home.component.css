@@ -174,7 +174,8 @@
   color: white;
   height: 490px;
 }
-.courses-card a {
+.courses-card a,
+.courses-card-nav a {
   text-decoration: none;
   color: #fff;
 }
@@ -337,9 +338,7 @@
   color: rgba(255, 255, 255, 0.856);
   border: 1.5px solid #92261e;
 }
-.inst-card .card {
-  width: 260px;
-}
+
 /*
 .card .img-con {
   width: 97%;
@@ -387,36 +386,44 @@
   .courses-card {
     width: 100%;
   }
-.courses-card-nav{
-  width: 100%;
-
+  .courses-card-nav {
+    width: 100%;
   }
   .inst-card {
     width: 80% !important;
   }
-  .carousel-control-next,.carousel-control-prev {
+  .carousel-control-next,
+  .carousel-control-prev {
     margin-right: -22px;
     margin-top: -10px;
     height: 50%;
     width: 30px;
     background-color: #00000000;
   }
-   .inst-caru .carousel-control-next, .inst-caru .carousel-control-prev {
+  .inst-caru .carousel-control-next,
+  .inst-caru .carousel-control-prev {
     margin-right: -1px;
     margin-top: 0px;
     height: 75%;
     width: 30px;
     background-color: #00000000;
   }
-
-
 }
 /* Small Screens  */
 @media (min-width: 768px) and (max-width: 991px) {
+  .inst-card .card {
+    width: 260px;
+  }
 }
 /* midume */
 @media (min-width: 992px) {
+  .inst-card .card {
+    width: 260px;
+  }
 }
 /* Large Screens  */
 @media (min-width: 1200px) {
+  .inst-card .card {
+    width: 260px;
+  }
 }

@@ -168,7 +168,7 @@
             <div class="row gy-5">
               @for (p of codecorses(); track p.id) {
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card courses-card">
+                  <div class="card courses-card-nav">
                     <a routerLink="/Details/{{ p.title }}">
                       <div class="card-img-container">
                         <img
@@ -206,17 +206,6 @@
                           </p>
                         </div></div
                     ></a>
-                    <!-- <div class="img-con">
-                    <img src="{{ p.image }}" class="card-img-top" alt="..." />
-                  </div>
-                  <div class="card-body">
-                    <h3 class="card-title">{{ p.title }}</h3>
-                    <a
-                      routerLink="/Details/{{ p.title }}"
-                      class="btn btn-primary"
-                      >Show Details</a
-                    >
-                  </div> -->
                   </div>
                 </div>
               }
@@ -232,19 +221,45 @@
           >
             <div class="row">
               @for (p of networkcorses(); track p.id) {
-                <div class="col-12 col-md-6 col-lg-4 gy-5">
-                  <div class="card">
-                    <div class="img-con">
-                      <img src="{{ p.image }}" class="card-img-top" alt="..." />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">{{ p.title }}</h5>
-                      <a
-                        routerLink="/ProjectDetails/{{ p.title }}"
-                        class="btn btn-primary"
-                        >Show Details</a
-                      >
-                    </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card courses-card-nav">
+                    <a routerLink="/Details/{{ p.title }}">
+                      <div class="card-img-container">
+                        <img
+                          [src]="p.image"
+                          class="card-img-top"
+                          [alt]="p.title"
+                        />
+                      </div>
+                      <div class="card-body courses-card-slider">
+                        <div class="card-top-part">
+                          <div class="d-flex justify-content-between">
+                            <p class="course-type">
+                              {{ p.typ }}
+                            </p>
+                            <span class="courses_rate mt-1"
+                              ><i class="fa fa-star"> </i> 4.5 ( 400+
+                              Enrollements )
+                            </span>
+                          </div>
+
+                          <h5 class="card-title course-title">
+                            {{ p.title }}
+                          </h5>
+
+                          <p class="Crs-Duration">
+                            <i class="bi bi-alarm"></i> 15h 41Mins
+                          </p>
+                        </div>
+                        <div
+                          class="ins-name_wishlist d-flex justify-content-between align-items-end"
+                        >
+                          <p class="card-text">{{ p.instructor }}</p>
+                          <p>
+                            <i class="fa-regular fa-bookmark"></i>
+                          </p>
+                        </div></div
+                    ></a>
                   </div>
                 </div>
               }
@@ -260,19 +275,46 @@
           >
             <div class="row">
               @for (p of designcourses(); track p.id) {
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="card">
-                    <div class="img-con">
-                      <img src="{{ p.image }}" class="card-img-top" alt="..." />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">{{ p.title }}</h5>
-                      <a
-                        routerLink="/ProjectDetails/{{ p.title }}"
-                        class="btn btn-primary"
-                        >Show Details</a
-                      >
-                    </div>
+           <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card courses-card-nav">
+                    <a routerLink="/Details/{{ p.title }}">
+                      <div class="card-img-container">
+                        <img
+                          [src]="p.image"
+                          class="card-img-top"
+                          [alt]="p.title"
+                        />
+                      </div>
+                      <div class="card-body courses-card-slider">
+                        <div class="card-top-part">
+                          <div class="d-flex justify-content-between">
+                            <p class="course-type">
+                              {{ p.typ }}
+                            </p>
+                            <span class="courses_rate mt-1"
+                              ><i class="fa fa-star"> </i> 4.5 ( 400+
+                              Enrollements )
+                            </span>
+                          </div>
+
+                          <h5 class="card-title course-title">
+                            {{ p.title }}
+                          </h5>
+
+                          <p class="Crs-Duration">
+                            <i class="bi bi-alarm"></i> 15h 41Mins
+                          </p>
+                        </div>
+                        <div
+                          class="ins-name_wishlist d-flex justify-content-between align-items-end"
+                        >
+                          <p class="card-text">{{ p.instructor }}</p>
+                          <p>
+                            <i class="fa-regular fa-bookmark"></i>
+                          </p>
+                        </div></div
+                    ></a>
+     
                   </div>
                 </div>
               }
