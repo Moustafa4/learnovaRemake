@@ -47,8 +47,6 @@ export class SignInComponent {
         localStorage.removeItem('rememberedEmail');
         localStorage.removeItem('rememberedPassword');
       }
-
-      // تخزين بيانات المستخدم الحالي في localStorage لعرضها لاحقًا
       localStorage.setItem('currentUser', JSON.stringify(user));
 
       if (user.role === 'student') {
