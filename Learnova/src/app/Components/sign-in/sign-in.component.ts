@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , NgForm } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-sign-in',
-    imports: [RouterModule, FormsModule],
+    imports: [RouterModule, FormsModule,CommonModule],
     templateUrl: './sign-in.component.html',
     styleUrls: ['./sign-in.component.css']
 })
@@ -12,7 +13,7 @@ export class SignInComponent {
   rememberMe: boolean = false;
   email: string = '';
   password: string = '';
-
+LoggedMessageError : boolean = false;
   constructor(private router: Router) {
     const rememberedEmail = localStorage.getItem('rememberedEmail');
     const rememberedPassword = localStorage.getItem('rememberedPassword');
@@ -23,7 +24,19 @@ export class SignInComponent {
     }
   }
 
-  onLogin() {
+  onLogin(loginForm: NgForm) {
+    // 1. Mark all fields as touched to trigger validation messages
+    if (loginForm.form.controls) {
+      Object.keys(loginForm.form.controls).forEach(key => {
+        loginForm.form.controls[key].markAsTouched();
+      });
+    }
+
+    // 2. Check if the form is valid
+    if (loginForm.invalid) {
+      return;
+    }
+
     const storedUsers: any[] = [];
 
     Object.keys(localStorage).forEach((key) => {
@@ -55,7 +68,7 @@ export class SignInComponent {
         this.router.navigate(['/InstDAshBoard']);
       }
     } else {
-      alert('ًWrong Email or Password!');
+      this.LoggedMessageError=true;
     }
   }
 }

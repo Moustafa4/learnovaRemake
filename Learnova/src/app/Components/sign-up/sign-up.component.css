@@ -41,31 +41,32 @@
   margin-bottom: 30px;
 }
 .btnsign-up {
-  border-color: #f7f7f7;
+  border-color: #6f0a02;
+  cursor: pointer;
   color: #ffffff !important;
 }
 
-.btn-primary {
-  background-color: rgb(18, 18, 18);
-  border-color: #ff5900a3;
-  color: #ff5900;
-}
+
 .teacher-btn {
   margin-right: 20px !important;
-}
-
-.btn-secondary {
-  background-color: rgb(18, 18, 18);
-  border-color: #ffffff;
 }
 /* Role Button Hover Effect */
 .btn:hover {
   opacity: 0.8;
-  background-color: #ff5900;
+  background-color: #6f0a02;
   color: #ffffff;
   border-color: #343a40;
 }
+.btn-teacher, .btn-std{
+  border-color: #6f0a02;
+  color: #fff;
+  background-color: #6f0a02;
 
+}
+.btn-notStd, .btn-notTeacher{
+  border-color: #6f0a02;
+  color: #fff;
+}
 /* Form Field Styling */
 .form-label,
 .form-check-label,
@@ -102,11 +103,11 @@ h5 {
 .form-check-label a,
 a {
   text-decoration: underline;
-  color: #ff5900;
+  color: #6f0a02;
   text-decoration: none;
 }
 .form-check-input {
-  accent-color: #ff6600; /* Change checkbox color */
+  accent-color: #6f0a02; /* Change checkbox color */
 }
 .form-check-label a:hover {
   text-decoration: none;
@@ -209,6 +210,74 @@ a {
     margin-right: 50px;
     /* border: 1px solid red; */
   }
+}
+/* Custom Alert Styles */
+.alert {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin-bottom: 20px;
+  
+  /* Smooth fade in animation */
+  animation: slideInDown 0.5s ease-out forwards;
+}
+
+/* Success Alert Customization */
+.alert-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border-left: 5px solid #198754; /* Green accent bar */
+}
+
+/* Error/Storage Alert Customization */
+.alert-danger {
+  background-color: #f8d7da;
+  color: #842029;
+  border-left: 5px solid #dc3545; /* Red accent bar */
+}
+
+/* Add an icon before the text (optional but recommended) */
+.alert-success strong::before {
+  content: "✔"; /* Checkmark */
+  margin-right: 10px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.alert-danger strong::before {
+  content: "⚠"; /* Warning sign */
+  margin-right: 10px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+/* Animation Keyframes */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Invalid Feedback Styling (Make it pop more) */
+.invalid-feedback {
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media (max-width: 600px) {

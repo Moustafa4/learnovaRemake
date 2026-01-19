@@ -6,16 +6,23 @@
         <h3 class="card-title text-center">Sign Up</h3>
         <h5 class="text-center">as</h5>
 
+        <!-- Success Message Notification -->
+        @if (showSuccessMessage) {
+        <div class="alert alert-success alert-dismissible fade show mb-3" role="alert">
+          <strong>Success!</strong> Registration successful! Your data has been saved.
+        </div>
+        }
+
         <div class="d-flex justify-content-center">
           <div class="teacher-btn">
             <button
               class="btn"
               [ngClass]="{
-                'btn-primary': selectedRole === 'teacher',
-                'btn-secondary': selectedRole !== 'teacher'
+                'btn-teacher': selectedRole === 'teacher',
+                'btn-notTeacher': selectedRole !== 'teacher'
               }"
               (click)="selectRole('teacher')"
-              >
+            >
               Teacher
             </button>
           </div>
@@ -23,11 +30,11 @@
             <button
               class="btn"
               [ngClass]="{
-                'btn-primary': selectedRole === 'student',
-                'btn-secondary': selectedRole !== 'student'
+                'btn-std': selectedRole === 'student',
+                'btn-notStd': selectedRole !== 'student'
               }"
               (click)="selectRole('student')"
-              >
+            >
               Student
             </button>
           </div>
@@ -51,404 +58,376 @@
                     signupForm.controls['firstName'].invalid &&
                     signupForm.controls['firstName'].touched
                 }"
-                />
-                @if (
-                  signupForm.controls['firstName']?.invalid &&
-                  signupForm.controls['firstName']?.touched
-                  ) {
-                  <div
-                    class="invalid-feedback"
-                    >
-                    First Name not matched required .
-                  </div>
-                }
+              />
+              @if ( signupForm.controls['firstName']?.invalid &&
+              signupForm.controls['firstName']?.touched ) {
+              <div class="invalid-feedback">
+                First Name not matched required .
               </div>
+              }
+            </div>
 
-              <!-- Last Name -->
-              <div class="col-md-6 mb-3">
-                <label for="lastName" class="form-label">Last Name</label>
-                <input
-                  type="text"
-                  class="form-control input"
-                  id="lastName"
-                  [(ngModel)]="lastName"
-                  name="lastName"
-                  required
-                  minlength="3"
+            <!-- Last Name -->
+            <div class="col-md-6 mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control input"
+                id="lastName"
+                [(ngModel)]="lastName"
+                name="lastName"
+                required
+                minlength="3"
                 [ngClass]="{
                   'is-invalid':
                     signupForm.controls['lastName'] &&
                     signupForm.controls['lastName'].invalid &&
                     signupForm.controls['lastName'].touched
                 }"
-                  />
-                  @if (
-                    signupForm.controls['lastName']?.invalid &&
-                    signupForm.controls['lastName']?.touched
-                    ) {
-                    <div
-                      class="invalid-feedback"
-                      >
-                      Last Name not matched .
-                    </div>
-                  }
-                </div>
-              </div>
+              />
+              @if ( signupForm.controls['lastName']?.invalid &&
+              signupForm.controls['lastName']?.touched ) {
+              <div class="invalid-feedback">Last Name not matched .</div>
+              }
+            </div>
+          </div>
 
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input
-                    type="email"
-                    class="form-control input"
-                    id="email"
-                    [(ngModel)]="email"
-                    name="email"
-                    required
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control input"
+                id="email"
+                [(ngModel)]="email"
+                name="email"
+                required
                 [ngClass]="{
                   'is-invalid':
-                    signupForm.controls['email'] &&
+                    (signupForm.controls['email'] &&
                     signupForm.controls['email'].invalid &&
-                    signupForm.controls['email'].touched
+                    signupForm.controls['email'].touched) || emailDomainError
                 }"
-                    />
-                    @if (
-                      signupForm.controls['email']?.invalid &&
-                      signupForm.controls['email']?.touched
-                      ) {
-                      <div
-                        class="invalid-feedback"
-                        >
-                        Please enter a valid email address.
-                      </div>
-                    }
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="confirmEmail" class="form-label">Confirm Email</label>
-                    <input
-                      type="email"
-                      class="form-control input"
-                      id="confirmEmail"
-                      [(ngModel)]="confirmEmail"
-                      name="confirmEmail"
-                      required
-                      [pattern]="email"
+              />
+              @if ( signupForm.controls['email']?.invalid &&
+              signupForm.controls['email']?.touched ) {
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+              }
+              @if (emailDomainError) {
+              <div class="invalid-feedback d-block">
+                Email must be from gmail.com, yahoo.com, hotmail.com, or outlook.com
+              </div>
+              }
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="confirmEmail" class="form-label">Confirm Email</label>
+              <input
+                type="email"
+                class="form-control input"
+                id="confirmEmail"
+                [(ngModel)]="confirmEmail"
+                name="confirmEmail"
+                required
+                [pattern]="email"
                 [ngClass]="{
                   'is-invalid':
-                    signupForm.controls['confirmEmail'] &&
+                    (signupForm.controls['confirmEmail'] &&
                     confirmEmail !== email &&
-                    signupForm.controls['confirmEmail'].touched
+                    signupForm.controls['confirmEmail'].touched) || emailMatchError
                 }"
-                      />
-                      @if (
-                        confirmEmail !== email &&
-                        signupForm.controls['confirmEmail']?.touched
-                        ) {
-                        <div
-                          class="invalid-feedback"
-                          >
-                          Email addresses must match.
-                        </div>
-                      }
-                    </div>
-                  </div>
+              />
+              @if ( confirmEmail !== email &&
+              signupForm.controls['confirmEmail']?.touched ) {
+              <div class="invalid-feedback">Email addresses must match.</div>
+              }
+              @if (emailMatchError) {
+              <div class="invalid-feedback d-block">
+                Email and Confirm Email do not match!
+              </div>
+              }
+            </div>
+          </div>
 
-                  <div class="row">
-                    <!-- Password -->
-                    <div class="col-md-6 mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input
-                        type="password"
-                        class="form-control input"
-                        id="password"
-                        [(ngModel)]="password"
-                        name="password"
-                        required
-                        minlength="8"
+          <div class="row">
+            <!-- Password -->
+            <div class="col-md-6 mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control input"
+                id="password"
+                [(ngModel)]="password"
+                name="password"
+                required
+                minlength="8"
                 [ngClass]="{
                   'is-invalid':
                     signupForm.controls['password'] &&
                     signupForm.controls['password'].invalid &&
                     signupForm.controls['password'].touched
                 }"
-                        />
-                        @if (
-                          signupForm.controls['password']?.invalid &&
-                          signupForm.controls['password']?.touched
-                          ) {
-                          <div
-                            class="invalid-feedback"
-                            >
-                            Password is required and must be at least 8 characters.
-                          </div>
-                        }
-                      </div>
+              />
+              @if ( signupForm.controls['password']?.invalid &&
+              signupForm.controls['password']?.touched ) {
+              <div class="invalid-feedback">
+                Password is required and must be at least 8 characters.
+              </div>
+              }
+            </div>
 
-                      <!-- Confirm Password -->
-                      <div class="col-md-6 mb-3">
-                        <label for="confirmPassword" class="form-label"
-                          >Confirm Password</label
-                          >
-                          <input
-                            type="password"
-                            class="form-control input"
-                            id="confirmPassword"
-                            [(ngModel)]="confirmPassword"
-                            name="confirmPassword"
-                            required
-                            [pattern]="password"
+            <!-- Confirm Password -->
+            <div class="col-md-6 mb-3">
+              <label for="confirmPassword" class="form-label"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                class="form-control input"
+                id="confirmPassword"
+                [(ngModel)]="confirmPassword"
+                name="confirmPassword"
+                required
+                [pattern]="password"
                 [ngClass]="{
                   'is-invalid':
-                    signupForm.controls['confirmPassword'] &&
+                    (signupForm.controls['confirmPassword'] &&
                     confirmPassword !== password &&
-                    signupForm.controls['confirmPassword'].touched
+                    signupForm.controls['confirmPassword'].touched) || passwordMatchError
                 }"
-                            />
-                            @if (
-                              confirmPassword !== password &&
-                              signupForm.controls['confirmPassword']?.touched
-                              ) {
-                              <div
-                                class="invalid-feedback"
-                                >
-                                Passwords must match.
-                              </div>
-                            }
-                          </div>
-                        </div>
+              />
+              @if ( confirmPassword !== password &&
+              signupForm.controls['confirmPassword']?.touched ) {
+              <div class="invalid-feedback">Passwords must match.</div>
+              }
+              @if (passwordMatchError) {
+              <div class="invalid-feedback d-block">
+                Password and Confirm Password do not match!
+              </div>
+              }
+            </div>
+          </div>
 
-                        <!-- Profile Picture -->
-                        <div class="row">
-                          <div class="col-md-6 mb-3">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input
-                              type="tel"
-                              class="form-control input"
-                              id="phone"
-                              [(ngModel)]="phone"
-                              name="phone"
-                              required
-                              pattern="^\d{11}$"
-                              inputmode="numeric"
-                              maxlength="11"
+          <!-- Profile Picture -->
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input
+                type="tel"
+                class="form-control input"
+                id="phone"
+                [(ngModel)]="phone"
+                name="phone"
+                required
+                pattern="^\d{11}$"
+                inputmode="numeric"
+                maxlength="11"
                 [ngClass]="{
                   'is-invalid':
                     signupForm.controls['phone'] &&
                     signupForm.controls['phone'].invalid &&
                     signupForm.controls['phone'].touched
                 }"
-                              />
-                              @if (
-                                signupForm.controls['phone']?.invalid &&
-                                signupForm.controls['phone']?.touched
-                                ) {
-                                <div
-                                  class="invalid-feedback"
-                                  >
-                                  Please enter a valid phone number.
-                                </div>
-                              }
-                            </div>
-                            <div class="col-md-6 mb-3">
-                              <label for="profilePicture" class="form-label custom-file-upload"
-                                >Profile Picture</label
-                                >
-                                <input
-                                  type="file"
-                                  class="form-control input"
-                                  id="profilePicture"
-                                  (change)="onFileSelected($event)"
-                                  accept="image/*"
-                                  name="profilePicture"
-                                  required
+              />
+              @if ( signupForm.controls['phone']?.invalid &&
+              signupForm.controls['phone']?.touched ) {
+              <div class="invalid-feedback">
+                Please enter a valid phone number.
+              </div>
+              }
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="profilePicture" class="form-label custom-file-upload"
+                >Profile Picture</label
+              >
+              <input
+                type="file"
+                class="form-control input"
+                id="profilePicture"
+                (change)="onFileSelected($event)"
+                accept="image/*"
+                name="profilePicture"
+                required
                 [ngClass]="{
                   'is-invalid':
-                    signupForm.controls['profilePicture'] &&
+                    (signupForm.controls['profilePicture'] &&
                     !profilePicture &&
-                    signupForm.controls['profilePicture'].touched
+                    signupForm.controls['profilePicture'].touched) || fileSizeError
                 }"
-                                  />
-                                  @if (
-                                    !profilePicture &&
-                                    signupForm.controls['profilePicture']?.touched
-                                    ) {
-                                    <div
-                                      class="invalid-feedback"
-                                      >
-                                      Profile Picture is required.
-                                    </div>
-                                  }
-                                </div>
-                              </div>
+              />
+              @if ( !profilePicture &&
+              signupForm.controls['profilePicture']?.touched ) {
+              <div class="invalid-feedback">Profile Picture is required.</div>
+              }
+              @if (fileSizeError) {
+              <div class="invalid-feedback d-block">
+                File is too large! Please upload an image smaller than 500KB.
+              </div>
+              }
+            </div>
+          </div>
 
-                              <!-- Teacher-Specific Fields -->
-                              @if (selectedRole === 'teacher') {
-                                <div>
-                                  <div class="row">
-                                    <!-- Specialization -->
-                                    <div class="col-md-6 mb-3">
-                                      <label for="specialization" class="form-label"
-                                        >Specialization</label
-                                        >
-                                        <input
-                                          type="text"
-                                          class="form-control input"
-                                          id="specialization"
-                                          [(ngModel)]="specialization"
-                                          name="specialization"
-                                          required
-                                          pattern="^[a-zA-Z\s]+$"
+          <!-- Teacher-Specific Fields -->
+          @if (selectedRole === 'teacher') {
+          <div>
+            <div class="row">
+              <!-- Specialization -->
+              <div class="col-md-6 mb-3">
+                <label for="specialization" class="form-label"
+                  >Specialization</label
+                >
+                <input
+                  type="text"
+                  class="form-control input"
+                  id="specialization"
+                  [(ngModel)]="specialization"
+                  name="specialization"
+                  required
+                  pattern="^[a-zA-Z\s]+$"
                   [ngClass]="{
                     'is-invalid':
                       signupForm.controls['specialization'] &&
                       signupForm.controls['specialization'].invalid &&
                       signupForm.controls['specialization'].touched
                   }"
-                                          />
-                                          @if (
-                                            signupForm.controls['specialization']?.invalid &&
-                                            signupForm.controls['specialization']?.touched
-                                            ) {
-                                            <div
-                                              class="invalid-feedback"
-                                              >
-                                              Specialization is required and must contain only letters.
-                                            </div>
-                                          }
-                                        </div>
-                                        <!-- Experience -->
-                                        <div class="col-md-6 mb-3">
-                                          <label for="experience" class="form-label"
-                                            >Experience (Years)</label
-                                            >
-                                            <input
-                                              type="number"
-                                              class="form-control input"
-                                              id="experience"
-                                              [(ngModel)]="experience"
-                                              name="experience"
-                                              required
-                                              min="0"
-                                              max="50"
+                />
+                @if ( signupForm.controls['specialization']?.invalid &&
+                signupForm.controls['specialization']?.touched ) {
+                <div class="invalid-feedback">
+                  Specialization is required and must contain only letters.
+                </div>
+                }
+              </div>
+              <!-- Experience -->
+              <div class="col-md-6 mb-3">
+                <label for="experience" class="form-label"
+                  >Experience (Years)</label
+                >
+                <input
+                  type="number"
+                  class="form-control input"
+                  id="experience"
+                  [(ngModel)]="experience"
+                  name="experience"
+                  required
+                  min="0"
+                  max="50"
                   [ngClass]="{
                     'is-invalid':
                       signupForm.controls['experience'] &&
                       signupForm.controls['experience'].invalid &&
                       signupForm.controls['experience'].touched
                   }"
-                                              />
-                                              @if (
-                                                signupForm.controls['experience'] &&
-                                                signupForm.controls['experience'].invalid &&
-                                                signupForm.controls['experience'].touched
-                                                ) {
-                                                <div
-                                                  class="invalid-feedback"
-                                                  >
-                                                  Please enter a valid experience.
-                                                </div>
-                                              }
-                                            </div>
-                                          </div>
-                                          <div class="row">
-                                            <!-- National ID -->
-                                            <div class="col-md-6 mb-3">
-                                              <label for="nationalId" class="form-label">National ID</label>
-                                              <input
-                                                type="text"
-                                                class="form-control input"
-                                                id="nationalId"
-                                                [(ngModel)]="nationalId"
-                                                name="nationalId"
-                                                required
-                                                pattern="^\d+$"
+                />
+                @if ( signupForm.controls['experience'] &&
+                signupForm.controls['experience'].invalid &&
+                signupForm.controls['experience'].touched ) {
+                <div class="invalid-feedback">
+                  Please enter a valid experience.
+                </div>
+                }
+              </div>
+            </div>
+            <div class="row">
+              <!-- National ID -->
+              <div class="col-md-6 mb-3">
+                <label for="nationalId" class="form-label">National ID</label>
+                <input
+                  type="text"
+                  class="form-control input"
+                  id="nationalId"
+                  [(ngModel)]="nationalId"
+                  name="nationalId"
+                  required
+                  pattern="^\d+$"
                   [ngClass]="{
                     'is-invalid':
                       signupForm.controls['nationalId'] &&
                       signupForm.controls['nationalId'].invalid &&
                       signupForm.controls['nationalId'].touched
                   }"
-                                                />
-                                                @if (
-                                                  signupForm.controls['nationalId'] &&
-                                                  signupForm.controls['nationalId'].invalid &&
-                                                  signupForm.controls['nationalId'].touched
-                                                  ) {
-                                                  <div
-                                                    class="invalid-feedback"
-                                                    >
-                                                    National ID is required and must contain only numbers.
-                                                  </div>
-                                                }
-                                              </div>
-                                              <!-- Country -->
-                                              <div class="col-md-6 mb-3">
-                                                <label for="country" class="form-label">Country</label>
-                                                <input
-                                                  type="text"
-                                                  class="form-control input"
-                                                  id="country"
-                                                  [(ngModel)]="country"
-                                                  name="country"
-                                                  pattern="^[a-zA-Z\s]+$"
+                />
+                @if ( signupForm.controls['nationalId'] &&
+                signupForm.controls['nationalId'].invalid &&
+                signupForm.controls['nationalId'].touched ) {
+                <div class="invalid-feedback">
+                  National ID is required and must contain only numbers.
+                </div>
+                }
+              </div>
+              <!-- Country -->
+              <div class="col-md-6 mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input
+                  type="text"
+                  class="form-control input"
+                  id="country"
+                  [(ngModel)]="country"
+                  name="country"
+                  pattern="^[a-zA-Z\s]+$"
                   [ngClass]="{
                     'is-invalid':
                       signupForm.controls['country'] &&
                       signupForm.controls['country'].invalid &&
                       signupForm.controls['country'].touched
                   }"
-                                                  />
-                                                  @if (
-                                                    signupForm.controls['country']?.invalid &&
-                                                    signupForm.controls['country']?.touched
-                                                    ) {
-                                                    <div
-                                                      class="invalid-feedback"
-                                                      >
-                                                      country is required and must contain only letters.
-                                                    </div>
-                                                  }
-                                                </div>
-                                              </div>
-                                            </div>
-                                          }
+                />
+                @if ( signupForm.controls['country']?.invalid &&
+                signupForm.controls['country']?.touched ) {
+                <div class="invalid-feedback">
+                  country is required and must contain only letters.
+                </div>
+                }
+              </div>
+            </div>
+          </div>
+          }
 
-                                          <!-- Agree to Privacy Policy Checkbox -->
-                                          <div class="form-check mb-3">
-                                            <input
-                                              class="form-check-input"
-                                              type="checkbox"
-                                              id="privacyPolicy"
-                                              [(ngModel)]="agreeToPolicy"
-                                              name="privacyPolicy"
-                                              required
-                                              />
-                                              <label class="form-check-label" for="privacyPolicy">
-                                                I agree to the <a href="#">Privacy Policy</a>
-                                              </label>
-                                            </div>
-                                            <div class="d-flex justify-content-center">
-                                              <button
-                                                type="submit"
-                                                class="btn btn-primary btnsign-up w-25"
-                                                [disabled]="signupForm.invalid || !agreeToPolicy"
-                                                >
-                                                Sign Up
-                                              </button>
-                                            </div>
+          <!-- Agree to Privacy Policy Checkbox -->
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="privacyPolicy"
+              [(ngModel)]="agreeToPolicy"
+              name="privacyPolicy"
+              required
+            />
+            <label class="form-check-label" for="privacyPolicy">
+              I agree to the <a href="#">Privacy Policy</a>
+            </label>
+          </div>
 
-                                            <div class="mt-3 text-center">
-                                              <span>Do you have an account ? </span>
-                                              <a
-                                                href="/login"
-                                                style="color: #ff5900 !important; font-weight: 500"
-                                                class="text-primary"
-                                                >Log In</a
-                                                >
-                                              </div>
-                                            </form>
-                                          </div>
-                                        </div>
-                                      <!-- </div> -->
-                                    </div>
-                                  </div>
+          <!-- Storage Error -->
+          @if (storageError) {
+          <div class="alert alert-danger mb-3" role="alert">
+            <strong>Storage is full!</strong> The profile picture is too large to save. Please try a smaller image.
+          </div>
+          }
+
+          <div class="d-flex justify-content-center">
+            <button
+              type="submit"
+              class="btn btnsign-up w-25"
+              [disabled]="!agreeToPolicy"
+            >
+              Sign Up
+            </button>
+          </div>
+
+          <div class="mt-3 text-center">
+            <span>Do you have an account ? </span>
+            <a
+              href="/sign-in"
+              style="color: #6f0a02 !important; font-weight: 500"
+              class="text-primary"
+              >Log In</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</div>

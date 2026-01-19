@@ -66,6 +66,9 @@ h2 {
 .social-buttons i {
   margin-right: 8px;
 }
+#email , #password{
+  padding-left: 33px;
+}
 
 /* Divider */
 .divider {
@@ -292,6 +295,57 @@ h2 {
 .form-check-label {
   color: #bbb;
 }
+/* Custom Error Message Styling */
+.LoggedMessageError {
+  background-color: #f8d7da;
+  color: #842029;
+  border-left: 5px solid #dc3545; /* Red accent bar */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  margin-top: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  
+  /* Smooth fade in animation */
+  animation: slideInDown 0.5s ease-out forwards;
+}
+
+/* Add warning icon */
+.LoggedMessageError::before {
+  content: "⚠"; /* Warning symbol */
+  margin-right: 10px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+/* Animation Keyframes */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Input validation feedback text */
+.invalid-feedback {
+  display: block; /* Ensure it shows up */
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (max-width: 500px) {
   .form-contain {
     /* border: 1px solid rgb(0, 255, 34); */
