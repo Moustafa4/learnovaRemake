@@ -1,89 +1,64 @@
 {
   "Inst": [
     {
-      "name": "Mohamed El-Desoky",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/d.jpeg"
+      "name": "Abdallah Sallam",
+      "role": "CEO and Managing Director of Madinet Masr Company",
+      "image": "Images/Inst_img/Abdallah Sallam.jpg"
     },
     {
-      "name": "Osama Mohamed",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/z.jpeg"
+      "name": "Ahmed El Aawar",
+      "role": "Coach and Organizational Psychologist Expert in Leadership and Cultural Transformation",
+      "image": "Images/Inst_img/Ahmed El Aawar.jpeg"
     },
     {
-      "name": "Mohammed Issa",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/Mohammed_Issa.jpeg"
+      "name": "Dr. Mohamed Taha",
+      "role": "Consultant and Assistant Professor of Psychiatry",
+      "image": "Images/Inst_img/Dr. Mohamed Taha.jpeg"
     },
     {
-      "name": "Moustafa Makram",
-      "role": "Graphic Designer Instructor",
-      "image": "Images/Inst_img/Moustafa_M.jpeg"
+      "name": "Khaled El Sawy",
+      "role": "Egyptian Actor",
+      "image": "Images/Inst_img/Khaled El Sawy.jpeg"
     },
     {
-      "name": "Mohamed El-Desoky",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/d.jpeg"
+      "name": "Dr. Mahmoud Mohieldin",
+      "role": " UN Special Envoy on Financing the 2030 Development Agenda and UN Climate Change High-Level Champion for Egypt",
+      "image": "Images/Inst_img/Dr. Mahmoud Mohieldin.jpeg"
     },
     {
-      "name": "Osama Mohamed",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/z.jpeg"
+      "name": "Dr. Emad Rashad",
+      "role": "Psychologist and Writer",
+      "image": "Images/Inst_img/Dr. Emad Rashad.jpeg"
     },
     {
-      "name": "Mohammed Issa",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/Mohammed_Issa.jpeg"
+      "name": "Yasser Ghallab",
+      "role": "Marketing Director",
+      "image": "Images/Inst_img/Yasser Ghallab.jpeg"
     },
     {
-      "name": "Ahmed Nazmy",
-      "role": "IT & Network Instructor",
-      "image": "Images/Inst_img/Ahmed_N.jpeg"
+      "name": "Fahda Bawazeer",
+      "role": "Clinical Psychologist",
+      "image": "Images/Inst_img/Fahda Bawazeer.jpeg"
     },
     {
-      "name": "Moustafa Makram",
-      "role": "Graphic Designer Instructor",
-      "image": "Images/Inst_img/Moustafa_M.jpeg"
+      "name": "Noha Zahra",
+      "role": "Educational Consultant & Author",
+      "image": "Images/Inst_img/Noha Zahra.jpeg"
     },
     {
-      "name": "Mohamed El-Desoky",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/d.jpeg"
+      "name": "Omar ElMonayar",
+      "role": "Sigma-Fit CEO",
+      "image": "Images/Inst_img/Omar ElMonayar.jpeg"
     },
     {
-      "name": "Osama Mohamed",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/z.jpeg"
+      "name": "Wael Fakharany",
+      "role": "Chief Executive Officer at Edenred Middle East ",
+      "image": "Images/Inst_img/Wael Fakharany.jpeg"
     },
     {
-      "name": "Mohammed Issa",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/Mohammed_Issa.jpeg"
-    },
-    {
-      "name": "Moustafa Makram",
-      "role": "Graphic Designer Instructor",
-      "image": "Images/Inst_img/Moustafa_M.jpeg"
-    },
-    {
-      "name": "Mohammed Issa",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/Mohammed_Issa.jpeg"
-    },
-    {
-      "name": "Moustafa Makram",
-      "role": "Graphic Designer Instructor",
-      "image": "Images/Inst_img/Moustafa_M.jpeg"
-    },
-    {
-      "name": "Mohamed El-Desoky",
-      "role": "Coding Instructor",
-      "image": "Images/Inst_img/d.jpeg"
-    },
-    {
-      "name": "Moustafa Makram",
-      "role": "Graphic Designer Instructor",
-      "image": "Images/Inst_img/Moustafa_M.jpeg"
+      "name": "Medhat Yassin",
+      "role": "A Strategic Consultant, Marketing and Business Development Expert",
+      "image": "Images/Inst_img/Medhat Yassin.jpeg"
     }
   ]
 }
