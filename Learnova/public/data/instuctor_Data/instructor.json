@@ -3,22 +3,22 @@
     {
       "name": "Abdallah Sallam",
       "role": "CEO and Managing Director of Madinet Masr Company",
-      "image": "dist/learnova/browser/Images/Inst_img/"
+      "image": "/Images/Inst_img/Abdallah Sallam.jpg"
     },
     {
       "name": "Ahmed El Aawar",
       "role": "Coach and Organizational Psychologist Expert in Leadership and Cultural Transformation",
-      "image": "Images/Inst_img/Ahmed El Aawar.jpeg"
+      "image": "/Images/Inst_img/Ahmed El Aawar.jpg"
     },
     {
       "name": "Dr. Mohamed Taha",
       "role": "Consultant and Assistant Professor of Psychiatry",
-      "image": "Images/Inst_img/Dr. Mohamed Taha.jpeg"
+      "image": "/Images/Inst_img/Dr. Mohamed Taha.jpg"
     },
     {
       "name": "Khaled El Sawy",
       "role": "Egyptian Actor",
-      "image": "Images/Inst_img/Khaled El Sawy.jpeg"
+      "image": "/Images/Inst_img/Khaled El Sawy.jpg"
     },
     {
       "name": "Dr. Mahmoud Mohieldin",
@@ -28,37 +28,37 @@
     {
       "name": "Dr. Emad Rashad",
       "role": "Psychologist and Writer",
-      "image": "Images/Inst_img/Dr. Emad Rashad.jpeg"
+      "image": "/Images/Inst_img/Dr. Emad Rashad.jpg"
     },
     {
       "name": "Yasser Ghallab",
       "role": "Marketing Director",
-      "image": "Images/Inst_img/Yasser Ghallab.jpeg"
+      "image": "/Images/Inst_img/Yasser Ghallab.jpg"
     },
     {
       "name": "Fahda Bawazeer",
       "role": "Clinical Psychologist",
-      "image": "Images/Inst_img/Fahda Bawazeer.jpeg"
+      "image": "/Images/Inst_img/Fahda Bawazeer.jpg"
     },
     {
       "name": "Noha Zahra",
       "role": "Educational Consultant & Author",
-      "image": "Images/Inst_img/Noha Zahra.jpeg"
+      "image": "/Images/Inst_img/Noha Zahra.jpg"
     },
     {
       "name": "Omar ElMonayar",
       "role": "Sigma-Fit CEO",
-      "image": "Images/Inst_img/Omar ElMonayar.jpeg"
+      "image": "/Images/Inst_img/Omar ElMonayar.jpg"
     },
     {
       "name": "Wael Fakharany",
       "role": "Chief Executive Officer at Edenred Middle East ",
-      "image": "Images/Inst_img/Wael Fakharany.jpeg"
+      "image": "/Images/Inst_img/Wael Fakharany.jpg"
     },
     {
       "name": "Medhat Yassin",
       "role": "A Strategic Consultant, Marketing and Business Development Expert",
-      "image": "Images/Inst_img/Medhat Yassin.jpeg"
+      "image": "/Images/Inst_img/Medhat Yassin.jpg"
     }
   ]
 }
