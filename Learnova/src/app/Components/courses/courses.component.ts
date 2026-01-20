@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CartService } from '../../../services/cartser/cart.service';
 
 @Component({
   selector: 'app-courses',
@@ -18,9 +19,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class CoursesComponent {
   private Courses_Service = inject(CoursesService);
-
+  private cartserv = inject(CartService);
   private $courses = this.Courses_Service.Allcourses().pipe(
-    map((courses) => courses ?? ([] as ICourses[]))
+    map((courses) => courses ?? ([] as ICourses[])),
   );
 
   _courses = toSignal(this.$courses, { initialValue: [] as ICourses[] });
@@ -39,12 +40,12 @@ export class CoursesComponent {
     } else {
       this.filterproduct = this._courses().filter(
         (m) =>
-          m.typ.toLocaleLowerCase() === this.selectedCat.toLocaleLowerCase()
+          m.typ.toLocaleLowerCase() === this.selectedCat.toLocaleLowerCase(),
       );
     }
   }
 
-  // addToCart(Course: Course) {
-  //   this.cartService.addToCart(Course);
-  // }
+  addToCart(Course: ICourses) {
+    this.cartserv.addToCart(Course);
+  }
 }

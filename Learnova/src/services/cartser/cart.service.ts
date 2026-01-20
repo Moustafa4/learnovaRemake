@@ -1,47 +1,49 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { ICourses } from '../../app/Components/courses/icourses';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  // private cartItems: Course[] = [];
-  // private totalPrice = new BehaviorSubject<number>(0);
-  // totalPrice$ = this.totalPrice.asObservable();
+  private cartKey = 'cart';
 
-  // constructor() {
-  //   // تحميل السلة من localStorage عند تهيئة الخدمة
-  //   const storedCartItems = localStorage.getItem('cart');
-  //   if (storedCartItems) {
-  //     this.cartItems = JSON.parse(storedCartItems);
-  //     this.updateTotalPrice(); // تحديث السعر الإجمالي عند تحميل السلة
-  //   }
-  // }
+  constructor() {}
 
-  // addToCart(course: Course) {
-  //   const existingCourse = this.cartItems.find((item) => item.id === course.id);
-  //   if (!existingCourse) {
-  //     console.log('Course added:', course);
-  //     this.cartItems.push(course);
-  //     this.updateTotalPrice();
-  //     localStorage.setItem('cart', JSON.stringify(this.cartItems)); // تحديث localStorage
-  //   } else {
-  //     console.log('Course already in cart:', existingCourse);
-  //   }
-  // }
+  // جلب الكورسات الموجودة بالعربة
+  getCart(): ICourses[] {
+    return JSON.parse(sessionStorage.getItem(this.cartKey) || '[]');
+  }
 
-  // removeFromCart(courseId: number) {
-  //   this.cartItems = this.cartItems.filter((course) => course.id !== courseId);
-  //   this.updateTotalPrice();
-  //   localStorage.setItem('cart', JSON.stringify(this.cartItems)); // تحديث localStorage بعد الإزالة
-  // }
+  // إضافة كورس للعربة
+  addToCart(course: ICourses): void {
+    let cart = this.getCart();
 
-  // getCartItems() {
-  //   return this.cartItems;
-  // }
+    // لو الكورس موجود بالفعل
+    const existingCourse = cart.find((c) => c.title === course.title);
+    if (existingCourse) {
+      alert('This Course Already Add to your cart');
+      return;
+    }
 
-  // private updateTotalPrice() {
-  //   const total = this.cartItems.reduce((sum, item) => sum + item.price, 0);
-  //   this.totalPrice.next(total);
-  // }
+    // لو مش موجود، نضيفه
+    cart.push(course);
+    sessionStorage.setItem(this.cartKey, JSON.stringify(cart));
+    console.log('Cart updated:', cart);
+  }
+
+  // إزالة كورس من العربة
+  removeFromCart(courseTitle: string): void {
+    let cart = this.getCart();
+    cart = cart.filter((c) => c.title !== courseTitle);
+    sessionStorage.setItem(this.cartKey, JSON.stringify(cart));
+  }
+
+  // مسح العربة كلها
+  clearCart(): void {
+    sessionStorage.removeItem(this.cartKey);
+  }
+  getTotalPrice(): number {
+    const cart = this.getCart();
+    return cart.reduce((total, course) => total + course.price, 0);
+  }
 }

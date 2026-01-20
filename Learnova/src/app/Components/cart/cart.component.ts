@@ -1,40 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { CartService } from '../../../services/cartser/cart.service';
-
+import { Component, inject, OnInit } from "@angular/core";
+import { ICourses } from "../courses/icourses";
+import { CartService } from "../../../services/cartser/cart.service";
 @Component({
   selector: 'app-cart',
+  standalone: true,
   templateUrl: './cart.component.html',
-  imports: [],
   styleUrls: ['./cart.component.css'],
 })
-export class CartComponent {
-  // cartCourses: Course[] = [];
-  isCartEmpty: boolean = true;
-  totalPrice: number = 0;
-  course: any;
+export class CartComponent implements OnInit {
+  cartCourses: ICourses[] = [];
+  isCartEmpty = true;
+  totalPrice = 0;
 
-  // constructor(private cartService: CartService) {}
+  private cartserv = inject(CartService);
 
-  // ngOnInit() {
-  //   this.cartCourses = this.cartService.getCartItems();
-  //   this.checkCartEmpty();
-  //   this.cartService.totalPrice$.subscribe((price) => {
-  //     this.totalPrice = price;
-  //   });
-  // }
+  ngOnInit() {
+    this.loadCart();
+  }
 
-  // removeCourse(courseId: number) {
-  //   this.cartService.removeFromCart(courseId);
-  //   this.cartCourses = this.cartService.getCartItems(); // تحديث العناصر بعد الإزالة
-  //   this.checkCartEmpty(); // تحديث حالة السلة
-  // }
+  loadCart() {
+    this.cartCourses = this.cartserv.getCart();
+    this.isCartEmpty = this.cartCourses.length === 0;
+    this.totalPrice = this.cartserv.getTotalPrice();
+  }
 
-  // checkCartEmpty() {
-  //   this.isCartEmpty = this.cartCourses.length === 0;
-  // }
-  // addToCart(course: Course) {
-  //   this.cartService.addToCart(course);
-  //   this.cartCourses = this.cartService.getCartItems(); // تحديث القائمة بعد الإضافة
-  //   this.checkCartEmpty(); // تحديث حالة السلة بعد الإضافة
-  // }
+  removeCourse(title: string) {
+    this.cartserv.removeFromCart(title);
+    this.loadCart();
+  }
+
+  clearCart() {
+    this.cartserv.clearCart();
+    this.loadCart();
+  }
 }

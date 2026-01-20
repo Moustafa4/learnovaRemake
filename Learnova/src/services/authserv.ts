@@ -30,4 +30,11 @@ export class Authserv {
     this.user.set(null);
     this.router.navigate(['']);
   }
+  authgard():boolean {
+    if (localStorage.getItem('currentUser')!=null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

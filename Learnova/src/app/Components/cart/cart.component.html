@@ -18,7 +18,7 @@
       }
 
       <!-- List of Cart Items -->
-      <!-- @for (item of cartCourses; track item) {
+      @for (item of cartCourses; track item) {
         <div class="cart-course row">
           <div class="col-md-3">
             <img [src]="item.image" alt="Course Image" class="img-fluid" />
@@ -29,17 +29,12 @@
             </h5>
             <p>Instructor: {{ item.instructor || "Unknown" }}</p>
             <p class="font-weight-bold">${{ item.price }}</p>
-            <button class="btn btn-danger" (click)="removeCourse(item.id)">
+            <button class="btn btn-danger" (click)="removeCourse(item.title)">
               <i class="fas fa-trash"></i> Remove
             </button> 
-             <p>
-            <a href="#" class="remove-course" (click)="removeCourse(item.id)"
-              ><i class="fas fa-trash"></i> Remove</a
-              >
-            </p>
           </div>
         </div>
-      }  -->
+      } 
 
       <!-- Cart Total -->
       @if (!isCartEmpty) {

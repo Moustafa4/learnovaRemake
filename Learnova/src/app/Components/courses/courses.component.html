@@ -24,7 +24,7 @@
             <a class="btn btn-danger" routerLink="/Details/{{ course.title }}"
               >Show Details</a
             >
-            <a class="btn btn-danger">Buy Now</a>
+            <a class="btn btn-danger" (click)="addToCart(course)">Buy Now</a>
           </div>
         </div>
       </div>
