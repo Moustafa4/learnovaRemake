@@ -136,7 +136,7 @@ select {
 }
 @media (min-width: 1400px){
   .card {
-    width: 300px;
+    width: 380px;
     padding: 3px;
     background-color: rgb(10, 10, 10);
     border: 1px solid #545454;
@@ -145,6 +145,9 @@ select {
     text-align: center;
     color: white;
     margin: 15px;
+  }
+  .card-img-top{
+    height: 220px;
   }
   .card-body {
     height: 180px;
