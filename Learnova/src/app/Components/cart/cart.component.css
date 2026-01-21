@@ -1,150 +1,174 @@
-.main{
-  margin-bottom: 50px;
+/* global */
+.cart-theme-wrapper {
+  --bg-dark: #000000;
+  --card-surface: #111111;
+  --card-border: #222222;
+  --primary-glow: #ff5500;
+  --text-main: #ffffff;
+  --text-muted: #888888;
 
-  background-color: #000000;
-}
-.container {
-    font-family: 'Arial', sans-serif;
-    background-color: #000000;
-    color: #ffffff;
-    padding-top: 20px;
-}
-.fa-shopping-cart{
-  margin-top: 20px;
-  margin-bottom: 20px;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  width: 100%;
 
-}
-/* Cart Header */
-.page-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.page-header h1 {
-    font-size: 2rem;
-    color: #ffffff;
-}
-
-.cart-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #1e1e1e;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  /* خلفية متدرجة */
+  background-image:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 85, 0, 0.05) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(40, 100, 255, 0.05) 0%,
+      transparent 20%
+    );
 }
 
-.cart-course {
-    background-color: #2b2b2b;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.main-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-.cart-course img {
-    /* border-radius: 50%; */
-    max-width: 100px;
-    /* Ensure max size on all screens */
-    width: 100%;
-    height: 100px;
+/* Header Style */
+.header-area {
+  padding-left: 20px;
+  border-left: 4px solid var(--primary-glow);
+}
+.header-area h1 {
+  color: var(--text-main);
+  font-weight: 700;
+}
+.header-area p {
+  color: var(--text-muted);
 }
 
-/* Ensure the image takes up only the appropriate space on small screens */
+/* Course Card Custom Styles */
+.course-card {
+  margin-bottom: 22px;
+  background: var(--card-surface);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  border-color: #444;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.course-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary-glow);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.course-card:hover::after {
+  opacity: 1;
+}
+
+.course-thumb {
+  width: 140px;
+  height: 90px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #0a0a0a;
+}
+
+/* في الموبايل نخلي الصورة كاملة العرض */
 @media (max-width: 576px) {
-    .cart-course img {
-        max-width: 80px;
-        /* Adjust the size for small screens */
-    }
+  .course-thumb {
+    width: 100%;
+    height: 180px;
+  }
 }
 
-.cart-total {
-    margin-top: 30px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: right;
-    color: #e0e0e0;
+.course-title {
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+.course-title:hover {
+  color: var(--primary-glow) !important;
 }
 
-.cart-btns {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+.instructor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #ccc;
+  width: fit-content;
 }
 
-.btn-primary {
-    background-color: rgb(255, 111, 0);
-    border-color: rgb(255, 111, 0);
-    color: #ffffff;
+.price-tag {
+  font-size: 1.3rem;
+  color: var(--primary-glow);
 }
 
-.btn-primary:hover {
-    background-color: #ff8c3a;
+.remove-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: var(--text-muted);
+  padding: 7px 16px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.remove-btn:hover {
+  border-color: #ff4444;
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.08);
 }
 
-.remove-course {
-    color: #ffffff;
+/* Summary Box */
+.summary-box {
+  background: linear-gradient(145deg, #151515 0%, #0f0f0f 100%);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 30px;
 }
 
-/* Empty cart message */
-.empty-cart-message {
-    text-align: center;
-    font-size: 1.75rem;
-    margin-top: 20px;
-    color: #ff6f00;
-    display: none;
-    padding: 20px;
-    background-color: #343a40;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+.checkout-btn-glow {
+  padding: 18px;
+  background: linear-gradient(90deg, #ff6600, #ff4500);
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 4px 20px rgba(255, 85, 0, 0.3);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.checkout-btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 85, 0, 0.5);
+  color: white;
 }
 
-.empty-cart-message.show {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+/* Empty State */
+.empty-cart-futuristic {
+  background: var(--card-surface);
+  border: 1px dashed #333;
+  border-radius: 20px;
 }
-
-/* Offer Upgrade Section */
-.offer-card {
-    background-color: #444;
-    color: #f5f5f5;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    border: none;
-    margin-top: 40px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.offer-card h5 {
-    color: #ff6f00;
-    font-weight: bold;
-}
-
-.offer-card p {
-    color: #ddd;
-}
-
-.offer-card .btn-success {
-    background-color: #28a745;
-    color: #ffffff;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.offer-card .btn-success:hover {
-    background-color: #218838;
-    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
-}
-
-.course-name {
-    color: rgb(255, 111, 0);
-    /* Set course name color to orange */
-    text-decoration: none;
-    /* Remove underline */
-}
-
-.course-name:hover {
-    text-decoration: underline;
-    /* Optional: underline on hover */
+.empty-cart-futuristic h3 {
+  color: var(--text-main);
 }

@@ -1,69 +1,111 @@
-<div class="main">
-  <div class="container">
-    <!-- Cart Header -->
-    <div class="page-header">
-      <h2><i class="bi bi-bag"></i></h2>
-
-      <h1>Your Cart</h1>
+<div class="cart-theme-wrapper">
+  <div class="main-wrapper container">
+    <!-- Header -->
+    <div class="header-area mb-5">
+      <h1>Shopping Cart</h1>
+      <p>You have {{ cartCourses.length }} items ready for checkout</p>
     </div>
 
-    <div class="container cart-container">
-      <!-- Empty Cart Message -->
-      @if (isCartEmpty) {
-      <div class="empty-cart-message alert alert-info">
-        <i class="fas fa-info-circle"></i> Your cart is currently empty.
-        <br />
-        <small>Start adding courses to invest in your future!</small>
-      </div>
-      }
+    <div class="row g-5">
+      <!--  left -->
+      <div class="col-lg-8 col-md-12 gy-5">
+        <div class="courses-container">
+          @if (isCartEmpty) {
+            <div class="empty-cart-futuristic text-center p-5">
+              <i class="bi bi-cart-x" style="font-size: 4rem; color: #333"></i>
+              <h3 class="mt-3">Your cart feels empty</h3>
+              <p style="color: #666">Discover new skills to fill it up.</p>
+              <a
+                href="/courses"
+                class="checkout-btn-glow mx-auto mt-4"
+                style="
+                  max-width: 250px;
+                  background: #222;
+                  border: 1px solid #444;
+                "
+                >Browse Courses</a
+              >
+            </div>
+          }
 
-      <!-- List of Cart Items -->
-      @for (item of cartCourses; track item) {
-        <div class="cart-course row">
-          <div class="col-md-3">
-            <img [src]="item.image" alt="Course Image" class="img-fluid" />
-          </div>
-          <div class="col-md-9 course-details">
-            <h5>
-              <a href="#" class="course-title">{{ item.title }}</a>
-            </h5>
-            <p>Instructor: {{ item.instructor || "Unknown" }}</p>
-            <p class="font-weight-bold">${{ item.price }}</p>
-            <button class="btn btn-danger" (click)="removeCourse(item.title)">
-              <i class="fas fa-trash"></i> Remove
-            </button> 
+          @for (item of cartCourses; track item) {
+            <div class="course-card d-flex flex-column flex-sm-row gap-3">
+              <div class="course-thumb">
+                <img
+                  [src]="item.image"
+                  alt="Course Thumbnail"
+                  class="img-fluid w-100 h-100"
+                  style="object-fit: cover"
+                />
+              </div>
+
+              <div
+                class="course-content flex-grow-1 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <a
+                    href="#"
+                    class="course-title text-decoration-none text-white fw-bold"
+                    >{{ item.title }}</a
+                  >
+                  <div class="instructor-badge mt-2">
+                    <i class="bi bi-person-fill"></i> {{ item.instructor }}
+                  </div>
+                </div>
+
+                <div
+                  class="course-footer d-flex justify-content-between align-items-center mt-3"
+                >
+                  <span class="price-tag fw-bold">${{ item.price }}</span>
+                  <button class="remove-btn" (click)="removeCourse(item.title)">
+                    <i class="bi bi-trash"></i> Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Right -->
+      @if (!isCartEmpty) {
+        <div class="col-lg-4 col-md-12">
+          <div class="summary-box sticky-top" style="top: 20px; z-index: 10">
+            <!-- sticky-top من بوتستراب -->
+            <div
+              class="summary-header border-bottom border-secondary pb-3 mb-3"
+            >
+              <h4 class="fw-bold m-0 text-white">Order Summary</h4>
+            </div>
+
+            <div class="d-flex justify-content-between mb-3 text-secondary">
+              <span>Subtotal</span>
+              <span>${{ totalPrice }}</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3 text-secondary">
+              <span>Discount</span>
+              <span class="text-success">$0.00</span>
+            </div>
+
+            <div
+              class="d-flex justify-content-between pt-3 mt-3 border-top border-secondary dashed-border"
+            >
+              <span class="fs-5 text-white">Total</span>
+              <span class="fs-3 fw-bold text-white">${{ totalPrice }}</span>
+            </div>
+
+            <a
+              href="/course-payment"
+              class="checkout-btn-glow d-block text-center text-decoration-none mt-4"
+            >
+              Complete Checkout <i class="bi bi-arrow-right-short"></i>
+            </a>
+
+            <div class="text-center mt-3 text-secondary small">
+              <i class="bi bi-shield-lock-fill"></i> SSL Secured Payment
+            </div>
           </div>
         </div>
-      } 
-
-      <!-- Cart Total -->
-      @if (!isCartEmpty) {
-      <div class="cart-total">
-        <p>Total: ${{ totalPrice }}</p>
-      </div>
-      }
-
-      <!-- Cart Buttons -->
-      @if (!isCartEmpty) {
-      <div class="cart-btns">
-        <a href="#" class="btn btn-outline-secondary"
-          ><i class="fas fa-arrow-left"></i> Continue Shopping</a
-        >
-        <a href="/course-payment" class="btn btn-primary"
-          ><i class="fas fa-credit-card"></i> Checkout</a
-        >
-      </div>
-      }
-
-      <!-- Upgrade to Annual Subscription Section -->
-      @if (!isCartEmpty) {
-      <div class="offer-card card mt-4">
-        <h5><i class="fas fa-arrow-up"></i> Upgrade to Annual Subscription</h5>
-        <p>Get access to all courses for a whole year at a discounted price!</p>
-        <a href="/main-payment" class="btn btn-success"
-          ><i class="fas fa-arrow-up"></i> Upgrade Now</a
-        >
-      </div>
       }
     </div>
   </div>

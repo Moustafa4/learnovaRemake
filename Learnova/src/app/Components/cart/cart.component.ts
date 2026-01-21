@@ -19,7 +19,7 @@ export class CartComponent implements OnInit {
   }
 
   loadCart() {
-    this.cartCourses = this.cartserv.getCart();
+    this.cartCourses = this.cartserv.cart();
     this.isCartEmpty = this.cartCourses.length === 0;
     this.totalPrice = this.cartserv.getTotalPrice();
   }

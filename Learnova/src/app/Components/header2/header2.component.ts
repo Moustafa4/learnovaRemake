@@ -1,4 +1,4 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, computed, HostListener, inject } from '@angular/core';
 import { Router, RouterLinkActive, RouterModule } from '@angular/router';
 import { CoursesService } from '../../../services/courses_ser/courses.service';
 import { map } from 'rxjs';
@@ -6,6 +6,7 @@ import { ICourses } from '../courses/icourses';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../../../services/cartser/cart.service';
 
 @Component({
   selector: 'app-header2',
@@ -14,7 +15,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header2.component.css',
 })
 export class Header2Component {
-  private router=inject(Router)
+  private router = inject(Router);
   private courses_services = inject(CoursesService);
   private $courses = this.courses_services
     .Allcourses()
@@ -22,6 +23,13 @@ export class Header2Component {
   private _courses = toSignal(this.$courses, {
     initialValue: [] as ICourses[],
   });
+
+  private cartser = inject(CartService);
+
+  cart = this.cartser.cart;
+
+  isCartEmpty = computed(() => this.cart().length === 0);
+
   showOverlay = false;
 
   sear_word: string = '';
@@ -36,7 +44,7 @@ export class Header2Component {
     }
 
     this.searchfilter = this._courses().filter((c) =>
-      c.description.toLowerCase().includes (value)
+      c.description.toLowerCase().includes(value),
     );
 
     this.showOverlay = true;

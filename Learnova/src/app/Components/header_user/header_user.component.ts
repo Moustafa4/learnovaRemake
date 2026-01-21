@@ -1,4 +1,4 @@
-import { Component, effect, HostListener, inject } from '@angular/core';
+import { Component, computed, effect, HostListener, inject } from '@angular/core';
 import { Router, RouterLinkActive, RouterModule } from '@angular/router';
 import { CoursesService } from '../../../services/courses_ser/courses.service';
 import { map } from 'rxjs';
@@ -7,6 +7,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Authserv } from '../../../services/authserv';
+import { CartService } from '../../../services/cartser/cart.service';
 interface CurrentUser {
   id: number;
   role: string;
@@ -33,6 +34,11 @@ export class Header_userComponent {
     initialValue: [] as ICourses[],
   });
 
+  private cartser = inject(CartService);
+
+  cart = this.cartser.cart;
+
+  isCartEmpty = computed(() => this.cart().length === 0);
   private auth = inject(Authserv);
   userData = this.auth.user;
 

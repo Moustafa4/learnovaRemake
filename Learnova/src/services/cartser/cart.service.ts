@@ -1,49 +1,44 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { ICourses } from '../../app/Components/courses/icourses';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class CartService {
   private cartKey = 'cart';
 
-  constructor() {}
+  cart = signal<ICourses[]>(this.loadCart());
 
-  // جلب الكورسات الموجودة بالعربة
-  getCart(): ICourses[] {
+  private loadCart(): ICourses[] {
     return JSON.parse(sessionStorage.getItem(this.cartKey) || '[]');
   }
 
-  // إضافة كورس للعربة
-  addToCart(course: ICourses): void {
-    let cart = this.getCart();
+  addToCart(course: ICourses) {
+    this.cart.update((cart) => {
+      const exists = cart.find((c) => c.title === course.title);
+      if (exists) {
+        alert('This Course Already Add to your cart');
+        return cart;
+      }
 
-    // لو الكورس موجود بالفعل
-    const existingCourse = cart.find((c) => c.title === course.title);
-    if (existingCourse) {
-      alert('This Course Already Add to your cart');
-      return;
-    }
-
-    // لو مش موجود، نضيفه
-    cart.push(course);
-    sessionStorage.setItem(this.cartKey, JSON.stringify(cart));
-    console.log('Cart updated:', cart);
+      const updated = [...cart, course];
+      sessionStorage.setItem(this.cartKey, JSON.stringify(updated));
+      return updated;
+    });
   }
 
-  // إزالة كورس من العربة
-  removeFromCart(courseTitle: string): void {
-    let cart = this.getCart();
-    cart = cart.filter((c) => c.title !== courseTitle);
-    sessionStorage.setItem(this.cartKey, JSON.stringify(cart));
+  removeFromCart(title: string) {
+    this.cart.update((cart) => {
+      const updated = cart.filter((c) => c.title !== title);
+      sessionStorage.setItem(this.cartKey, JSON.stringify(updated));
+      return updated;
+    });
   }
 
-  // مسح العربة كلها
-  clearCart(): void {
+  clearCart() {
     sessionStorage.removeItem(this.cartKey);
+    this.cart.set([]);
   }
+
   getTotalPrice(): number {
-    const cart = this.getCart();
-    return cart.reduce((total, course) => total + course.price, 0);
+    return this.cart().reduce((t, c) => t + c.price, 0);
   }
 }
