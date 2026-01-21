@@ -124,34 +124,26 @@
           <li class="nav-item cart-btn position-relative">
             <a class="nav-link" routerLink="/cart">
               <i class="bi bi-bag"></i>
-              <span class="cart-counter">{{cart().length}}</span>
+              <span class="cart-counter">{{ cart().length }}</span>
             </a>
           </li>
           <span class="seperator">|</span>
 
-          <li class="nav-item">
+          <li class="nav-item user">
             <a
               class="nav-link"
               routerLinkActive="active"
               aria-current="page"
               (click)="goToDashboard()"
-              >{{ userData()?.firstName }}
+              >Hi ,{{ userData()?.firstName }}
             </a>
           </li>
           <li class="nav-item d-flex">
             <button (click)="logout()" class="logout">
-             Logout  <i class="fa-solid fa-arrow-right-from-bracket"> </i>
+              Logout <i class="fa-solid fa-arrow-right-from-bracket"> </i>
             </button>
           </li>
-          <li class="nav-item">
-            <a
-              class="nav-link notify-btn"
-              routerLinkActive="active"
-              aria-current="page"
-              routerLink="/notifications"
-              ><i class="fa-solid fa-bell"></i
-            ></a>
-          </li>
+
           <li class="nav-item">
             <a
               class="nav-link notify-btn"

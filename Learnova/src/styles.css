@@ -2,3 +2,6 @@ body {
   background-color: black;
 }
 
+:root {
+  --mainColor: #8d170f;
+}

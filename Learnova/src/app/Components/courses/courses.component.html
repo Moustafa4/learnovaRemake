@@ -2,33 +2,81 @@
   <div class="text-center heading">
     <p>Explore Inspiring Courses Online</p>
   </div>
-  <select [(ngModel)]="selectedCat" (change)="onchanged()" class="form-select">
+
+  <!-- Filter Select -->
+  <select
+    [(ngModel)]="selectedCat"
+    (change)="onchanged()"
+    class="form-select mb-5"
+  >
     <option selected>All Courses</option>
     <option value="Programming">Programming</option>
     <option value="design">Design</option>
     <option value="network">Network</option>
   </select>
 
-  <div class="row">
+  <div class="row gy-4">
     @for (course of filterproduct; track $index) {
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4  p-0 gy-4">
-      <div class="card">
-        <img [src]="course.image" class="card-img-top" />
-        <div class="card-body">
-          <div>
-            <h5 class="card-title">{{ course.title }}</h5>
-          </div>
-          <p>The trainer: {{ course.instructor }}</p>
-          <p>Price: EGP {{ course.price }}</p>
-          <div class="d-flex justify-content-between">
-            <a class="btn btn-danger" routerLink="/Details/{{ course.title }}"
-              >Show Details</a
-            >
-            <a class="btn btn-danger" (click)="addToCart(course)">Buy Now</a>
-          </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card courses-card">
+          <a routerLink="/Details/{{ course.title }}">
+            <div class="card-img-container">
+              <img
+                [src]="course.image"
+                class="card-img-top"
+                [alt]="course.title"
+              />
+            </div>
+
+            <div class="card-body courses-card-slider">
+              <div class="card-top-part">
+                <div class="d-flex justify-content-between">
+                  <p class="course-type">{{ course.typ }}</p>
+
+                  <span class="courses_rate mt-1">
+                    <i class="fa fa-star"></i> 4.5 (400+)
+                  </span>
+                </div>
+
+                <h5 class="card-title course-title">
+                  {{ course.title }}
+                </h5>
+
+                <p class="Crs-Duration">
+                  <i class="bi bi-alarm"></i> 15h 41Mins
+                  <span class="float-end text-light"
+                    >{{ course.price }} EGP</span
+                  >
+                </p>
+              </div>
+
+              <div
+                class="ins-name_wishlist d-flex justify-content-between align-items-center"
+              >
+                <p class="card-text">{{ course.instructor }}</p>
+
+                <p
+                  (click)="
+                    $event.preventDefault();
+                    addToCart(course);
+                    $event.stopPropagation()
+                  "
+                  style="cursor: pointer"
+                  [class.added-btn]="isAdded(course.title)"
+                >
+                  @if (isAdded(course.title)) {
+                    <!-- Green Check Icon -->
+                    <i class="fa-solid fa-check"></i>
+                  } @else {
+                    <!-- Original Plus Icon -->
+                    <i class="fa-solid fa-plus"></i>
+                  }
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-    </div>
     }
   </div>
 </div>
