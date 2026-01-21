@@ -9,7 +9,7 @@
   font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
-  border-bottom: 2px solid rgb(255, 60, 0);
+  border-bottom: 2px solid var(--mainColor);
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -20,22 +20,22 @@
 }
 
 .highlight {
-  color: rgb(255, 60, 0);
+  color: var(--mainColor);
   font-weight: bold;
 }
 
 .btn-danger {
-  background-color: rgb(255, 60, 0);
+  background-color: var(--mainColor);
   border: none;
   padding: 10px 20px;
 }
 
 .btn-danger:hover {
-  background-color: rgb(255, 60, 0);
+  background-color: var(--mainColor);
 }
 /**red line*/
 .red-line {
   border: none;
   height: 2px;
-  background-color: rgb(255, 60, 0);
+  background-color: var(--mainColor);
 }

@@ -55,12 +55,13 @@ addedCourseTitle = new Set<string>();
       );
     }
   }
-  addToCart(Course: ICourses) {
+  toggleCart(Course: ICourses) {
      if (this.isAdded(Course.title)) {
-      return;
-    }
-    this.cartserv.addToCart(Course);
-    this.addedCourseTitle.add(Course.title);
+     this.cartserv.removeFromCart(Course.title);
+      this.addedCourseTitle.delete(Course.title);
+    }else{
+      this.cartserv.addToCart(Course);
+    this.addedCourseTitle.add(Course.title);}
   }
 
     isAdded(courseTitle:any): boolean {

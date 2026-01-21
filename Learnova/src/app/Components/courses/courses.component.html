@@ -58,7 +58,7 @@
                 <p
                   (click)="
                     $event.preventDefault();
-                    addToCart(course);
+                    toggleCart(course);
                     $event.stopPropagation()
                   "
                   style="cursor: pointer"
@@ -66,7 +66,7 @@
                 >
                   @if (isAdded(course.title)) {
                     <!-- Green Check Icon -->
-                    <i class="fa-solid fa-check"></i>
+                    <i class="fa-regular fa-circle-check"></i>
                   } @else {
                     <!-- Original Plus Icon -->
                     <i class="fa-solid fa-plus"></i>

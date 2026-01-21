@@ -8,8 +8,9 @@
   height: 100px;
   object-fit: cover;
   border: 2px solid #000000;
-  box-shadow: 1px 0px 8px rgba(252, 252, 252, 0.989), -1px -1px 3px rgba(0, 0, 0, 0.893);
-
+  box-shadow:
+    1px 0px 8px rgba(252, 252, 252, 0.989),
+    -1px -1px 3px rgba(0, 0, 0, 0.893);
 }
 
 .expert-card h5 {
@@ -25,7 +26,7 @@
   font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
-  border-bottom: 2px solid rgb(255, 60, 0);
+  border-bottom: 2px solid var(--mainColor);
   display: inline-block;
   padding-bottom: 5px;
 }

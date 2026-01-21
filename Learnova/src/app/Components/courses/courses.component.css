@@ -179,20 +179,21 @@ select.form-select option {
 
 /* Specific style for when the item is added */
 .ins-name_wishlist p.added-btn {
-  background-color: #198754 !important; /* Bootstrap Green (Success) */
-  border: 1px solid #198754;
+  background-color: transparent !important; /* Bootstrap Green (Success) */
 }
 
 .ins-name_wishlist p.added-btn:hover {
-  background-color: #146c43 !important; /* Darker Green on hover */
+  background-color: #343434 !important; /* Darker Green on hover */
 }
 
 /* Ensure the check icon is centered just like the plus was */
-.fa-check {
+.fa-circle-check {
   position: absolute;
   top: 50%;
   left: 50%;
   color: white;
+  font-size: 25px;
+
   transform: translate(-50%, -50%);
 }
 @media (max-width: 575.98px) {
