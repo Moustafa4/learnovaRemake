@@ -2,18 +2,16 @@
 .d-flex {
   background: rgb(27, 27, 27);
   height: 100vh;
-  padding-bottom: 50px; /* إضافة هامش سفلي */
+  padding-bottom: 50px;
 }
-.navbar {
-  border-radius: 5px;
-  border: 1px solid rgb(143, 143, 143);
-  background: rgb(65, 65, 65);
-}
+
 .stuname {
   color: white;
   font-weight: bold;
-  font-size: 20px;
-  margin-left: 50px;
+  font-size: 28px;
+  padding: 10px;
+  margin-top: 10px;
+  text-transform: capitalize;
 }
 
 .sidebar {
@@ -23,6 +21,11 @@
   padding: 20px;
   min-height: 100vh;
 }
+
+.sidebar ul {
+  padding: 0 10px;
+}
+
 a {
   border: none !important;
   color: white;
@@ -32,30 +35,36 @@ a {
   display: flex;
   align-items: center;
   text-decoration: none;
+  padding: 0 10px;
 }
+
 a:hover {
   color: white;
-  border: 1px solid white !important;
+  border: 1px solid rgb(145, 145, 145) !important;
   border-radius: 5px;
   background: rgb(65, 65, 65) !important;
   font-size: 20px;
   height: 50px;
 }
+
 ul {
   display: flex;
   flex-direction: column;
 }
+
 ul li {
   text-align: center;
   align-items: center;
   margin-top: 20px;
 }
+
 .sidebar-header {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-.sidebar-header   i {
+
+.sidebar-header i {
   font-size: 36px;
   margin-right: 10px;
 }
@@ -72,53 +81,112 @@ ul li {
 .my-courses {
   margin: 70px 0px 0px 0px;
   color: white;
+  height: auto;
 }
+
+.my-courses h2 {
+  margin-bottom: 40px;
+
+  text-shadow:
+    1px 1px 1px rgba(255, 255, 255, 0.5),
+    -1px -1px 3px rgba(0, 0, 0, 0.893);
+}
+
 .course-cards {
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: space-between;
+  display: block;
 }
 
 .course-card {
   text-align: center;
-  background-color: rgb(65, 65, 65);
+  background-color: #0e0c0c;
   border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  width: 30%;
+  border: 2px solid #242222;
+
   color: white;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  height: 100%;
 }
 
-.course-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.course-card p {
-  margin-bottom: 10px;
+.card-img-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
 .course-card img {
-  width: 150px;
-  height: 100px;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 0;
+  transition: transform 2s ease-in-out;
 }
-.img {
-  width: 100px !important;
+
+.card-img-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 45%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 60%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 1s ease;
+}
+
+.course-card:hover .card-img-container::after {
+  left: 150%;
+}
+
+.course-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+  font-weight: 500;
+}
+
+.course-card p {
+  margin-bottom: 20px;
+  color: #bfbaba;
 }
 
 .course-card button {
-  background-color: #333;
+  background-color: black;
   color: #fff;
-  border: none;
-  padding: 10px 20px;
+  border: 1px solid #92261e;
+  padding: 10px 25px;
   border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
+
+.course-card button:hover {
+  background-color: #92261e;
+  color: white;
+}
+
+.profile-picture {
+  height: auto;
+  padding-bottom: 0;
+}
+
+.profile-picture img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
 @media (max-width: 992px) {
-  .course-card {
-    width: 45%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -129,8 +197,8 @@ ul li {
   .container-fluid,
   .d-flex {
     flex-direction: column;
-      padding-bottom: 50px;
-margin-bottom: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 
   .stuname {
@@ -138,18 +206,15 @@ margin-bottom: 50px;
   }
 
   .course-cards {
-    flex-direction: column;
-    align-items: center;
   }
 
   .course-card {
-    width: 100%;
     margin-bottom: 20px;
   }
-  .my-courses{
-                    height: 50vh !important;
-                    padding-bottom: 50px;
-                    border: 1px solid ;
-                    margin-bottom: 500px;
+
+  .my-courses {
+    height: auto !important;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 }

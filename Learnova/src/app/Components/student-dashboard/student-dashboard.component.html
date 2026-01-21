@@ -5,13 +5,17 @@
       <i class="fa fa-code"></i>
       <h2>DASHBOARD</h2>
     </div>
-    <ul>
-      <li>
-        <a href="#"><i class="fa fa-home"></i> Home</a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-user"></i> Profile</a>
-      </li>
+    <div class="profile-picture ml-auto d-flex flex-column justify-content-center align-items-center">
+      <img
+        [src]="studentPicture"
+        alt="Student Avatar"
+        class="rounded-circle"
+        width="50"
+        height="50"
+      />
+      <span class="stuname">{{ studentName }}</span>
+    </div>
+    <ul class="text-center">
       <li>
         <a href="#"><i class="fa fa-wallet"></i> Wallet</a>
       </li>
@@ -33,45 +37,56 @@
   <!-- Main Content -->
 
   <div class="container-fluid mt-4">
-    <nav class="navbar navbar-expand-lg">
-      <div class="ml-auto">
-        <img
-          [src]="studentPicture"
-          alt="Student Avatar"
-          class="rounded-circle"
-          width="50"
-          height="50"
-        />
-        <span class="stuname">{{ studentName }}</span>
-      </div>
-    </nav>
-    <div class="my-courses">
-      <h2>Your Courses</h2>
-
-      <div class="course-cards">
-        <div class="course-card">
-          <img src="Images/html5-logo.png" alt="HTML Logo" />
-
-          <h3>HTML</h3>
-          <p>80% - Progress</p>
-
-          <button>Continue</button>
+    <div class="my-courses container"> <!-- Added container to center the grid -->
+      <h2 class="heading">Your Courses</h2>
+  
+      <!-- Bootstrap Row -->
+      <div class="row justify-content-center">
+        
+        <!-- Card 1: HTML -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="card course-card">
+            <div class="card-img-container">
+              <img src="Images/html5-logo.png" class="card-img-top" alt="HTML Logo" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">HTML</h3>
+              <p class="card-text">80% - Progress</p>
+              <button class="btn btn-subscribe">Continue</button>
+            </div>
+          </div>
         </div>
-        <div class="course-card">
-          <img src="Images/img_css.jpg" class="img" alt="CSS Logo" />
-
-          <h3>CSS</h3>
-          <p>60% - Progress</p>
-          <button>Continue</button>
+  
+        <!-- Card 2: CSS -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="card course-card">
+            <div class="card-img-container">
+              <img src="Images/img_css.jpg" class="card-img-top" alt="CSS Logo" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">CSS</h3>
+              <p class="card-text">60% - Progress</p>
+              <button class="btn btn-subscribe">Continue</button>
+            </div>
+          </div>
         </div>
-        <div class="course-card">
-          <img src="Images/16_JS.png" class="img" alt="JS Logo" />
-
-          <h3>JavaScript</h3>
-          <p>30% - Progress</p>
-          <button>Continue</button>
+  
+        <!-- Card 3: JavaScript -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="card course-card">
+            <div class="card-img-container">
+              <img src="Images/16_JS.png" class="card-img-top" alt="JS Logo" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">JavaScript</h3>
+              <p class="card-text">30% - Progress</p>
+              <button class="btn btn-subscribe">Continue</button>
+            </div>
+          </div>
         </div>
+  
       </div>
     </div>
   </div>
+  
 </div>
