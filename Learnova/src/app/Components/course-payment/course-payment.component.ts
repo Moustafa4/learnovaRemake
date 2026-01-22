@@ -39,25 +39,24 @@ export class CoursePaymentComponent implements OnInit {
 
   private initConfig(): void {
     const exchangeRate = 50;
-    // const this.cartser.getTotalPrice().toString() = (this.totalCost / exchangeRate).toFixed(2);
-    // const this.cartser.getTotalPrice().toString() = (this.totalCost / exchangeRate).toFixed(2);
+    const amountInUSD = (this.totalCost / exchangeRate).toFixed(2);
 
     this.payPalConfig = {
-      currency: 'EGP',
+      currency: 'USD',
       clientId:
-        'AVw46PWTvwI8EaUSOjQsi_kDFoJkOJhly5T3EVexR7DPoBrdJ-bzYxbxO-JgON53sOkwH3UrTi2Rqwac',
+        'AVE6qxmjP8vFYkWxtVyJeyZ6BATRBA631QKGE2KnUaJ3c-mAo3tcTeAS3uF7xg5iXqGqQYw7smGguEvo',
       createOrderOnClient: (data) =>
         <ICreateOrderRequest>{
           intent: 'CAPTURE',
           purchase_units: [
             {
               amount: {
-                currency_code: 'EGP',
-                value: this.cartser.getTotalPrice().toString(),
+                currency_code: 'USD',
+                value: amountInUSD,
                 breakdown: {
                   item_total: {
-                    currency_code: 'EGP',
-                    value: this.cartser.getTotalPrice().toString(),
+                    currency_code: 'USD',
+                    value: amountInUSD,
                   },
                 },
               },
@@ -67,8 +66,8 @@ export class CoursePaymentComponent implements OnInit {
                   quantity: '1',
                   category: 'DIGITAL_GOODS',
                   unit_amount: {
-                    currency_code: 'EGP',
-                    value: this.cartser.getTotalPrice().toString(),
+                    currency_code: 'USD',
+                    value: amountInUSD,
                   },
                 },
               ],
