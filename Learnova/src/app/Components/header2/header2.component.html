@@ -21,27 +21,7 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <button type="submit" class="btn search-btn-sm">
-      <i class="fas fa-search"></i>
-    </button>
-    <button type="submit" class="btn bell-btn-sm">
-      <a
-        class="nav-link notify-btn"
-        routerLinkActive="active"
-        aria-current="page"
-        routerLink="/notifications"
-        ><i class="fa-solid fa-bell"></i
-      ></a>
-    </button>
-    <li class="nav-item bell-btn-sm">
-      <a
-        class="nav-link notify-btn"
-        routerLinkActive="active"
-        aria-current="page"
-        routerLink="/notifications"
-        ><i class="fa-solid fa-bell"></i
-      ></a>
-    </li>
+
     <div
       class="collapse navbar-collapse justify-content-between"
       id="navbarSupportedContent"
@@ -58,8 +38,7 @@
           >
         </li>
 
-     
-        <li class="nav-item ">
+        <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" routerLink="/courses">
             Courses
           </a>
@@ -125,7 +104,7 @@
           <li class="nav-item cart-btn position-relative">
             <a class="nav-link" routerLink="/cart">
               <i class="bi bi-bag"></i>
-              <span class="cart-counter">{{cart().length}}</span>
+              <span class="cart-counter">{{ cart().length }}</span>
             </a>
           </li>
           <span class="seperator">|</span>
@@ -148,7 +127,7 @@
               ><i class="fa-regular fa-user"></i> Register</a
             >
           </li>
-          
+
           <li class="nav-item">
             <a
               class="nav-link notify-btn"
