@@ -45,55 +45,24 @@
 
       <!-- Bootstrap Row -->
       <div class="row justify-content-center">
-        <!-- Card 1: HTML -->
-        <div class="col-lg-4 col-md-6 col-12 mb-4">
-          <div class="card course-card">
-            <div class="card-img-container">
-              <img
-                src="Images/html5-logo.png"
-                class="card-img-top"
-                alt="HTML Logo"
-              />
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">HTML</h3>
-              <p class="card-text">80% - Progress</p>
-              <button class="btn btn-subscribe">Continue</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: CSS -->
-        <div class="col-lg-4 col-md-6 col-12 mb-4">
-          <div class="card course-card">
-            <div class="card-img-container">
-              <img
-                src="Images/img_css.jpg"
-                class="card-img-top"
-                alt="CSS Logo"
-              />
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">CSS</h3>
-              <p class="card-text">60% - Progress</p>
-              <button class="btn btn-subscribe">Continue</button>
+        @for (c of myCourses(); track c) {
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <div class="card course-card">
+              <div class="card-img-container">
+                <img
+                  src="{{c.image}}"
+                  class="card-img-top"
+                  alt="HTML Logo"
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">{{c.title}}</h3>
+                <p class="card-text">80% - Progress</p>
+                <button class="btn btn-subscribe">Continue</button>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- Card 3: JavaScript -->
-        <div class="col-lg-4 col-md-6 col-12 mb-4">
-          <div class="card course-card">
-            <div class="card-img-container">
-              <img src="Images/16_JS.png" class="card-img-top" alt="JS Logo" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">JavaScript</h3>
-              <p class="card-text">30% - Progress</p>
-              <button class="btn btn-subscribe">Continue</button>
-            </div>
-          </div>
-        </div>
+        }
       </div>
     </div>
   </div>
