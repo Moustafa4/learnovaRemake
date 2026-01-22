@@ -174,7 +174,7 @@ a {
   height: 50px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .navbar-brand {
     margin-top: -18px;
   }
@@ -235,6 +235,10 @@ a {
     text-align: center;
   }
 }
+@media (min-width: 768px) and (max-width: 991px){
+  
+}
+
 @media only screen and (max-width: 1400px) and (min-width: 992px) {
   .nav-item {
     display: block;
