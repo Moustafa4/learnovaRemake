@@ -81,7 +81,7 @@ export class CoursePaymentComponent implements OnInit {
         label: 'paypal',
         layout: 'vertical',
       },
-      onApprove: (data, actions) => {
+      onApprove: (data: any, actions: any) => {
         console.log(
           'onApprove - transaction was approved, but not authorized',
           data,
@@ -104,13 +104,13 @@ export class CoursePaymentComponent implements OnInit {
           this.router.navigate(['/InstDAshBoard']);
         }
       },
-      onCancel: (data, actions) => {
+      onCancel: (data: any, actions: any) => {
         console.log('OnCancel', data, actions);
       },
       onError: (err: any) => {
         console.log('OnError', err);
       },
-      onClick: (data, actions) => {
+      onClick: (data: any, actions: any) => {
         console.log('onClick', data, actions);
       },
     };
