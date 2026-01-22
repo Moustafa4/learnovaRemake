@@ -35,7 +35,7 @@
 /* Header Style */
 .header-area {
   padding-left: 20px;
-  border-left: 4px solid var(--primary-glow);
+  border-left: 4px solid var(--secondaryColor);
 }
 .header-area h1 {
   color: var(--text-main);
@@ -70,7 +70,7 @@
   left: 0;
   bottom: 0;
   width: 4px;
-  background: var(--primary-glow);
+  background: var(--secondaryColor);
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -100,7 +100,7 @@
   transition: color 0.2s;
 }
 .course-title:hover {
-  color: var(--primary-glow) !important;
+  color: var(--secondaryColor) !important;
 }
 
 .instructor-badge {
@@ -117,7 +117,7 @@
 
 .price-tag {
   font-size: 1.3rem;
-  color: var(--primary-glow);
+  color: var(--secondaryColor);
 }
 
 .remove-btn {
@@ -147,19 +147,19 @@
 
 .checkout-btn-glow {
   padding: 18px;
-  background: linear-gradient(90deg, #ff6600, #ff4500);
+  background: linear-gradient(90deg, var(--secondaryColor), var(--mainColor));
   border-radius: 12px;
   color: white;
   font-weight: 600;
   text-transform: uppercase;
-  box-shadow: 0 4px 20px rgba(255, 85, 0, 0.3);
+  box-shadow: -1px 2px 5px 0px rgb(42 42 42 / 91%);
   transition:
     transform 0.2s,
     box-shadow 0.2s;
 }
 .checkout-btn-glow:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(255, 85, 0, 0.5);
+
   color: white;
 }
 
