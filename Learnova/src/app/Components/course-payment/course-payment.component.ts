@@ -94,7 +94,7 @@ export class CoursePaymentComponent implements OnInit {
           );
         });
       },
-      onClientAuthorization: (data) => {
+      onClientAuthorization: (data: any) => {
         console.log('onClientAuthorization - transaction completed', data);
         this.showSuccess = true;
         this.cartser.confirmPurchase();
@@ -107,7 +107,7 @@ export class CoursePaymentComponent implements OnInit {
       onCancel: (data, actions) => {
         console.log('OnCancel', data, actions);
       },
-      onError: (err) => {
+      onError: (err: any) => {
         console.log('OnError', err);
       },
       onClick: (data, actions) => {
