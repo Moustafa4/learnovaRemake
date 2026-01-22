@@ -45,7 +45,7 @@ export class CoursePaymentComponent implements OnInit {
       currency: 'USD',
       clientId:
         'AVE6qxmjP8vFYkWxtVyJeyZ6BATRBA631QKGE2KnUaJ3c-mAo3tcTeAS3uF7xg5iXqGqQYw7smGguEvo',
-      createOrderOnClient: (data) =>
+      createOrderOnClient: (data: any) =>
         <ICreateOrderRequest>{
           intent: 'CAPTURE',
           purchase_units: [
