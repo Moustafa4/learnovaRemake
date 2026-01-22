@@ -112,7 +112,8 @@
   padding: 15px;
 }
 .card-text {
-  font-size: 16px;
+  width: 50%;
+  font-size: 14px;
   margin-bottom: 0px;
   color: #bfbaba;
   padding: 5px;
@@ -121,23 +122,20 @@
   height: 160px;
 }
 
-.ins-name_wishlist p {
-  font-size: 18px;
-}
 .ins-name_wishlist :nth-child(2) {
-  background-color: #303030;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   position: relative;
 }
-.fa-plus {
+
+/* .fa-plus {
   position: absolute;
   top: 50%;
   left: 50%;
   color: white;
   transform: translate(-50%, -50%);
-}
+} */
 .ins-card {
   width: 326px !important;
 }
@@ -317,32 +315,50 @@
 }
 /* --- Add Button (Plus Icon) Base Styles --- */
 .ins-name_wishlist p:last-child {
-  background-color: #303030;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  position: relative;
+  width: 30%;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
   cursor: pointer;
   margin-bottom: 0;
+  height: 44px;
 }
 
-.ins-name_wishlist p:last-child:hover {
-  background-color: #ffffff;
-}
+/* .ins-name_wishlist p:last-child:hover {
+  background-color: #ffffff65;
+} */
 
 .ins-name_wishlist p:last-child:hover .fa-plus {
   color: #0e0c0c; /* Turns icon black on white background */
 }
-
 .fa-plus {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%; */
   color: white;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
-
+.ins-name_wishlist p i {
+  background: #303030;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  text-align: center;
+}
+.ins-name_wishlist p,
+.ins-name_wishlist p span,
+.ins-name_wishlist p i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.isPurchas {
+  border: 1px solid #46c746;
+  color: #13d113;
+}
+.Purchas {
+  background: transparent !important;
+  color: #74dd74 !important;
+}
 /* --- Added State (Check Icon) Styles --- */
 .ins-name_wishlist p.added-btn {
   background-color: transparent !important;
@@ -353,12 +369,12 @@
 }
 
 .fa-circle-check {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
-  left: 50%;
-  color: white; /* Kept white as requested */
+  left: 50%; */
+  color: white;
   font-size: 25px;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
 
 /* MOBILE */

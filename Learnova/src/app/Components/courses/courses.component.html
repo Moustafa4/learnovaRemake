@@ -55,23 +55,29 @@
               >
                 <p class="card-text">{{ course.instructor }}</p>
 
-                <p
-                  (click)="
-                    $event.preventDefault();
-                    toggleCart(course);
-                    $event.stopPropagation()
-                  "
-                  style="cursor: pointer"
-                  [class.added-btn]="isAdded(course.title)"
-                >
-                  @if (isAdded(course.title)) {
-                    <!-- Green Check Icon -->
-                    <i class="fa-regular fa-circle-check"></i>
-                  } @else {
-                    <!-- Original Plus Icon -->
-                    <i class="fa-solid fa-plus"></i>
-                  }
-                </p>
+                                        <p
+                            (click)="
+                              $event.preventDefault();
+                              toggleCart(course);
+                              $event.stopPropagation()
+                            "
+                            style="cursor: pointer;"
+                            [class.added-btn]="isAdded(course.title)"
+                            [class.purchased-btn]="isPurchased(course.title)"
+                            [class.isPurchas]="isPurchased(course.title)"
+                          >
+                            @if (isPurchased(course.title)) {
+                              <!-- PURCHASED STATE: Verification Icon + Text -->
+                              <span class="w-100 gap-2">
+                                Purchased
+                                <i [class.Purchas]="isPurchased(course.title)" class="fa-solid fa-circle-check" ></i>
+                              </span>
+                            } @else if (isAdded(course.title)) {
+                              <i class="fa-regular fa-circle-check"></i>
+                            } @else {
+                              <i class="fa-solid fa-plus"></i>
+                            }
+                          </p>
               </div>
             </div>
           </a>

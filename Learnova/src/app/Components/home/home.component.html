@@ -231,12 +231,17 @@
                             style="cursor: pointer"
                             [class.added-btn]="isAdded(p.title)"
                             [class.purchased-btn]="isPurchased(p.title)"
+                            [class.isPurchas]="isPurchased(p.title)"
                           >
                             @if (isPurchased(p.title)) {
-                              <i
-                                class="fa-solid fa-lock-open"
-                                title="You own this course"
-                              ></i>
+                              <!-- PURCHASED STATE: Verification Icon + Text -->
+                              <span class="w-100 gap-2">
+                                Purchased
+                                <i
+                                  [class.Purchas]="isPurchased(p.title)"
+                                  class="fa-solid fa-circle-check"
+                                ></i>
+                              </span>
                             } @else if (isAdded(p.title)) {
                               <i class="fa-regular fa-circle-check"></i>
                             } @else {
@@ -303,12 +308,17 @@
                             style="cursor: pointer"
                             [class.added-btn]="isAdded(p.title)"
                             [class.purchased-btn]="isPurchased(p.title)"
+                            [class.isPurchas]="isPurchased(p.title)"
                           >
                             @if (isPurchased(p.title)) {
-                              <i
-                                class="fa-solid fa-lock-open"
-                                title="You own this course"
-                              ></i>
+                              <!-- PURCHASED STATE: Verification Icon + Text -->
+                              <span class="w-100 gap-2">
+                                Purchased
+                                <i
+                                  [class.Purchas]="isPurchased(p.title)"
+                                  class="fa-solid fa-circle-check"
+                                ></i>
+                              </span>
                             } @else if (isAdded(p.title)) {
                               <i class="fa-regular fa-circle-check"></i>
                             } @else {
@@ -375,14 +385,17 @@
                             style="cursor: pointer"
                             [class.added-btn]="isAdded(p.title)"
                             [class.purchased-btn]="isPurchased(p.title)"
+                            [class.isPurchas]="isPurchased(p.title)"
                           >
                             @if (isPurchased(p.title)) {
                               <!-- PURCHASED STATE: Verification Icon + Text -->
-                              <span class="d-flex align-items-center gap-2">
-                                <i class="fa-solid fa-circle-check"></i>
+                              <span class="w-100 gap-2">
                                 Purchased
+                                <i
+                                  [class.Purchas]="isPurchased(p.title)"
+                                  class="fa-solid fa-circle-check"
+                                ></i>
                               </span>
-                              <p>purchased</p>
                             } @else if (isAdded(p.title)) {
                               <i class="fa-regular fa-circle-check"></i>
                             } @else {
