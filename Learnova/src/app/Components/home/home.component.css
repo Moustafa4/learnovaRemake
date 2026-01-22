@@ -113,7 +113,7 @@
 }
 .card-text {
   font-size: 16px;
-
+  margin-bottom: 0px;
   color: #bfbaba;
   padding: 5px;
 }
@@ -195,7 +195,8 @@
     opacity 0.2s;
 }
 
-.courses-card:hover .card-img-container::after {
+.courses-card:hover .card-img-container::after,
+.courses-card-nav:hover .card-img-container::after {
   left: 130%;
   opacity: 1;
 }
@@ -313,6 +314,51 @@
   background-color: transparent;
   color: rgba(255, 255, 255, 0.856);
   border: 1.5px solid #92261e;
+}
+/* --- Add Button (Plus Icon) Base Styles --- */
+.ins-name_wishlist p:last-child {
+  background-color: #303030;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.ins-name_wishlist p:last-child:hover {
+  background-color: #ffffff;
+}
+
+.ins-name_wishlist p:last-child:hover .fa-plus {
+  color: #0e0c0c; /* Turns icon black on white background */
+}
+
+.fa-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+/* --- Added State (Check Icon) Styles --- */
+.ins-name_wishlist p.added-btn {
+  background-color: transparent !important;
+}
+
+.ins-name_wishlist p.added-btn:hover {
+  background-color: #343434 !important;
+}
+
+.fa-circle-check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white; /* Kept white as requested */
+  font-size: 25px;
+  transform: translate(-50%, -50%);
 }
 
 /* MOBILE */

@@ -27,7 +27,7 @@ export class CartService {
         return cart;
       }
 
-      //نتاكد انه مش مشتريه قبل كده 
+      //نتاكد انه مش مشتريه قبل كده
       const purchased = this.loadPurchasedCourses();
       const existsInPurchased = purchased.find((c) => c.title === course.title);
       if (existsInPurchased) {
@@ -58,10 +58,10 @@ export class CartService {
     return this.cart().reduce((t, c) => t + c.price, 0);
   }
 
-  // فانكشن لما الدفع يتم يبعت الكورسات للداشبورد 
-  // دي موجوده في الكورس بايمنت 
+  // فانكشن لما الدفع يتم يبعت الكورسات للداشبورد
+  // دي موجوده في الكورس بايمنت
   confirmPurchase() {
-  
+
     const currentCart = this.cart();
 
   //  دي علشان اجيب الكورسات اللي معاه دلوقتي
@@ -73,10 +73,16 @@ export class CartService {
     // هنا علشان اخزن الفي اللوكال علشان تفضل موجوده
     localStorage.setItem(this.purchasedKey, JSON.stringify(updatedPurchased));
 
-    
+
     this.myCourses.set(updatedPurchased);
 
 
     this.clearCart();
+  }
+
+  //handling the courses already purchased
+  isCoursePurchased(courseTitle: string): boolean {
+    const purchased = this.loadPurchasedCourses();
+    return purchased.some((course) => course.title === courseTitle);
   }
 }

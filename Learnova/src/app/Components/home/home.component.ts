@@ -15,6 +15,7 @@ import { ICourses } from '../courses/icourses';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Instructorservisces } from '../../../services/instructor_servisces/instructorservisces';
 import { Iinstructor } from '../instructors/iinstructor';
+import { CartService } from '../../../services/cartser/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -25,6 +26,13 @@ import { Iinstructor } from '../instructors/iinstructor';
 export class HomeComponent {
   // courses
   private courses_services = inject(CoursesService);
+ private cartserv = inject(CartService);
+
+// 1. Add a Set for purchased courses
+purchasedCourseTitle = new Set<string>();
+  // 1. Track items currently in the cart
+  addedCourseTitle = new Set<string>();
+
 
   // allcorses
   private $courses = this.courses_services
@@ -128,5 +136,42 @@ export class HomeComponent {
       const width = window.innerWidth;
       this.updateGroups();
     });
+
+    //cart effect
+    effect(() => {
+  const currentItems = this.cartserv.cart();
+  this.addedCourseTitle.clear();
+  currentItems.forEach((item) => {
+    this.addedCourseTitle.add(item.title);
+  });
+});
+//purchased effect
+  effect(() => {
+     const owned = this.cartserv.myCourses();
+     this.purchasedCourseTitle.clear();
+     owned.forEach(item => this.purchasedCourseTitle.add(item.title));
+  });
+
   }
+//function of cart add
+isAdded(courseTitle: string): boolean {
+  return this.addedCourseTitle.has(courseTitle);
 }
+// 3. Add a helper method
+isPurchased(courseTitle: string): boolean {
+  return this.purchasedCourseTitle.has(courseTitle);
+}
+   // 4. Update toggleCart to prevent adding if purchased
+toggleCart(Course: ICourses) {
+  if (this.isPurchased(Course.title)) {
+     return; // Do nothing if already owned
+  }
+
+  if (this.isAdded(Course.title)) {
+    this.cartserv.removeFromCart(Course.title);
+    this.addedCourseTitle.delete(Course.title);
+  } else {
+    this.cartserv.addToCart(Course);
+    this.addedCourseTitle.add(Course.title);
+  }
+}}
