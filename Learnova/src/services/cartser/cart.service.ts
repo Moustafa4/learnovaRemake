@@ -59,6 +59,7 @@ export class CartService {
   }
 
   // فانكشن لما الدفع يتم يبعت الكورسات للداشبورد 
+  // دي موجوده في الكورس بايمنت 
   confirmPurchase() {
   
     const currentCart = this.cart();

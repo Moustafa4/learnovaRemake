@@ -28,7 +28,7 @@
               <li><i class="bi bi-reception-4"></i> {{courses()?.level}}</li>
               <li><i class="bi bi-globe"></i> Course Language: Ar / En</li>
             </ul>
-            <a href="#" class="card-link">Buy Now</a>
+            <a (click)="addtocart(courses()!)" class="card-link">Add To Cart</a>
           </div>
         </div>
 
@@ -52,8 +52,10 @@
         <div class="Coursedetails">
           <h3>Course details</h3>
           <ul>
-            @if(courses()){ 
-            <li><i class="bi bi-alarm"></i>{{courses()?.duration}}/13 lessons</li>
+            @if(courses()){
+            <li>
+              <i class="bi bi-alarm"></i>{{courses()?.duration}}/13 lessons
+            </li>
             <li><i class="bi bi-calendar"></i> Last updated: 20/9/2026</li>
             <li>
               <i class="bi bi-card-text"></i>Course completion certificate
@@ -95,7 +97,7 @@
               <li><i class="bi bi-reception-4"></i> {{courses()?.level}}</li>
               <li><i class="bi bi-globe"></i> Course Language: Ar / En</li>
             </ul>
-            <a href="#" class="card-link">Buy Now</a>
+            <a (click)="addtocart(courses()!)" class="card-link">Add To Cart</a>
           </div>
         </div>
       </div>
