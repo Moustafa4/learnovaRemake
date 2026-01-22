@@ -44,19 +44,15 @@
       <h2 class="heading">Your Courses</h2>
 
       <!-- Bootstrap Row -->
-      <div class="row justify-content-center">
+      <div class="row">
         @for (c of myCourses(); track c) {
           <div class="col-lg-4 col-md-6 col-12 mb-4">
             <div class="card course-card">
               <div class="card-img-container">
-                <img
-                  src="{{c.image}}"
-                  class="card-img-top"
-                  alt="HTML Logo"
-                />
+                <img src="{{ c.image }}" class="card-img-top" alt="HTML Logo" />
               </div>
               <div class="card-body">
-                <h3 class="card-title">{{c.title}}</h3>
+                <h3 class="card-title">{{ c.title }}</h3>
                 <p class="card-text">80% - Progress</p>
                 <button class="btn btn-subscribe">Continue</button>
               </div>

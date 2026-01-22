@@ -1,7 +1,7 @@
 .container-fluid,
 .d-flex {
   background: rgb(27, 27, 27);
-  height: 100vh;
+  height: auto;
   padding-bottom: 50px;
 }
 

@@ -25,7 +25,7 @@
   text-decoration: none;
 }
 .site-footer a:hover {
-  color: orangered;
+  color: #bd2a1f;
   text-decoration: none;
 }
 .footer-links {
@@ -41,7 +41,7 @@
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-  color: orangered;
+  color: #bd2a1f;
   text-decoration: none;
 }
 .footer-links.inline li {
