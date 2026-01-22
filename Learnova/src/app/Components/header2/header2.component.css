@@ -21,7 +21,7 @@
   color: #ffff;
 }
 .navbar li:hover a {
-  color: #92261e;
+  color: var(--secondaryColor);
 }
 
 .search-input {
@@ -33,7 +33,7 @@
   color: rgb(236, 236, 236) !important;
 }
 .dropdown-menu li a:hover {
-  color: #92261e !important;
+  color: var(--secondaryColor) !important;
   background-color: transparent;
 }
 .input-group-text {

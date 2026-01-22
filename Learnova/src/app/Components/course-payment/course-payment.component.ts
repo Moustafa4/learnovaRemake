@@ -45,7 +45,7 @@ export class CoursePaymentComponent implements OnInit {
       currency: 'USD',
       clientId:
         'AVE6qxmjP8vFYkWxtVyJeyZ6BATRBA631QKGE2KnUaJ3c-mAo3tcTeAS3uF7xg5iXqGqQYw7smGguEvo',
-      createOrderOnClient: (data: any) =>
+      createOrderOnClient: (data) =>
         <ICreateOrderRequest>{
           intent: 'CAPTURE',
           purchase_units: [
@@ -81,7 +81,7 @@ export class CoursePaymentComponent implements OnInit {
         label: 'paypal',
         layout: 'vertical',
       },
-      onApprove: (data: any, actions: any) => {
+      onApprove: (data, actions) => {
         console.log(
           'onApprove - transaction was approved, but not authorized',
           data,
@@ -104,13 +104,13 @@ export class CoursePaymentComponent implements OnInit {
           this.router.navigate(['/InstDAshBoard']);
         }
       },
-      onCancel: (data: any, actions: any) => {
+      onCancel: (data, actions) => {
         console.log('OnCancel', data, actions);
       },
       onError: (err: any) => {
         console.log('OnError', err);
       },
-      onClick: (data: any, actions: any) => {
+      onClick: (data, actions) => {
         console.log('onClick', data, actions);
       },
     };

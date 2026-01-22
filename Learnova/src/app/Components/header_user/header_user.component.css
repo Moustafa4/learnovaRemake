@@ -21,7 +21,7 @@
   color: #ffff;
 }
 .navbar li:hover a {
-  color: #92261e;
+  color: var(--secondaryColor);
 }
 .user a {
   cursor: pointer;
@@ -35,7 +35,7 @@
   color: rgb(236, 236, 236) !important;
 }
 .dropdown-menu li a:hover {
-  color: #92261e !important;
+  color: var(--secondaryColor) !important;
   background-color: transparent;
 }
 .input-group-text {
@@ -184,8 +184,14 @@ a {
 }
 .logout i {
   margin-right: 5px;
+  transition: transform 0.35s ease-in-out;
 }
-
+.logout:hover {
+  color: var(--secondaryColor);
+}
+.logout:hover i {
+  transform: translateX(5px);
+}
 @media (max-width: 991px) {
   .navbar-brand {
     margin-top: -18px;
