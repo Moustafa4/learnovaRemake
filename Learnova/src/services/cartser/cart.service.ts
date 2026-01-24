@@ -27,22 +27,22 @@ export class CartService {
     );
   }
 
-  // 4. دالة ديناميكية بتجيب المفتاح الخاص بالمستخدم الحالي
+  // فانكشن بتعمل key  لكل يوزر بالكورسات بتاعته
   private getPurchasedKey(): string {
     const user = this.authServ.user();
     if (user && user.id) {
-      return `my_courses_${user.id}`; // مفتاح مميز لكل مستخدم: my_courses_1, my_courses_2
+      return `my_courses_${user.id}`; 
     }
-    return 'my_courses_guest'; // مفتاح مؤقت للزائر (اختياري)
+    return 'my_courses_guest';
   }
 
   private loadCart(): ICourses[] {
     return JSON.parse(sessionStorage.getItem(this.cartKey) || '[]');
   }
 
-  // تعديل الدالة لتستخدم المفتاح الديناميكي
+  // بجيب الكورسات حسب كل يوزر
   private loadPurchasedCourses(): ICourses[] {
-    const key = this.getPurchasedKey(); // هات المفتاح بتاع اليوزر الحالي
+    const key = this.getPurchasedKey(); 
     return JSON.parse(localStorage.getItem(key) || '[]');
   }
 
