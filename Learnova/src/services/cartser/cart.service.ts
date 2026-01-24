@@ -54,7 +54,7 @@ export class CartService {
         return cart;
       }
 
-      // التأكد من الملكية باستخدام الدالة المحدثة
+      //فانكشن بتشوف الكورس موجود ولال لا
       const purchased = this.loadPurchasedCourses();
       const existsInPurchased = purchased.find((c) => c.title === course.title);
       if (existsInPurchased) {

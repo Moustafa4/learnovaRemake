@@ -129,13 +129,6 @@
   position: relative;
 }
 
-/* .fa-plus {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  transform: translate(-50%, -50%);
-} */
 .ins-card {
   width: 326px !important;
 }
@@ -328,14 +321,11 @@
 } */
 
 .ins-name_wishlist p:last-child:hover .fa-plus {
-  color: #0e0c0c; /* Turns icon black on white background */
+  color: #0e0c0c;
 }
 .fa-plus {
-  /* position: absolute; */
-  /* top: 50%;
-  left: 50%; */
+
   color: white;
-  /* transform: translate(-50%, -50%); */
 }
 .ins-name_wishlist p i {
   background: #303030;
