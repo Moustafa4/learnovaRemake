@@ -1,37 +1,63 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal, inject, effect } from '@angular/core'; // 1. ضيف effect
 import { ICourses } from '../../app/Components/courses/icourses';
+import { Authserv } from '../../services/authserv'; // تأكد من المسار الصحيح
 
 @Injectable({ providedIn: 'root' })
 export class CartService {
+  private authServ = inject(Authserv); // 2. استدعاء سيرفيس المستخدمين
+
   private cartKey = 'cart';
-  private purchasedKey = 'my_courses';
+  // شيلنا المتغير الثابت purchasedKey من هنا
 
   cart = signal<ICourses[]>(this.loadCart());
-  myCourses = signal<ICourses[]>(this.loadPurchasedCourses());
+  myCourses = signal<ICourses[]>([]); // ابدأ بمصفوفة فاضية وهي هتتحدث تلقائي
+
+  constructor() {
+    // 3. Effect: مراقب تلقائي لأي تغيير في حالة المستخدم (Login/Logout)
+    // أول ما اليوزر يتغير، بنحدث قائمة الكورسات بتاعته فوراً
+    effect(
+      () => {
+        // السطر ده مجرد عشان الـ effect يشتغل لما اليوزر يتغير
+        const currentUser = this.authServ.user();
+
+        // حدث قائمة الكورسات بناءً على اليوزر الجديد
+        this.myCourses.set(this.loadPurchasedCourses());
+      },
+      { allowSignalWrites: true },
+    );
+  }
+
+  // فانكشن بتعمل key  لكل يوزر بالكورسات بتاعته
+  private getPurchasedKey(): string {
+    const user = this.authServ.user();
+    if (user && user.id) {
+      return `my_courses_${user.id}`; 
+    }
+    return 'my_courses_guest';
+  }
 
   private loadCart(): ICourses[] {
     return JSON.parse(sessionStorage.getItem(this.cartKey) || '[]');
   }
 
-  // فانكشن لتحميل الكورسات اللي اشتراها من localStorage
+  // بجيب الكورسات حسب كل يوزر
   private loadPurchasedCourses(): ICourses[] {
-    return JSON.parse(localStorage.getItem(this.purchasedKey) || '[]');
+    const key = this.getPurchasedKey(); 
+    return JSON.parse(localStorage.getItem(key) || '[]');
   }
 
   addToCart(course: ICourses) {
     this.cart.update((cart) => {
-      // نتأكد إنه مش في السلة
       const existsInCart = cart.find((c) => c.title === course.title);
       if (existsInCart) {
         alert('This Course Already Add to your cart');
         return cart;
       }
 
-      //نتاكد انه مش مشتريه قبل كده
+      //فانكشن بتشوف الكورس موجود ولال لا
       const purchased = this.loadPurchasedCourses();
       const existsInPurchased = purchased.find((c) => c.title === course.title);
       if (existsInPurchased) {
-        alert('You already own this course!');
         return cart;
       }
 
@@ -58,29 +84,21 @@ export class CartService {
     return this.cart().reduce((t, c) => t + c.price, 0);
   }
 
-  // فانكشن لما الدفع يتم يبعت الكورسات للداشبورد
-  // دي موجوده في الكورس بايمنت
   confirmPurchase() {
-
     const currentCart = this.cart();
 
-  //  دي علشان اجيب الكورسات اللي معاه دلوقتي
+    // نجيب كورسات المستخدم الحالي فقط
     const currentPurchased = this.loadPurchasedCourses();
-
-  //  دي علشان ميحصلش تكرار عندي
     const updatedPurchased = [...currentPurchased, ...currentCart];
 
-    // هنا علشان اخزن الفي اللوكال علشان تفضل موجوده
-    localStorage.setItem(this.purchasedKey, JSON.stringify(updatedPurchased));
-
+    // التخزين في المفتاح الخاص بالمستخدم الحالي
+    const key = this.getPurchasedKey();
+    localStorage.setItem(key, JSON.stringify(updatedPurchased));
 
     this.myCourses.set(updatedPurchased);
-
-
     this.clearCart();
   }
 
-  //handling the courses already purchased
   isCoursePurchased(courseTitle: string): boolean {
     const purchased = this.loadPurchasedCourses();
     return purchased.some((course) => course.title === courseTitle);

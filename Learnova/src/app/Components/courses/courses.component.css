@@ -151,51 +151,45 @@ select.form-select option {
   color: #bfbaba;
   margin-bottom: 0;
 }
-
 .ins-name_wishlist p:last-child {
-  background-color: #303030;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  position: relative;
+  width: 30%;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
   cursor: pointer;
   margin-bottom: 0;
+  height: 44px;
 }
-
-.ins-name_wishlist p:last-child:hover {
-  background-color: #ffffff;
+.ins-name_wishlist p i {
+  background: #303030;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  text-align: center;
 }
-.ins-name_wishlist p:last-child:hover .fa-plus {
-  color: #0e0c0c;
+.ins-name_wishlist p,
+.ins-name_wishlist p span,
+.ins-name_wishlist p i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.fa-plus {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  transform: translate(-50%, -50%);
+.isPurchas {
+  border: 1px solid #46c746;
+  color: #13d113;
 }
-
+.Purchas {
+  background: transparent !important;
+  color: #74dd74 !important;
+}
 /* Specific style for when the item is added */
 .ins-name_wishlist p.added-btn {
   background-color: transparent !important; /* Bootstrap Green (Success) */
 }
 
-.ins-name_wishlist p.added-btn:hover {
-  background-color: #343434 !important; /* Darker Green on hover */
-}
+
 
 /* Ensure the check icon is centered just like the plus was */
-.fa-circle-check {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  font-size: 25px;
 
-  transform: translate(-50%, -50%);
-}
 @media (max-width: 575.98px) {
   .heading {
     font-size: 28px;

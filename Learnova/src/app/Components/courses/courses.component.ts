@@ -17,10 +17,13 @@ import { CartService } from '../../../services/cartser/cart.service';
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css',
 })
-export class CoursesComponent  {
-
+export class CoursesComponent {
   private Courses_Service = inject(CoursesService);
   private cartserv = inject(CartService);
+  purchasedCourseTitle = new Set<string>();
+  // 1. Track items currently in the cart
+  addedCourseTitle = new Set<string>();
+
   private $courses = this.Courses_Service.Allcourses().pipe(
     map((courses) => courses ?? ([] as ICourses[])),
   );
@@ -30,19 +33,30 @@ export class CoursesComponent  {
   filterproduct: ICourses[] = this._courses();
   selectedCat: string = 'All Courses';
 
-addedCourseTitle = new Set<string>();
-
   constructor() {
     effect(() => {
       this.filterproduct = this._courses();
     });
-    effect(()=> {
-       const currentItems = this.cartserv.cart();
-         this.addedCourseTitle.clear();
-        currentItems.forEach(item => {
-          this.addedCourseTitle.add(item.title);
-        });
-    })
+    effect(() => {
+      const currentItems = this.cartserv.cart();
+      this.addedCourseTitle.clear();
+      currentItems.forEach((item) => {
+        this.addedCourseTitle.add(item.title);
+      });
+    });
+    //purchased effect
+    effect(() => {
+      const owned = this.cartserv.myCourses();
+      this.purchasedCourseTitle.clear();
+      owned.forEach((item) => this.purchasedCourseTitle.add(item.title));
+    });
+  }
+  isAdded(courseTitle: string): boolean {
+    return this.addedCourseTitle.has(courseTitle);
+  }
+  // 3. Add a helper method
+  isPurchased(courseTitle: string): boolean {
+    return this.purchasedCourseTitle.has(courseTitle);
   }
 
   onchanged() {
@@ -56,15 +70,12 @@ addedCourseTitle = new Set<string>();
     }
   }
   toggleCart(Course: ICourses) {
-     if (this.isAdded(Course.title)) {
-     this.cartserv.removeFromCart(Course.title);
+    if (this.isAdded(Course.title)) {
+      this.cartserv.removeFromCart(Course.title);
       this.addedCourseTitle.delete(Course.title);
-    }else{
+    } else {
       this.cartserv.addToCart(Course);
-    this.addedCourseTitle.add(Course.title);}
-  }
-
-    isAdded(courseTitle:any): boolean {
-    return this.addedCourseTitle.has(courseTitle);
+      this.addedCourseTitle.add(Course.title);
+    }
   }
 }
