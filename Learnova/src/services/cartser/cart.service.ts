@@ -1,10 +1,10 @@
-import { Injectable, signal, inject, effect } from '@angular/core'; // 1. ضيف effect
+import { Injectable, signal, inject, effect } from '@angular/core';
 import { ICourses } from '../../app/Components/courses/icourses';
-import { Authserv } from '../../services/authserv'; // تأكد من المسار الصحيح
+import { Authserv } from '../../services/authserv';
 
 @Injectable({ providedIn: 'root' })
 export class CartService {
-  private authServ = inject(Authserv); // 2. استدعاء سيرفيس المستخدمين
+  private authServ = inject(Authserv);
 
   private cartKey = 'cart';
   // شيلنا المتغير الثابت purchasedKey من هنا

@@ -4,11 +4,7 @@
   </div>
 
   <!-- Filter Select -->
-  <select
-    [(ngModel)]="selectedCat"
-    (change)="onchanged()"
-    class="form-select mb-5"
-  >
+  <select [(ngModel)]="selectedCat" (change)="onchanged()" class="form-select mb-5">
     <option selected>All Courses</option>
     <option value="Programming">Programming</option>
     <option value="design">Design</option>
@@ -17,72 +13,59 @@
 
   <div class="row gy-4">
     @for (course of filterproduct; track $index) {
-      <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="card courses-card">
-          <a routerLink="/Details/{{ course.title }}">
-            <div class="card-img-container">
-              <img
-                [src]="course.image"
-                class="card-img-top"
-                [alt]="course.title"
-              />
-            </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card courses-card">
+        <a routerLink="/Details/{{ course.title }}">
+          <div class="card-img-container">
+            <img [src]="course.image" class="card-img-top" [alt]="course.title" />
+          </div>
 
-            <div class="card-body courses-card-slider">
-              <div class="card-top-part">
-                <div class="d-flex justify-content-between">
-                  <p class="course-type">{{ course.typ }}</p>
+          <div class="card-body courses-card-slider">
+            <div class="card-top-part">
+              <div class="d-flex justify-content-between">
+                <p class="course-type">{{ course.typ }}</p>
 
-                  <span class="courses_rate mt-1">
-                    <i class="fa fa-star"></i> 4.5 (400+)
-                  </span>
-                </div>
-
-                <h5 class="card-title course-title">
-                  {{ course.title }}
-                </h5>
-
-                <p class="Crs-Duration">
-                  <i class="bi bi-alarm"></i> 15h 41Mins
-                  <span class="float-end text-light"
-                    >{{ course.price }} EGP</span
-                  >
-                </p>
+                <span class="courses_rate mt-1">
+                  <i class="fa fa-star"></i> 4.5 (400+)
+                </span>
               </div>
 
-              <div
-                class="ins-name_wishlist d-flex justify-content-between align-items-center"
-              >
-                <p class="card-text">{{ course.instructor }}</p>
+              <h5 class="card-title course-title">
+                {{ course.title }}
+              </h5>
 
-                                        <p
-                            (click)="
-                              $event.preventDefault();
-                              toggleCart(course);
-                              $event.stopPropagation()
-                            "
-                            style="cursor: pointer;"
-                            [class.added-btn]="isAdded(course.title)"
-                            [class.purchased-btn]="isPurchased(course.title)"
-                            [class.isPurchas]="isPurchased(course.title)"
-                          >
-                            @if (isPurchased(course.title)) {
-                              <!-- PURCHASED STATE: Verification Icon + Text -->
-                              <span class="w-100 gap-2">
-                                Purchased
-                                <i [class.Purchas]="isPurchased(course.title)" class="fa-solid fa-circle-check" ></i>
-                              </span>
-                            } @else if (isAdded(course.title)) {
-                              <i class="fa-regular fa-circle-check"></i>
-                            } @else {
-                              <i class="fa-solid fa-plus"></i>
-                            }
-                          </p>
-              </div>
+              <p class="Crs-Duration">
+                <i class="bi bi-alarm"></i> 15h 41Mins
+                <span class="float-end text-light">{{ course.price }} EGP</span>
+              </p>
             </div>
-          </a>
-        </div>
+
+            <div class="ins-name_wishlist d-flex justify-content-between align-items-center">
+              <p class="card-text">{{ course.instructor }}</p>
+
+              <p (click)="
+                    $event.preventDefault();
+                    toggleCart(course);
+                    $event.stopPropagation()
+                  " style="cursor: pointer" [class.added-btn]="isAdded(course.title)"
+                [class.purchased-btn]="isPurchased(course.title)" [class.isPurchas]="isPurchased(course.title)">
+                @if (isPurchased(course.title)) {
+                <!-- PURCHASED STATE: Verification Icon + Text -->
+                <span class="w-100 gap-2">
+                  Purchased
+                  <i [class.Purchas]="isPurchased(course.title)" class="fa-solid fa-circle-check"></i>
+                </span>
+                } @else if (isAdded(course.title)) {
+                <i class="fa-regular fa-circle-check"></i>
+                } @else {
+                <i class="fa-solid fa-plus"></i>
+                }
+              </p>
+            </div>
+          </div>
+        </a>
       </div>
+    </div>
     }
   </div>
 </div>
