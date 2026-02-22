@@ -7,10 +7,9 @@ export class CartService {
   private authServ = inject(Authserv);
 
   private cartKey = 'cart';
-  // شيلنا المتغير الثابت purchasedKey من هنا
 
   cart = signal<ICourses[]>(this.loadCart());
-  myCourses = signal<ICourses[]>([]); // ابدأ بمصفوفة فاضية وهي هتتحدث تلقائي
+  myCourses = signal<ICourses[]>([]);
 
   constructor() {
     // 3. Effect: مراقب تلقائي لأي تغيير في حالة المستخدم (Login/Logout)
@@ -31,19 +30,18 @@ export class CartService {
   private getPurchasedKey(): string {
     const user = this.authServ.user();
     if (user && user.id) {
-      return `my_courses_${user.id}`; 
+      return `my_courses_${user.id}`;
     }
     return 'my_courses_guest';
+  }
+  // بجيب الكورسات حسب كل يوزر
+  private loadPurchasedCourses(): ICourses[] {
+    const key = this.getPurchasedKey();
+    return JSON.parse(localStorage.getItem(key) || '[]');
   }
 
   private loadCart(): ICourses[] {
     return JSON.parse(sessionStorage.getItem(this.cartKey) || '[]');
-  }
-
-  // بجيب الكورسات حسب كل يوزر
-  private loadPurchasedCourses(): ICourses[] {
-    const key = this.getPurchasedKey(); 
-    return JSON.parse(localStorage.getItem(key) || '[]');
   }
 
   addToCart(course: ICourses) {
