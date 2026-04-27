@@ -44,7 +44,7 @@ export class CoursePaymentComponent implements OnInit {
     this.payPalConfig = {
       currency: 'USD',
       clientId:
-        'EEaYRpcglQhLLkAYoiXJ1EIgbREY95PkvnQXflaMb-izRE2XUA9wzQLu3BhX1YCJEA-cNM7c-jk_UtYT',
+        'AfdFnjllpu0eAfA2lzZjo3Skqh-tqJjtER_BXrGxPh4cLRzvggt_R_BmOrzUbvnIMtydMTASDnffb1Tc',
       createOrderOnClient: (data) =>
         <ICreateOrderRequest>{
           intent: 'CAPTURE',
