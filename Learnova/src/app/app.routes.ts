@@ -16,6 +16,7 @@ import { PrivacyComponent } from './Components/privacy/privacy.component';
 import { StudentDashboardComponent } from './Components/student-dashboard/student-dashboard.component';
 import { CoursesDetails } from './Components/courses-details/courses-details';
 import { authGGuard } from './Gaurds/auth-g-guard';
+import { LoginComponent } from './Components/login/login.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -30,7 +31,7 @@ export const routes: Routes = [
     canActivate: [authGGuard],
   },
   { path: 'sign-up', component: SignUpComponent },
-  { path: 'sign-in', component: SignInComponent },
+  { path: 'sign-in', component: LoginComponent },
   { path: 'cart', component: CartComponent},
   { path: 'ar', component: ArLanguageComponent },
   { path: 'contact', component: ContactComponent },
